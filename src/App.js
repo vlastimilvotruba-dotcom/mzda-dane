@@ -1,6 +1,6 @@
-// src/App.js
+// src/App.js – ručně ověř a případně uprav takto
 import React from 'react';
-import { Container, Typography, Box, Paper } from '@mui/material';
+import { Container, Typography, Paper } from '@mui/material';
 import SalaryWizard from './components/SalaryWizard/SalaryWizard';
 
 function App() {
