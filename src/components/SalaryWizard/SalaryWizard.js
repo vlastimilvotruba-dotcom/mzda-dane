@@ -1,4 +1,3 @@
-// src/components/SalaryWizard/SalaryWizard.js
 import React, { useState } from 'react';
 import StepBasic from './StepBasic';
 import StepTaxCredits from './StepTaxCredits';
@@ -9,9 +8,12 @@ const initialForm = {
   contractType: 'HPP',
   grossSalary: '',
   disability: 'none',
+  // daňové slevy:
   childrenCount: 0,
+  childrenZtpP: 0,
   spouseClaim: false,
   student: false,
+  ztpP: false, // poplatník držitel průkazu ZTP/P
 };
 
 function SalaryWizard() {
@@ -20,12 +22,7 @@ function SalaryWizard() {
   const [result, setResult] = useState(null);
 
   const updateForm = (partial) => {
-    console.log('updateForm called with:', partial);
-    setForm((prev) => {
-      const next = { ...prev, ...partial };
-      console.log('new form state:', next);
-      return next;
-    });
+    setForm((prev) => ({ ...prev, ...partial }));
   };
 
   const next = () => setStep((s) => Math.min(s + 1, 2));
@@ -36,8 +33,6 @@ function SalaryWizard() {
     setResult(res);
     setStep(2);
   };
-
-  console.log('render SalaryWizard, form.contractType:', form.contractType);
 
   return (
     <div>
@@ -62,7 +57,7 @@ function SalaryWizard() {
         <StepSummary
           form={form}
           result={result}
-          onBack={back}
+          onBack={() => setStep(1)}
           onRestart={() => {
             setForm(initialForm);
             setResult(null);
