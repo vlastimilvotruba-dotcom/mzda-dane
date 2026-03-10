@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import SalaryWizard from './components/SalaryWizard/SalaryWizard';
 import CalculatorTiles from './components/CalculatorTiles/CalculatorTiles';
+import AdSlot from './components/Ads/AdSlot';
 
 function App() {
-  const [activeCalculator, setActiveCalculator] = useState(null); 
+  const [activeCalculator, setActiveCalculator] = useState(null);
   const [activeColor, setActiveColor] = useState('#ffffff');
 
   const handleSelectCalculator = (id, color) => {
@@ -69,27 +70,62 @@ function App() {
         )}
       </Box>
 
-      {/* Úvodní rozcestník */}
+      {/* Úvodní rozcestník + bottom reklama */}
       {!activeCalculator && (
-        <CalculatorTiles onSelect={handleSelectCalculator} />
+        <Box>
+          <CalculatorTiles onSelect={handleSelectCalculator} />
+          <Box mt={2}>
+            <AdSlot id="home-bottom" position="bottom" />
+          </Box>
+        </Box>
       )}
 
-      {/* Stránka kalkulačky čisté mzdy 2026 */}
+      {/* Stránka kalkulačky čisté mzdy 2026 + reklamní sloty */}
       {activeCalculator === 'salary2026' && (
-        <Box mt={4} display="flex" justifyContent="center">
+        <Box mt={4}>
+          {/* Top reklama u kalkulačky */}
+          <Box mb={2}>
+            <AdSlot id="salary-top" position="top" />
+          </Box>
+
+          {/* Kalkulačka + side reklama */}
           <Box
-            sx={{
-              width: '100%',
-              maxWidth: 800,
-              bgcolor: `${activeColor}55`, // jemné tónované pozadí
-              borderRadius: 2,
-              p: { xs: 2, sm: 3 },
-            }}
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            gap={2}
+            justifyContent="center"
           >
-            <Typography variant="h5" gutterBottom>
-              Kalkulačka čisté mzdy 2026
-            </Typography>
-            <SalaryWizard />
+            <Box
+              sx={{
+                width: '100%',
+                maxWidth: 800,
+                bgcolor: `${activeColor}55`,
+                borderRadius: 2,
+                p: { xs: 2, sm: 3 },
+                boxShadow: 2,
+                flexShrink: 0,
+              }}
+            >
+              <Typography variant="h5" gutterBottom>
+                Kalkulačka čisté mzdy 2026
+              </Typography>
+              <SalaryWizard />
+            </Box>
+
+            {/* Side reklama (AdSlot sám skrývá side na mobilu) */}
+            <Box
+              sx={{
+                width: { xs: '100%', md: 300 },
+                flexShrink: 0,
+              }}
+            >
+              <AdSlot id="salary-side" position="side" />
+            </Box>
+          </Box>
+
+          {/* Bottom reklama u kalkulačky */}
+          <Box mt={2}>
+            <AdSlot id="salary-bottom" position="bottom" />
           </Box>
         </Box>
       )}

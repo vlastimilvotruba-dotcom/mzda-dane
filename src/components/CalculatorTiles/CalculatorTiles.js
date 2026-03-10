@@ -1,9 +1,10 @@
 import React from 'react';
 import {
   Box,
-  Grid,
   Paper,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 
 function CalculatorTile({ title, description, active, onClick, color }) {
@@ -11,7 +12,7 @@ function CalculatorTile({ title, description, active, onClick, color }) {
     <Paper
       onClick={onClick}
       elevation={active ? 3 : 1}
-        sx={{
+      sx={{
         p: 2,
         height: '100%',
         display: 'flex',
@@ -20,20 +21,22 @@ function CalculatorTile({ title, description, active, onClick, color }) {
         gap: 1,
         cursor: 'pointer',
         borderRadius: 2,
-        border: active ? '2px solid #1976d2' : '1px solid #cfd8dc',
-        backgroundColor: active ? color : `${color}55`, // méně průhledné
-        transition: 'box-shadow 0.2s, transform 0.1s, border 0.2s, background-color 0.2s',
+        border: active ? '2px solid #1976d2' : '1px solid #b0bec5',
+        backgroundColor: active ? color : `${color}77`,
+        boxShadow: active ? 4 : 1,
+        transition:
+          'box-shadow 0.2s, transform 0.1s, border 0.2s, background-color 0.2s',
         '&:hover': {
-            boxShadow: 4,
-            transform: 'translateY(-1px)',
-            backgroundColor: `${color}88`,
+          boxShadow: 6,
+          transform: 'translateY(-1px)',
+          backgroundColor: `${color}aa`,
         },
-        }}
+      }}
     >
       <Typography variant="subtitle1">
         {title}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body2" color="text.primary">
         {description}
       </Typography>
     </Paper>
@@ -68,21 +71,33 @@ function CalculatorTiles({ onSelect }) {
     },
   ];
 
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box>
-      <Grid container spacing={2}>
-        {tiles.map((tile) => (
-          <Grid key={tile.id} item xs={12} sm={6}>
-            <CalculatorTile
-              title={tile.title}
-              description={tile.description}
-              color={tile.color}
-              active={false}
-              onClick={() => onSelect(tile.id, tile.color)}
-            />
-          </Grid>
-        ))}
-      </Grid>
+    <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 2,
+      }}
+    >
+      {tiles.map((tile) => (
+        <Box
+          key={tile.id}
+          sx={{
+            flexBasis: isSmall ? '100%' : 'calc(50% - 8px)', // 2 sloupce na desktopu, 1 na mobilu
+          }}
+        >
+          <CalculatorTile
+            title={tile.title}
+            description={tile.description}
+            color={tile.color}
+            active={false}
+            onClick={() => onSelect(tile.id, tile.color)}
+          />
+        </Box>
+      ))}
     </Box>
   );
 }

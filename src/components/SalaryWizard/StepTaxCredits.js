@@ -15,13 +15,15 @@ function StepTaxCredits({ form, onChange, onBack, onNext }) {
     onChange({ [name]: checked });
   };
 
-  const handleChildrenTotal = (e) => {
-    const total = Number(e.target.value) || 0;
+   const handleChildrenTotal = (e) => {
+    let total = Number(e.target.value) || 0;
+    if (total < 0) total = 0;
+    if (total > 10) total = 10;
     const currentZtp = Number(form.childrenZtpP) || 0;
     const safeZtp = Math.min(currentZtp, total);
     onChange({
-      childrenCount: total,
-      childrenZtpP: safeZtp,
+        childrenCount: total,
+        childrenZtpP: safeZtp,
     });
   };
 
@@ -88,7 +90,7 @@ function StepTaxCredits({ form, onChange, onBack, onNext }) {
         label="Počet dětí (celkem)"
         value={totalChildren}
         onChange={handleChildrenTotal}
-        inputProps={{ min: 0 }}
+        inputProps={{ min: 0, max: 10 }}
       />
 
       <TextField
