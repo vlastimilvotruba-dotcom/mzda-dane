@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   Box, Typography, Divider, Button, Paper, Chip, Alert,
-  Accordion, AccordionSummary, AccordionDetails, Table,
-  TableBody, TableCell, TableRow, Tooltip, IconButton,
+  Accordion, AccordionSummary, AccordionDetails, Tooltip, IconButton,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';

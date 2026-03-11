@@ -4,7 +4,6 @@ import AnnualTaxForm from './AnnualTaxForm';
 import AnnualTaxResult from './AnnualTaxResult';
 import { calculateAnnualTax2026 } from '../../logic/annualTax2026';
 
-const PRIMARY       = '#e65100';
 const PROGRESSCOLOR = '#ef6c00';
 
 const INITIAL_FORM = {
