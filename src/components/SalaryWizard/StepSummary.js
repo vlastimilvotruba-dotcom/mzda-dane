@@ -1,293 +1,303 @@
 import React from 'react';
 import {
-  Box,
-  Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-  Paper,
-  Alert,
-  Button,
+  Box, Typography, Divider, Button, Paper, Chip, Alert,
+  Accordion, AccordionSummary, AccordionDetails, Table,
+  TableBody, TableCell, TableRow, Tooltip, IconButton,
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
-function StepSummary({ form, result, onBack, onRestart }) {
-  if (!result) return null;
+function fmt(n) {
+  return Math.round(n).toLocaleString('cs-CZ') + ' Kč';
+}
 
-  const {
-    gross,
-    net,
-    taxBase,
-    taxBeforeCredits,
-    tax,
-    childBonus,
-    socialEmployee,
-    healthEmployee,
-    socialEmployer,
-    healthEmployer,
-    totalEmployerCost,
-    socialCapMonth,
-    credits,
-    srazkova,
-  } = result;
-
+function Info({ text }) {
   return (
-    <Box display="flex" flexDirection="column" gap={3}>
-      <Typography variant="h6">Krok 3 – Souhrn</Typography>
+    <Tooltip title={text} arrow placement="top">
+      <IconButton size="small" sx={{ ml: 0.5, p: 0 }}>
+        <InfoOutlinedIcon fontSize="small" color="action" />
+      </IconButton>
+    </Tooltip>
+  );
+}
 
-      {/* Info o srážkové dani */}
-      {srazkova && (
-        <Alert severity="warning" variant="outlined">
-          Bez podepsaného prohlášení poplatníka se uplatňuje srážková daň
-          15 % – žádné slevy na dani nelze uplatnit. Daň je konečná.
-        </Alert>
-      )}
-
-      {/* Mzda a daň */}
-      <Paper variant="outlined">
-        <Box p={2}>
-          <Typography variant="subtitle1">Mzda a daň</Typography>
-          <Table size="small">
-            <TableBody>
-              <TableRow>
-                <TableCell>Hrubá mzda</TableCell>
-                <TableCell align="right">
-                  {gross.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Daňový základ</TableCell>
-                <TableCell align="right">
-                  {taxBase.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  {srazkova ? 'Srážková daň (15 %)' : 'Daň před slevami'}
-                </TableCell>
-                <TableCell align="right">
-                  {taxBeforeCredits.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
-              {!srazkova && (
-                <TableRow>
-                  <TableCell>Daň po slevách</TableCell>
-                  <TableCell align="right">
-                    {tax.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              )}
-              {childBonus > 0 && (
-                <TableRow>
-                  <TableCell>Daňový bonus na děti</TableCell>
-                  <TableCell align="right">
-                    +{childBonus.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              )}
-              <TableRow>
-                <TableCell>
-                  <strong>Čistá mzda</strong>
-                </TableCell>
-                <TableCell align="right">
-                  <strong>{net.toLocaleString('cs-CZ')} Kč</strong>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Box>
-      </Paper>
-
-      {/* Pojištění a náklady zaměstnavatele */}
-      <Paper variant="outlined">
-        <Box p={2} display="flex" flexDirection="column" gap={2}>
-          <Typography variant="subtitle1">
-            Pojištění a náklady zaměstnavatele
-          </Typography>
-
-          <Box>
-            <Typography variant="subtitle2">Odvody zaměstnance</Typography>
-            <Table size="small">
-              <TableBody>
-                <TableRow>
-                  <TableCell>Sociální pojištění (zaměstnanec)</TableCell>
-                  <TableCell align="right">
-                    {socialEmployee.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Zdravotní pojištění (zaměstnanec)</TableCell>
-                  <TableCell align="right">
-                    {healthEmployee.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Box>
-
-          <Box>
-            <Typography variant="subtitle2">Odvody zaměstnavatele</Typography>
-            <Table size="small">
-              <TableBody>
-                <TableRow>
-                  <TableCell>Sociální pojištění (zaměstnavatel)</TableCell>
-                  <TableCell align="right">
-                    {socialEmployer.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Zdravotní pojištění (zaměstnavatel)</TableCell>
-                  <TableCell align="right">
-                    {healthEmployer.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <strong>Celkové mzdové náklady zaměstnavatele</strong>
-                  </TableCell>
-                  <TableCell align="right">
-                    <strong>
-                      {totalEmployerCost.toLocaleString('cs-CZ')} Kč
-                    </strong>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Box>
-
-          {socialCapMonth && (
-            <Alert severity="info" variant="standard">
-              Při této výši mzdy byste dosáhl(a) ročního stropu pro
-              sociální pojištění přibližně v {socialCapMonth}. měsíci.
-              V dalších měsících roku by se čistá mzda zvýšila o částku
-              odpovídající neplacenému sociálnímu pojištění.
-            </Alert>
-          )}
-        </Box>
-      </Paper>
-
-      {/* Rozpis slev – jen při zálohové dani */}
-      {!srazkova && (
-        <Paper variant="outlined">
-          <Box p={2}>
-            <Typography variant="subtitle1">Rozpis slev na dani</Typography>
-            <Table size="small">
-              <TableBody>
-                <TableRow>
-                  <TableCell>Sleva na poplatníka</TableCell>
-                  <TableCell align="right">
-                    −{credits.basicCredit.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-
-                {credits.ztpPHoldCredit > 0 && (
-                  <TableRow>
-                    <TableCell>Sleva pro držitele průkazu ZTP/P</TableCell>
-                    <TableCell align="right">
-                      −{credits.ztpPHoldCredit.toLocaleString('cs-CZ')} Kč
-                    </TableCell>
-                  </TableRow>
-                )}
-
-                {credits.spouseCredit > 0 && (
-                  <TableRow>
-                    <TableCell>Sleva na manžela/manželku</TableCell>
-                    <TableCell align="right">
-                      −{credits.spouseCredit.toLocaleString('cs-CZ')} Kč
-                    </TableCell>
-                  </TableRow>
-                )}
-
-                {credits.studentCredit > 0 && (
-                  <TableRow>
-                    <TableCell>Sleva na studenta</TableCell>
-                    <TableCell align="right">
-                      −{credits.studentCredit.toLocaleString('cs-CZ')} Kč
-                    </TableCell>
-                  </TableRow>
-                )}
-
-                {credits.disabilityCredit > 0 && (
-                  <TableRow>
-                    <TableCell>Sleva na invaliditu</TableCell>
-                    <TableCell align="right">
-                      −{credits.disabilityCredit.toLocaleString('cs-CZ')} Kč
-                    </TableCell>
-                  </TableRow>
-                )}
-
-                {credits.childrenTotal > 0 && (
-                  <>
-                    <TableRow>
-                      <TableCell>Sleva na děti celkem</TableCell>
-                      <TableCell align="right">
-                        −{credits.childrenTotal.toLocaleString('cs-CZ')} Kč
-                      </TableCell>
-                    </TableRow>
-
-                    {credits.child1 > 0 && (
-                      <TableRow>
-                        <TableCell>Z toho 1. dítě</TableCell>
-                        <TableCell align="right">
-                          −{credits.child1.toLocaleString('cs-CZ')} Kč
-                        </TableCell>
-                      </TableRow>
-                    )}
-
-                    {credits.child2 > 0 && (
-                      <TableRow>
-                        <TableCell>Z toho 2. dítě</TableCell>
-                        <TableCell align="right">
-                          −{credits.child2.toLocaleString('cs-CZ')} Kč
-                        </TableCell>
-                      </TableRow>
-                    )}
-
-                    {credits.child3plus > 0 && (
-                      <TableRow>
-                        <TableCell>Z toho 3. a další děti</TableCell>
-                        <TableCell align="right">
-                          −{credits.child3plus.toLocaleString('cs-CZ')} Kč
-                        </TableCell>
-                      </TableRow>
-                    )}
-
-                    {credits.childZtpPBonus > 0 && (
-                      <TableRow>
-                        <TableCell>Navýšení za děti ZTP/P</TableCell>
-                        <TableCell align="right">
-                          −{credits.childZtpPBonus.toLocaleString('cs-CZ')} Kč
-                        </TableCell>
-                      </TableRow>
-                    )}
-                  </>
-                )}
-
-                <TableRow>
-                  <TableCell>
-                    <strong>Celkové slevy</strong>
-                  </TableCell>
-                  <TableCell align="right">
-                    −{credits.totalCredits.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Box>
-        </Paper>
-      )}
-
-      {/* Ovládací tlačítka */}
-      <Box display="flex" justifyContent="space-between" mt={1}>
-        <Button variant="outlined" onClick={onBack}>
-          Zpět
-        </Button>
-        <Button variant="text" onClick={onRestart}>
-          Začít znovu
-        </Button>
+function Row({ label, value, bold, color, indent, tooltip }) {
+  return (
+    <Box
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+      py={0.4}
+      pl={indent ? 2 : 0}
+    >
+      <Box display="flex" alignItems="center">
+        <Typography
+          variant="body2"
+          fontWeight={bold ? 700 : 400}
+          color={color || 'text.primary'}
+        >
+          {label}
+        </Typography>
+        {tooltip && <Info text={tooltip} />}
       </Box>
+      <Typography
+        variant="body2"
+        fontWeight={bold ? 700 : 400}
+        color={color || 'text.primary'}
+      >
+        {value}
+      </Typography>
     </Box>
   );
 }
 
-export default StepSummary;
+export default function StepSummary({ form, result, onBack, onRestart }) {
+  if (!result) return null;
+
+  const {
+    gross, net, taxBase, taxBeforeCredits, tax, childBonus,
+    socialEmployee, healthEmployee, socialEmployer, healthEmployer,
+    totalEmployerCost, socialCapMonth, credits, srazkova,
+  } = result;
+
+  const BG_COLOR = '#e3f2fd';
+  const PRIMARY = '#1565c0';
+
+  return (
+    <Box display="flex" flexDirection="column" gap={2.5}>
+
+      {/* ── Srážková daň upozornění ── */}
+      {srazkova && (
+        <Alert severity="warning" variant="outlined">
+          Bez podepsaného prohlášení poplatníka se uplatňuje srážková daň 15 %.
+          Slevy na dani nelze uplatnit. Daň je konečná.
+        </Alert>
+      )}
+
+      {/* ── Hlavní výsledek ── */}
+      <Paper
+        elevation={0}
+        sx={{
+          bgcolor: BG_COLOR,
+          border: '1.5px solid',
+          borderColor: PRIMARY,
+          borderRadius: 3,
+          p: 3,
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="body2" color="text.secondary" mb={0.5}>
+          Čistá mzda
+        </Typography>
+        <Typography variant="h4" fontWeight={900} color={PRIMARY}>
+          {fmt(net)}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" mt={0.5}>
+          z hrubé mzdy {fmt(gross)}
+        </Typography>
+        {childBonus > 0 && (
+          <Chip
+            label={`Daňový bonus na děti: ${fmt(childBonus)}`}
+            color="success"
+            size="small"
+            sx={{ mt: 1.5 }}
+          />
+        )}
+        {socialCapMonth && (
+          <Chip
+            label={`Roční strop SP dosažen ~v měsíci ${socialCapMonth}`}
+            color="info"
+            size="small"
+            sx={{ mt: 1, ml: 1 }}
+          />
+        )}
+      </Paper>
+
+      {/* ── Mzda a daň ── */}
+      <Paper elevation={2} sx={{ borderRadius: 3, p: 2.5 }}>
+        <Typography variant="subtitle2" fontWeight={700} color="primary" mb={1}>
+          Mzda a daň
+        </Typography>
+
+        <Row label="Hrubá mzda" value={fmt(gross)} bold />
+        <Row
+          label="Daňový základ"
+          value={fmt(taxBase)}
+          tooltip="Základ pro výpočet daně – u HPP roven hrubé mzdě."
+        />
+        <Divider sx={{ my: 1 }} />
+        <Row
+          label={srazkova ? 'Srážková daň (15 %)' : 'Daň před slevami'}
+          value={fmt(taxBeforeCredits)}
+        />
+        {!srazkova && (
+          <Row
+            label="Slevy na dani"
+            value={`− ${fmt(credits.totalCredits)}`}
+            color="text.secondary"
+            tooltip="Součet všech uplatněných slev a daňového zvýhodnění."
+          />
+        )}
+        <Row label="Výsledná daň" value={fmt(tax)} />
+        {childBonus > 0 && (
+          <Row
+            label="Daňový bonus na děti"
+            value={`+ ${fmt(childBonus)}`}
+            color="success.main"
+            bold
+          />
+        )}
+        <Divider sx={{ my: 1 }} />
+        <Row label="Čistá mzda" value={fmt(net)} bold color={PRIMARY} />
+      </Paper>
+
+      {/* ── Pojištění ── */}
+      <Paper elevation={2} sx={{ borderRadius: 3, p: 2.5 }}>
+        <Typography variant="subtitle2" fontWeight={700} color="primary" mb={1}>
+          Pojištění a náklady zaměstnavatele
+        </Typography>
+
+        <Typography variant="caption" color="text.secondary" display="block" mb={0.5}>
+          Odvody zaměstnance
+        </Typography>
+        <Row
+          label="Sociální pojištění"
+          value={fmt(socialEmployee)}
+          indent
+          tooltip="7,1 % z hrubé mzdy"
+        />
+        <Row
+          label="Zdravotní pojištění"
+          value={fmt(healthEmployee)}
+          indent
+          tooltip="4,5 % z hrubé mzdy"
+        />
+
+        <Divider sx={{ my: 1 }} />
+
+        <Typography variant="caption" color="text.secondary" display="block" mb={0.5}>
+          Odvody zaměstnavatele
+        </Typography>
+        <Row
+          label="Sociální pojištění"
+          value={fmt(socialEmployer)}
+          indent
+          tooltip="24,8 % z hrubé mzdy"
+        />
+        <Row
+          label="Zdravotní pojištění"
+          value={fmt(healthEmployer)}
+          indent
+          tooltip="9 % z hrubé mzdy"
+        />
+        <Divider sx={{ my: 1 }} />
+        <Row
+          label="Celkové mzdové náklady zaměstnavatele"
+          value={fmt(totalEmployerCost)}
+          bold
+          tooltip="Hrubá mzda + odvody zaměstnavatele."
+        />
+
+        {socialCapMonth && (
+          <Alert severity="info" variant="standard" sx={{ mt: 1.5 }}>
+            Při této výši mzdy dosáhnete ročního stropu pro sociální pojištění
+            přibližně v <strong>{socialCapMonth}. měsíci</strong>. V dalších
+            měsících roku se čistá mzda zvýší o ušetřené sociální pojištění.
+          </Alert>
+        )}
+      </Paper>
+
+      {/* ── Detail slev (Accordion) ── */}
+      {!srazkova && (
+        <Accordion elevation={2} sx={{ borderRadius: '12px !important' }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography variant="subtitle2" fontWeight={700}>
+              Detail slev na dani
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Row
+              label="Sleva na poplatníka"
+              value={fmt(credits.basicCredit)}
+              indent
+            />
+            {credits.ztpPHoldCredit > 0 && (
+              <Row
+                label="Sleva – držitel průkazu ZTP/P"
+                value={fmt(credits.ztpPHoldCredit)}
+                indent
+              />
+            )}
+            {credits.spouseCredit > 0 && (
+              <Row
+                label="Sleva na manžela/manželku"
+                value={fmt(credits.spouseCredit)}
+                indent
+              />
+            )}
+            {credits.disabilityCredit > 0 && (
+              <Row
+                label="Sleva na invaliditu"
+                value={fmt(credits.disabilityCredit)}
+                indent
+              />
+            )}
+            {credits.childrenTotal > 0 && (
+              <>
+                <Divider sx={{ my: 1 }} />
+                <Typography variant="caption" color="text.secondary" display="block" mb={0.5} pl={2}>
+                  Daňové zvýhodnění na děti
+                </Typography>
+                {credits.child1 > 0 && (
+                  <Row label="1. dítě" value={fmt(credits.child1)} indent />
+                )}
+                {credits.child2 > 0 && (
+                  <Row label="2. dítě" value={fmt(credits.child2)} indent />
+                )}
+                {credits.child3plus > 0 && (
+                  <Row label="3. a další děti" value={fmt(credits.child3plus)} indent />
+                )}
+                {credits.childZtpPBonus > 0 && (
+                  <Row
+                    label="Příplatek ZTP/P dítě"
+                    value={fmt(credits.childZtpPBonus)}
+                    indent
+                  />
+                )}
+              </>
+            )}
+            <Divider sx={{ my: 1 }} />
+            <Row
+              label="Celkové slevy a zvýhodnění"
+              value={fmt(credits.totalCredits)}
+              bold
+            />
+          </AccordionDetails>
+        </Accordion>
+      )}
+
+      {/* ── Ovládací tlačítka ── */}
+      <Box display="flex" justifyContent="space-between" gap={1} mt={1}>
+        <Button
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+          onClick={onBack}
+          sx={{ borderRadius: 2 }}
+        >
+          Zpět
+        </Button>
+        <Button
+          variant="outlined"
+          startIcon={<RestartAltIcon />}
+          onClick={onRestart}
+          sx={{ borderRadius: 2 }}
+        >
+          Začít znovu
+        </Button>
+      </Box>
+
+    </Box>
+  );
+}
