@@ -44,32 +44,33 @@ function CalculatorTile({ title, description, active, onClick, color }) {
 }
 
 function CalculatorTiles({ onSelect }) {
-  const tiles = [
-    {
-      id: 'salary2026',
-      title: 'Čistá mzda 2026',
-      description: 'Výpočet čisté mzdy zaměstnance v roce 2026.',
-      color: '#e3f2fd',
-    },
-    {
-      id: 'dpp',
-      title: 'DPP / DPČ',
-      description: 'Kalkulačka pro dohody (bude doplněno).',
-      color: '#e8f5e9',
-    },
-    {
-      id: 'annual-tax',
-      title: 'Roční daně zaměstnance',
-      description: 'Roční zúčtování daně (bude doplněno).',
-      color: '#fff3e0',
-    },
-    {
-      id: 'self-employed',
-      title: 'OSVČ / Paušální daň',
-      description: 'Kalkulačka pro OSVČ (bude doplněno).',
-      color: '#f3e5f5',
-    },
-  ];
+    const tiles = [
+        {
+            id: 'salary2026',
+            title: 'Čistá mzda 2026',
+            description: 'Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev.',
+            color: '#e3f2fd',
+        },
+        {
+            id: 'dpp',
+            title: 'DPP / DPČ',
+            description: 'Výpočet čisté odměny z dohody o provedení práce nebo pracovní činnosti. Připravujeme.',
+            color: '#e8f5e9',
+        },
+        {
+            id: 'annual-tax',
+            title: 'Roční daně zaměstnance',
+            description: 'Roční zúčtování daně z příjmu pro zaměstnance. Připravujeme.',
+            color: '#fff3e0',
+        },
+        {
+            id: 'self-employed',
+            title: 'OSVČ / Paušální daň',
+            description: 'Výpočet odvodů a daní pro osoby samostatně výdělečně činné. Připravujeme.',
+            color: '#f3e5f5',
+        },
+    ];
+
 
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
