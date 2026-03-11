@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import SalaryWizard from './components/SalaryWizard/SalaryWizard';
+import LoanCalculator from './components/LoanCalculator/LoanCalculator';
 import CalculatorTiles from './components/CalculatorTiles/CalculatorTiles';
 import HomeContent from './components/HomeContent/HomeContent';
 import AdSlot from './components/Ads/AdSlot';
@@ -13,9 +14,9 @@ const CALCULATOR_META = {
     title: 'Kalkulačka čisté mzdy 2026',
     subtitle: 'Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev.',
   },
-  dpp: {
-    title: 'Kalkulačka DPP / DPČ',
-    subtitle: 'Výpočet čisté odměny z dohody o provedení práce nebo pracovní činnosti.',
+  loan: {
+    title: 'Kalkulačka půjčky',
+    subtitle: 'Výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky.',
   },
   'annual-tax': {
     title: 'Roční daně zaměstnance',
@@ -66,6 +67,7 @@ function App() {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
+        ml={2}
       >
         <Box>
           {!activeCalculator && (
@@ -149,7 +151,8 @@ function App() {
                 borderRadius: 2,
                 p: { xs: 2, sm: 3 },
                 boxShadow: 2,
-                flexShrink: 0,
+                alignSelf: 'flex-start',
+                //flexShrink: 0,
               }}
             >
               <Typography variant="h5" gutterBottom>
@@ -169,8 +172,53 @@ function App() {
         </Box>
       )}
 
+      {/* Kalkulačka půjčky */}
+      {activeCalculator === 'loan' && (
+        <Box mt={4}>
+          <Box mb={2}>
+            <AdSlot id="salary-top" position="top" />
+          </Box>
+
+          <Box
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            gap={2}
+            justifyContent="center"
+          >
+            <Box
+              sx={{
+                width: '100%',
+                maxWidth: 800,
+                bgcolor: '#e8f5e955',
+                borderRadius: 2,
+                p: { xs: 2, sm: 3 },
+                boxShadow: 2,
+                alignSelf: 'flex-start',
+              }}
+            >
+              <Typography variant="h5" gutterBottom>
+                Kalkulačka půjčky
+              </Typography>
+              <LoanCalculator />
+            </Box>
+
+            <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
+              <AdSlot id="salary-side" position="side" />
+            </Box>
+          </Box>
+
+          <Box mt={2}>
+            <AdSlot id="salary-bottom" position="bottom" />
+          </Box>
+        </Box>
+      )}
+
+
       {/* Fallback stránky pro ostatní kalkulačky */}
-      {activeCalculator && activeCalculator !== 'salary2026' && !isStaticPage && (
+      {activeCalculator &&
+        activeCalculator !== 'salary2026' &&
+        activeCalculator !== 'loan' &&
+        !isStaticPage && (
         <Box mt={4}>
           <Box mb={2}>
             <AdSlot id="other-top" position="top" />

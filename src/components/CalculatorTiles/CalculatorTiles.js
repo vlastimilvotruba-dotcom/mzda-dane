@@ -44,17 +44,17 @@ function CalculatorTile({ title, description, active, onClick, color }) {
 }
 
 function CalculatorTiles({ onSelect }) {
-    const tiles = [
+const tiles = [
         {
             id: 'salary2026',
             title: 'Čistá mzda 2026',
-            description: 'Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev.',
+            description: 'Výpočet čisté mzdy pro HPP, DPP i DPČ včetně odvodů a daňových slev.',
             color: '#e3f2fd',
         },
         {
-            id: 'dpp',
-            title: 'DPP / DPČ',
-            description: 'Výpočet čisté odměny z dohody o provedení práce nebo pracovní činnosti. Připravujeme.',
+            id: 'loan',
+            title: 'Kalkulačka půjčky',
+            description: 'Výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky.',
             color: '#e8f5e9',
         },
         {
@@ -70,6 +70,7 @@ function CalculatorTiles({ onSelect }) {
             color: '#f3e5f5',
         },
     ];
+
 
 
   const theme = useTheme();

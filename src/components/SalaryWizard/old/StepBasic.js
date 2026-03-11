@@ -9,6 +9,8 @@ import {
   InputLabel,
   Select,
   Alert,
+  FormControlLabel,
+  Switch,
 } from '@mui/material';
 
 function StepBasic({ form, onChange, onNext }) {
@@ -21,6 +23,16 @@ function StepBasic({ form, onChange, onNext }) {
 
   const isDPP = form.contractType === 'DPP';
   const isDPC = form.contractType === 'DPC';
+  const isDohoda = isDPP || isDPC;
+
+  // Limit pod který platí srážková daň (pokud není prohlášení)
+  const limitInfo = isDPP ? '12 000 Kč' : '4 500 Kč';
+  const gross = Number(form.grossSalary) || 0;
+  const isPodLimitem = isDPP
+    ? gross < 12000
+    : isDPC
+    ? gross < 4500
+    : false;
 
   return (
     <Box display="flex" flexDirection="column" gap={2}>
@@ -43,17 +55,17 @@ function StepBasic({ form, onChange, onNext }) {
 
       {isDPP && (
         <Alert severity="info" variant="outlined">
-          U DPP se do 12&nbsp;000&nbsp;Kč u jednoho zaměstnavatele
-          neodvádí sociální ani zdravotní pojištění. Při vyšší odměně
-          se pojištění počítá stejně jako u HPP.
+          U DPP se do 11&nbsp;999&nbsp;Kč u jednoho zaměstnavatele
+          neodvádí sociální ani zdravotní pojištění. Při odměně
+          12&nbsp;000&nbsp;Kč a více se pojištění počítá stejně jako u HPP.
         </Alert>
       )}
 
       {isDPC && (
         <Alert severity="info" variant="outlined">
-          U DPČ se do 4&nbsp;500&nbsp;Kč měsíčně neodvádí sociální ani
-          zdravotní pojištění. Při vyšší odměně se pojištění počítá
-          stejně jako u HPP.
+          U DPČ se do 4&nbsp;499&nbsp;Kč měsíčně neodvádí sociální ani
+          zdravotní pojištění. Při odměně 4&nbsp;500&nbsp;Kč a více
+          se pojištění počítá stejně jako u HPP.
         </Alert>
       )}
 
@@ -66,6 +78,36 @@ function StepBasic({ form, onChange, onNext }) {
         onChange={handleChange}
         inputProps={{ min: 0 }}
       />
+
+      {/* Prohlášení poplatníka – jen pro DPP/DPČ */}
+      {isDohoda && (
+        <Box>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={form.taxDeclaration ?? true}
+                onChange={(e) => onChange({ taxDeclaration: e.target.checked })}
+                color="primary"
+              />
+            }
+            label="Podepsal/a jsem prohlášení poplatníka"
+          />
+          {/* Informace o dopadu podle situace */}
+          {form.taxDeclaration ? (
+            <Alert severity="success" variant="outlined" sx={{ mt: 1 }}>
+              {'S podepsaným prohlášením se uplatní zálohová daň a slevy (základní sleva 2 570 Kč/měs. a další).'}
+            </Alert>
+          ) : isPodLimitem ? (
+            <Alert severity="warning" variant="outlined" sx={{ mt: 1 }}>
+              {`Bez prohlášení se z odměny do ${limitInfo} sráží srážková daň 15 % – slevy na dani nelze uplatnit.`}
+            </Alert>
+          ) : (
+            <Alert severity="info" variant="outlined" sx={{ mt: 1 }}>
+              {'Nad limitem pro odvody se daní zálohově i bez prohlášení, slevy však nelze uplatnit.'}
+            </Alert>
+          )}
+        </Box>
+      )}
 
       <FormControl fullWidth>
         <InputLabel id="disability-label">Invalidita</InputLabel>

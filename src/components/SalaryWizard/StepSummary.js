@@ -12,9 +12,7 @@ import {
 } from '@mui/material';
 
 function StepSummary({ form, result, onBack, onRestart }) {
-  if (!result) {
-    return null;
-  }
+  if (!result) return null;
 
   const {
     gross,
@@ -30,11 +28,20 @@ function StepSummary({ form, result, onBack, onRestart }) {
     totalEmployerCost,
     socialCapMonth,
     credits,
+    srazkova,
   } = result;
 
   return (
     <Box display="flex" flexDirection="column" gap={3}>
       <Typography variant="h6">Krok 3 – Souhrn</Typography>
+
+      {/* Info o srážkové dani */}
+      {srazkova && (
+        <Alert severity="warning" variant="outlined">
+          Bez podepsaného prohlášení poplatníka se uplatňuje srážková daň
+          15 % – žádné slevy na dani nelze uplatnit. Daň je konečná.
+        </Alert>
+      )}
 
       {/* Mzda a daň */}
       <Paper variant="outlined">
@@ -55,22 +62,26 @@ function StepSummary({ form, result, onBack, onRestart }) {
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Daň před slevami</TableCell>
+                <TableCell>
+                  {srazkova ? 'Srážková daň (15 %)' : 'Daň před slevami'}
+                </TableCell>
                 <TableCell align="right">
                   {taxBeforeCredits.toLocaleString('cs-CZ')} Kč
                 </TableCell>
               </TableRow>
-              <TableRow>
-                <TableCell>Daň po slevách</TableCell>
-                <TableCell align="right">
-                  {tax.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
+              {!srazkova && (
+                <TableRow>
+                  <TableCell>Daň po slevách</TableCell>
+                  <TableCell align="right">
+                    {tax.toLocaleString('cs-CZ')} Kč
+                  </TableCell>
+                </TableRow>
+              )}
               {childBonus > 0 && (
                 <TableRow>
                   <TableCell>Daňový bonus na děti</TableCell>
                   <TableCell align="right">
-                    {childBonus.toLocaleString('cs-CZ')} Kč
+                    +{childBonus.toLocaleString('cs-CZ')} Kč
                   </TableCell>
                 </TableRow>
               )}
@@ -94,7 +105,6 @@ function StepSummary({ form, result, onBack, onRestart }) {
             Pojištění a náklady zaměstnavatele
           </Typography>
 
-          {/* Odvody zaměstnance */}
           <Box>
             <Typography variant="subtitle2">Odvody zaměstnance</Typography>
             <Table size="small">
@@ -115,7 +125,6 @@ function StepSummary({ form, result, onBack, onRestart }) {
             </Table>
           </Box>
 
-          {/* Odvody zaměstnavatele */}
           <Box>
             <Typography variant="subtitle2">Odvody zaměstnavatele</Typography>
             <Table size="small">
@@ -148,8 +157,8 @@ function StepSummary({ form, result, onBack, onRestart }) {
 
           {socialCapMonth && (
             <Alert severity="info" variant="standard">
-              Při této výši mzdy byste dosáhl(a) ročního stropu
-              pro sociální pojištění přibližně v {socialCapMonth}. měsíci.
+              Při této výši mzdy byste dosáhl(a) ročního stropu pro
+              sociální pojištění přibližně v {socialCapMonth}. měsíci.
               V dalších měsících roku by se čistá mzda zvýšila o částku
               odpovídající neplacenému sociálnímu pojištění.
             </Alert>
@@ -157,114 +166,116 @@ function StepSummary({ form, result, onBack, onRestart }) {
         </Box>
       </Paper>
 
-      {/* Rozpis slev na dani */}
-      <Paper variant="outlined">
-        <Box p={2}>
-          <Typography variant="subtitle1">Rozpis slev na dani</Typography>
-          <Table size="small">
-            <TableBody>
-              <TableRow>
-                <TableCell>Sleva na poplatníka</TableCell>
-                <TableCell align="right">
-                  −{credits.basicCredit.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
-
-              {credits.ztpPHoldCredit > 0 && (
+      {/* Rozpis slev – jen při zálohové dani */}
+      {!srazkova && (
+        <Paper variant="outlined">
+          <Box p={2}>
+            <Typography variant="subtitle1">Rozpis slev na dani</Typography>
+            <Table size="small">
+              <TableBody>
                 <TableRow>
-                  <TableCell>Sleva pro držitele průkazu ZTP/P</TableCell>
+                  <TableCell>Sleva na poplatníka</TableCell>
                   <TableCell align="right">
-                    −{credits.ztpPHoldCredit.toLocaleString('cs-CZ')} Kč
+                    −{credits.basicCredit.toLocaleString('cs-CZ')} Kč
                   </TableCell>
                 </TableRow>
-              )}
 
-              {credits.spouseCredit > 0 && (
-                <TableRow>
-                  <TableCell>Sleva na manžela/manželku</TableCell>
-                  <TableCell align="right">
-                    −{credits.spouseCredit.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              )}
-
-              {credits.studentCredit > 0 && (
-                <TableRow>
-                  <TableCell>Sleva na studenta</TableCell>
-                  <TableCell align="right">
-                    −{credits.studentCredit.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              )}
-
-              {credits.disabilityCredit > 0 && (
-                <TableRow>
-                  <TableCell>Sleva na invaliditu</TableCell>
-                  <TableCell align="right">
-                    −{credits.disabilityCredit.toLocaleString('cs-CZ')} Kč
-                  </TableCell>
-                </TableRow>
-              )}
-
-              {credits.childrenTotal > 0 && (
-                <>
+                {credits.ztpPHoldCredit > 0 && (
                   <TableRow>
-                    <TableCell>Sleva na děti celkem</TableCell>
+                    <TableCell>Sleva pro držitele průkazu ZTP/P</TableCell>
                     <TableCell align="right">
-                      −{credits.childrenTotal.toLocaleString('cs-CZ')} Kč
+                      −{credits.ztpPHoldCredit.toLocaleString('cs-CZ')} Kč
                     </TableCell>
                   </TableRow>
+                )}
 
-                  {credits.child1 > 0 && (
+                {credits.spouseCredit > 0 && (
+                  <TableRow>
+                    <TableCell>Sleva na manžela/manželku</TableCell>
+                    <TableCell align="right">
+                      −{credits.spouseCredit.toLocaleString('cs-CZ')} Kč
+                    </TableCell>
+                  </TableRow>
+                )}
+
+                {credits.studentCredit > 0 && (
+                  <TableRow>
+                    <TableCell>Sleva na studenta</TableCell>
+                    <TableCell align="right">
+                      −{credits.studentCredit.toLocaleString('cs-CZ')} Kč
+                    </TableCell>
+                  </TableRow>
+                )}
+
+                {credits.disabilityCredit > 0 && (
+                  <TableRow>
+                    <TableCell>Sleva na invaliditu</TableCell>
+                    <TableCell align="right">
+                      −{credits.disabilityCredit.toLocaleString('cs-CZ')} Kč
+                    </TableCell>
+                  </TableRow>
+                )}
+
+                {credits.childrenTotal > 0 && (
+                  <>
                     <TableRow>
-                      <TableCell>Z toho 1. dítě</TableCell>
+                      <TableCell>Sleva na děti celkem</TableCell>
                       <TableCell align="right">
-                        −{credits.child1.toLocaleString('cs-CZ')} Kč
+                        −{credits.childrenTotal.toLocaleString('cs-CZ')} Kč
                       </TableCell>
                     </TableRow>
-                  )}
 
-                  {credits.child2 > 0 && (
-                    <TableRow>
-                      <TableCell>Z toho 2. dítě</TableCell>
-                      <TableCell align="right">
-                        −{credits.child2.toLocaleString('cs-CZ')} Kč
-                      </TableCell>
-                    </TableRow>
-                  )}
+                    {credits.child1 > 0 && (
+                      <TableRow>
+                        <TableCell>Z toho 1. dítě</TableCell>
+                        <TableCell align="right">
+                          −{credits.child1.toLocaleString('cs-CZ')} Kč
+                        </TableCell>
+                      </TableRow>
+                    )}
 
-                  {credits.child3plus > 0 && (
-                    <TableRow>
-                      <TableCell>Z toho 3. a další děti</TableCell>
-                      <TableCell align="right">
-                        −{credits.child3plus.toLocaleString('cs-CZ')} Kč
-                      </TableCell>
-                    </TableRow>
-                  )}
+                    {credits.child2 > 0 && (
+                      <TableRow>
+                        <TableCell>Z toho 2. dítě</TableCell>
+                        <TableCell align="right">
+                          −{credits.child2.toLocaleString('cs-CZ')} Kč
+                        </TableCell>
+                      </TableRow>
+                    )}
 
-                  {credits.childZtpPBonus > 0 && (
-                    <TableRow>
-                      <TableCell>Navýšení za děti ZTP/P</TableCell>
-                      <TableCell align="right">
-                        −{credits.childZtpPBonus.toLocaleString('cs-CZ')} Kč
-                      </TableCell>
-                    </TableRow>
-                  )}
-                </>
-              )}
+                    {credits.child3plus > 0 && (
+                      <TableRow>
+                        <TableCell>Z toho 3. a další děti</TableCell>
+                        <TableCell align="right">
+                          −{credits.child3plus.toLocaleString('cs-CZ')} Kč
+                        </TableCell>
+                      </TableRow>
+                    )}
 
-              <TableRow>
-                <TableCell>
-                  <strong>Celkové slevy</strong>
-                </TableCell>
-                <TableCell align="right">
-                  −{credits.totalCredits.toLocaleString('cs-CZ')} Kč
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Box>
-      </Paper>
+                    {credits.childZtpPBonus > 0 && (
+                      <TableRow>
+                        <TableCell>Navýšení za děti ZTP/P</TableCell>
+                        <TableCell align="right">
+                          −{credits.childZtpPBonus.toLocaleString('cs-CZ')} Kč
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </>
+                )}
+
+                <TableRow>
+                  <TableCell>
+                    <strong>Celkové slevy</strong>
+                  </TableCell>
+                  <TableCell align="right">
+                    −{credits.totalCredits.toLocaleString('cs-CZ')} Kč
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Box>
+        </Paper>
+      )}
 
       {/* Ovládací tlačítka */}
       <Box display="flex" justifyContent="space-between" mt={1}>

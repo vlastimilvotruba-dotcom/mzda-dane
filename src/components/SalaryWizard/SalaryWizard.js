@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import StepBasic from './StepBasic';
-import StepTaxCredits from './StepTaxCredits';
+import StepForm from './StepForm';
 import StepSummary from './StepSummary';
 import { calculateNetSalary2026 } from '../../logic/salary2026';
 
@@ -8,12 +7,11 @@ const initialForm = {
   contractType: 'HPP',
   grossSalary: '',
   disability: 'none',
-  // daňové slevy:
   childrenCount: 0,
   childrenZtpP: 0,
   spouseClaim: false,
-  student: false,
-  ztpP: false, // poplatník držitel průkazu ZTP/P
+  ztpP: false,
+  taxDeclaration: true,
 };
 
 function SalaryWizard() {
@@ -25,39 +23,27 @@ function SalaryWizard() {
     setForm((prev) => ({ ...prev, ...partial }));
   };
 
-  const next = () => setStep((s) => Math.min(s + 1, 2));
-  const back = () => setStep((s) => Math.max(s - 1, 0));
-
   const handleCalculate = () => {
     const res = calculateNetSalary2026(form);
     setResult(res);
-    setStep(2);
+    setStep(1);
   };
 
   return (
     <div>
       {step === 0 && (
-        <StepBasic
+        <StepForm
           form={form}
           onChange={updateForm}
-          onNext={next}
+          onCalculate={handleCalculate}
         />
       )}
 
       {step === 1 && (
-        <StepTaxCredits
-          form={form}
-          onChange={updateForm}
-          onBack={back}
-          onNext={handleCalculate}
-        />
-      )}
-
-      {step === 2 && (
         <StepSummary
           form={form}
           result={result}
-          onBack={() => setStep(1)}
+          onBack={() => setStep(0)}
           onRestart={() => {
             setForm(initialForm);
             setResult(null);
