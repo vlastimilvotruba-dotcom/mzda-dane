@@ -40,12 +40,12 @@ function HomeContent() {
           {' – zadejte hrubou mzdu, slevy a počet dětí, kalkulačka spočítá odvody, daň a výslednou čistou mzdu.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          <strong>Kalkulačka DPP / DPČ</strong>
-          {' – výpočet čisté odměny z dohody o provedení práce nebo dohody o pracovní činnosti (připravujeme).'}
+          <strong>Kalkulačka půjčky</strong>
+          {' – výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
           <strong>Roční daně zaměstnance</strong>
-          {' – roční zúčtování daně z příjmu pro zaměstnance (připravujeme).'}
+          {' – roční zúčtování daně z příjmu pro zaměstnance.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
           <strong>OSVČ / Paušální daň</strong>
