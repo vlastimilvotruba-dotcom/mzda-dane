@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Box, Container, Typography, Button } from '@mui/material';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
@@ -13,35 +15,10 @@ import AdSlot from './components/Ads/AdSlot';
 import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import AboutPage from './components/AboutPage/AboutPage';
+import SalaryContent from './components/PageContent/SalaryContent';
+import LoanContent from './components/PageContent/LoanContent';
+import AnnualTaxContent from './components/PageContent/AnnualTaxContent';
 
-const CALCULATOR_META = {
-  'salary2026': {
-    title:    'Kalkulačka čisté mzdy 2026',
-    subtitle: 'Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev.',
-  },
-  'loan': {
-    title:    'Kalkulačka půjčky',
-    subtitle: 'Výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky.',
-  },
-  'annual-tax': {
-    title:    'Roční zúčtování daní 2026',
-    subtitle: 'Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance.',
-  },
-  'self-employed': {
-    title:    'OSVČ / Paušální daň',
-    subtitle: 'Výpočet odvodů a daní pro osoby samostatně výdělečně činné.',
-  },
-  'privacy': {
-    title:    'Zásady ochrany osobních údajů',
-    subtitle: '',
-  },
-  'about': {
-    title:    'O webu',
-    subtitle: '',
-  },
-};
-
-// Stejné akcenty a ikony jako v CalculatorTiles
 const TILE_ACCENT = {
   'salary2026':    '#1565c0',
   'loan':          '#2e7d32',
@@ -59,16 +36,9 @@ const TILE_ICON = {
 function CalcTitle({ id, title }) {
   const accent = TILE_ACCENT[id];
   const Icon   = TILE_ICON[id];
-
   if (!accent) {
-    // Statické stránky (privacy, about) – bez ikony a barvy
-    return (
-      <Typography variant="h5" gutterBottom>
-        {title}
-      </Typography>
-    );
+    return <Typography variant="h5" gutterBottom>{title}</Typography>;
   }
-
   return (
     <Box display="flex" alignItems="center" gap={1} mb={1}>
       {Icon && <Icon sx={{ color: accent, fontSize: 28 }} />}
@@ -79,247 +49,218 @@ function CalcTitle({ id, title }) {
   );
 }
 
-function App() {
-  const [activeCalculator, setActiveCalculator] = useState(null);
-  const [activeColor, setActiveColor]           = useState('#ffffff');
-
-  const handleSelectCalculator = (id, color) => {
-    setActiveCalculator(id);
-    setActiveColor(color || '#ffffff');
-  };
-
-  const handleBackHome = () => {
-    setActiveCalculator(null);
-    setActiveColor('#ffffff');
-  };
-
-  const handleNavigate = (page) => {
-    setActiveCalculator(page);
-    setActiveColor('#ffffff');
-  };
-
-  const meta          = activeCalculator ? CALCULATOR_META[activeCalculator] : null;
-  const isStaticPage  = activeCalculator === 'privacy' || activeCalculator === 'about';
-  const isImplemented =
-    activeCalculator === 'salary2026' ||
-    activeCalculator === 'loan' ||
-    activeCalculator === 'annual-tax';
-
+function Header({ showBack, subtitle }) {
+  const navigate = useNavigate();
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
-
-      {/* ── Header ── */}
-      <Box mb={3} display="flex" justifyContent="space-between" alignItems="center" ml={2}>
-        <Box>
-          {!activeCalculator && (
-            <>
-              <Typography variant="h4" component="h1" gutterBottom>
-                Mzda a daně
+    <Box mb={3} display="flex" justifyContent="space-between" alignItems="center" ml={2}>
+      <Box>
+        {!showBack && (
+          <>
+            <Typography variant="h4" component="h1" gutterBottom>
+              Mzda a daně
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              Jednoduché kalkulačky pro mzdu a daně v ČR.
+            </Typography>
+          </>
+        )}
+        {showBack && (
+          <Box>
+            <Typography variant="h6" component="h1" sx={{ display: { xs: 'none', sm: 'block' } }}>
+              Mzda a daně
+            </Typography>
+            {subtitle && (
+              <Typography variant="body2" color="text.secondary" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {subtitle}
               </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Jednoduché kalkulačky pro mzdu a daně v ČR.
-              </Typography>
-            </>
-          )}
-          {activeCalculator && (
-            <Box>
-              <Typography
-                variant="h6"
-                component="h1"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-              >
-                Mzda a daně
-              </Typography>
-              {meta?.subtitle && (
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ display: { xs: 'none', sm: 'block' } }}
-                >
-                  {meta.subtitle}
-                </Typography>
-              )}
-            </Box>
-          )}
-        </Box>
-
-        {activeCalculator && (
-          <Button
-            variant="outlined"
-            size="small"
-            onClick={handleBackHome}
-            sx={{
-              fontSize: { xs: '0.75rem', sm: '0.875rem' },
-              py:       { xs: 0.5,       sm: 0.75 },
-              px:       { xs: 1.25,      sm: 2 },
-            }}
-          >
-            Zpět na úvod
-          </Button>
+            )}
+          </Box>
         )}
       </Box>
-
-      {/* ── Úvodní rozcestník ── */}
-      {!activeCalculator && (
-        <Box>
-          <CalculatorTiles onSelect={handleSelectCalculator} />
-          <Box mt={2}>
-            <AdSlot id="home-bottom" position="bottom" />
-          </Box>
-          <HomeContent />
-        </Box>
+      {showBack && (
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={() => navigate('/')}
+          sx={{
+            fontSize: { xs: '0.75rem', sm: '0.875rem' },
+            py:       { xs: 0.5,       sm: 0.75 },
+            px:       { xs: 1.25,      sm: 2 },
+          }}
+        >
+          Zpět na úvod
+        </Button>
       )}
+    </Box>
+  );
+}
 
-      {/* ── Kalkulačka čisté mzdy 2026 ── */}
-      {activeCalculator === 'salary2026' && (
-        <Box mt={4}>
-          <Box mb={2}>
-            <AdSlot id="salary-top" position="top" />
-          </Box>
-          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
-            <Box
-              sx={{
-                width: '100%', maxWidth: 800,
-                bgcolor: `${activeColor}55`,
-                borderRadius: 2,
-                p: { xs: 2, sm: 3 },
-                boxShadow: 2,
-                alignSelf: 'flex-start',
-              }}
-            >
-              <CalcTitle id="salary2026" title={meta.title} />
-              <SalaryWizard />
-            </Box>
-            <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
-              <AdSlot id="salary-side" position="side" />
-            </Box>
-          </Box>
-          <Box mt={2}>
-            <AdSlot id="salary-bottom" position="bottom" />
-          </Box>
-        </Box>
-      )}
+function HomePage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack={false} />
+      <CalculatorTiles />
+      <Box mt={2}>
+        <AdSlot id="home-bottom" position="bottom" />
+      </Box>
+      <HomeContent />
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
-      {/* ── Kalkulačka půjčky ── */}
-      {activeCalculator === 'loan' && (
-        <Box mt={4}>
-          <Box mb={2}>
-            <AdSlot id="loan-top" position="top" />
+function SalaryPage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack subtitle="Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev." />
+      <Box mt={4}>
+        <Box mb={2}><AdSlot id="salary-top" position="top" /></Box>
+        <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
+          <Box sx={{ width: '100%', maxWidth: 800, bgcolor: '#e3f2fd55', borderRadius: 2, p: { xs: 2, sm: 3 }, boxShadow: 2, alignSelf: 'flex-start' }}>
+            <CalcTitle id="salary2026" title="Kalkulačka čisté mzdy 2026" />
+            <SalaryWizard />
           </Box>
-          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
-            <Box
-              sx={{
-                width: '100%', maxWidth: 800,
-                bgcolor: '#e8f5e955',
-                borderRadius: 2,
-                p: { xs: 2, sm: 3 },
-                boxShadow: 2,
-                alignSelf: 'flex-start',
-              }}
-            >
-              <CalcTitle id="loan" title={meta.title} />
-              <LoanCalculator />
-            </Box>
-            <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
-              <AdSlot id="loan-side" position="side" />
-            </Box>
-          </Box>
-          <Box mt={2}>
-            <AdSlot id="loan-bottom" position="bottom" />
+          <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
+            <AdSlot id="salary-side" position="side" />
           </Box>
         </Box>
-      )}
+        <Box mt={2}><AdSlot id="salary-bottom" position="bottom" /></Box>
+      </Box>
+      <SalaryContent />
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
-      {/* ── Roční zúčtování daní ── */}
-      {activeCalculator === 'annual-tax' && (
-        <Box mt={4}>
-          <Box mb={2}>
-            <AdSlot id="annual-top" position="top" />
+function LoanPage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack subtitle="Výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky." />
+      <Box mt={4}>
+        <Box mb={2}><AdSlot id="loan-top" position="top" /></Box>
+        <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
+          <Box sx={{ width: '100%', maxWidth: 800, bgcolor: '#e8f5e955', borderRadius: 2, p: { xs: 2, sm: 3 }, boxShadow: 2, alignSelf: 'flex-start' }}>
+            <CalcTitle id="loan" title="Kalkulačka půjčky" />
+            <LoanCalculator />
           </Box>
-          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
-            <Box
-              sx={{
-                width: '100%', maxWidth: 800,
-                bgcolor: '#fff3e055',
-                borderRadius: 2,
-                p: { xs: 2, sm: 3 },
-                boxShadow: 2,
-                alignSelf: 'flex-start',
-              }}
-            >
-              <CalcTitle id="annual-tax" title={meta.title} />
-              <AnnualTaxWizard onBack={handleBackHome} />
-            </Box>
-            <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
-              <AdSlot id="annual-side" position="side" />
-            </Box>
-          </Box>
-          <Box mt={2}>
-            <AdSlot id="annual-bottom" position="bottom" />
+          <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
+            <AdSlot id="loan-side" position="side" />
           </Box>
         </Box>
-      )}
+        <Box mt={2}><AdSlot id="loan-bottom" position="bottom" /></Box>
+      </Box>
+      <LoanContent />
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
-      {/* ── Fallback – kalkulačky ve vývoji ── */}
-      {activeCalculator && !isImplemented && !isStaticPage && (
-        <Box mt={4}>
-          <Box mb={2}>
-            <AdSlot id="other-top" position="top" />
+function AnnualTaxPage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack subtitle="Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance." />
+      <Box mt={4}>
+        <Box mb={2}><AdSlot id="annual-top" position="top" /></Box>
+        <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
+          <Box sx={{ width: '100%', maxWidth: 800, bgcolor: '#fff3e055', borderRadius: 2, p: { xs: 2, sm: 3 }, boxShadow: 2, alignSelf: 'flex-start' }}>
+            <CalcTitle id="annual-tax" title="Roční zúčtování daní 2026" />
+            <AnnualTaxWizard onBack={() => navigate('/')} />
           </Box>
-          <Box display="flex" justifyContent="center">
-            <Box
-              sx={{
-                width: '100%', maxWidth: 800,
-                bgcolor: `${activeColor}55`,
-                borderRadius: 2,
-                p: { xs: 2, sm: 3 },
-                boxShadow: 2,
-              }}
-            >
-              <CalcTitle id={activeCalculator} title={meta.title} />
-              <Typography variant="body1" color="text.secondary" paragraph>
-                Tato kalkulačka je aktuálně ve vývoji a bude brzy dostupná. Mezitím můžete využít naši kalkulačku čisté mzdy 2026.
-              </Typography>
-              <Typography variant="body1" color="text.secondary" gutterBottom>
-                Chystáme výpočty pro:
-              </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75, mt: 1 }}>
-                {activeCalculator === 'self-employed' && (
-                  <>
-                    <Typography variant="body2" color="text.secondary">
-                      Výpočet odvodů OSVČ na sociální a zdravotní pojištění
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Paušální daň a podmínky pro její uplatnění
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Srovnání paušálních výdajů vs. skutečných nákladů
-                    </Typography>
-                  </>
-                )}
-              </Box>
-            </Box>
-          </Box>
-          <Box mt={2}>
-            <AdSlot id="other-bottom" position="bottom" />
+          <Box sx={{ width: { xs: '100%', md: 300 }, flexShrink: 0 }}>
+            <AdSlot id="annual-side" position="side" />
           </Box>
         </Box>
-      )}
+        <Box mt={2}><AdSlot id="annual-bottom" position="bottom" /></Box>
+      </Box>
+      <AnnualTaxContent />
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
-      {/* ── Statické stránky ── */}
-      {isStaticPage && (
-        <Box mt={4} display="flex" justifyContent="center">
-          <Box sx={{ width: '100%', maxWidth: 800 }}>
-            {activeCalculator === 'privacy' && <PrivacyPolicy />}
-            {activeCalculator === 'about'   && <AboutPage />}
+function OsvcPage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <Header showBack subtitle="Výpočet odvodů a daní pro osoby samostatně výdělečně činné." />
+      <Box mt={4} display="flex" justifyContent="center">
+        <Box sx={{ width: '100%', maxWidth: 800, bgcolor: '#f3e5f555', borderRadius: 2, p: { xs: 2, sm: 3 }, boxShadow: 2 }}>
+          <CalcTitle id="self-employed" title="OSVČ / Paušální daň" />
+          <Typography variant="body1" color="text.secondary" paragraph>
+            Tato kalkulačka je aktuálně ve vývoji a bude brzy dostupná. Mezitím můžete využít naši kalkulačku čisté mzdy 2026.
+          </Typography>
+          <Typography variant="body1" color="text.secondary" gutterBottom>
+            Chystáme výpočty pro:
+          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75, mt: 1 }}>
+            <Typography variant="body2" color="text.secondary">Výpočet odvodů OSVČ na sociální a zdravotní pojištění</Typography>
+            <Typography variant="body2" color="text.secondary">Paušální daň a podmínky pro její uplatnění</Typography>
+            <Typography variant="body2" color="text.secondary">Srovnání paušálních výdajů vs. skutečných nákladů</Typography>
           </Box>
         </Box>
-      )}
+      </Box>
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
-      <Footer onNavigate={handleNavigate} />
+function PrivacyPage() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack />
+      <Box mt={4} display="flex" justifyContent="center">
+        <Box sx={{ width: '100%', maxWidth: 800 }}>
+          <PrivacyPolicy />
+        </Box>
+      </Box>
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
 
+function AboutPageRoute() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Header showBack />
+      <Box mt={4} display="flex" justifyContent="center">
+        <Box sx={{ width: '100%', maxWidth: 800 }}>
+          <AboutPage />
+        </Box>
+      </Box>
+      <Footer onNavigate={(page) => navigate(`/${page}`)} />
+    </>
+  );
+}
+
+function AppRoutes() {
+  return (
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Routes>
+        <Route path="/"           element={<HomePage />} />
+        <Route path="/cista-mzda" element={<SalaryPage />} />
+        <Route path="/pujcka"     element={<LoanPage />} />
+        <Route path="/rocni-dane" element={<AnnualTaxPage />} />
+        <Route path="/osvc"       element={<OsvcPage />} />
+        <Route path="/privacy"    element={<PrivacyPage />} />
+        <Route path="/about"      element={<AboutPageRoute />} />
+      </Routes>
     </Container>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
