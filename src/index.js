@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { hydrateRoot, createRoot } from 'react-dom/client';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { HelmetProvider } from 'react-helmet-async';
@@ -8,7 +8,7 @@ import App from './App';
 const theme = createTheme({
   palette: {
     text: {
-      primary:   '#1a1a1a',
+      primary: '#1a1a1a',
       secondary: '#444444',
     },
   },
@@ -16,9 +16,9 @@ const theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: '#111111',          // výchozí – velmi tmavá
+          color: '#111111', // výchozí velmi tmavý
           '&.Mui-focused': {
-            color: '#000000',        // focus – absolutní černá
+            color: '#000000', // focus absolutně černý
           },
         },
       },
@@ -26,7 +26,7 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         notchedOutline: {
-          borderColor: '#888888',    // výchozí border
+          borderColor: '#888888', // výchozí border
         },
       },
     },
@@ -37,8 +37,7 @@ const theme = createTheme({
   },
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const app = (
   <React.StrictMode>
     <HelmetProvider>
       <ThemeProvider theme={theme}>
@@ -48,3 +47,11 @@ root.render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+const rootElement = document.getElementById('root');
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}
