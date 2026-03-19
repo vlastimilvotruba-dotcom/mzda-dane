@@ -7,19 +7,21 @@ const routes = ['/', '/cista-mzda', '/pujcka', '/rocni-dane'];
 const buildDir = './build';
 const port = 5050;
 
-// Spusť serve na pozadí (Windows kompatibilní)
 const server = spawn('npx', ['serve', '-s', 'build', '-l', String(port)], {
   stdio: 'ignore',
   shell: true,
   detached: false
 });
 
-// Počkej 3 sekundy na start serveru
 await new Promise(r => setTimeout(r, 3000));
+
+// Netlify má Chromium na jiné cestě než lokální Windows
+const isCI = process.env.CI === 'true';
 
 const browser = await puppeteer.launch({
   headless: 'new',
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
+  executablePath: isCI ? '/usr/bin/chromium-browser' : undefined,
+  args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
 });
 
 for (const route of routes) {
