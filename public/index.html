@@ -21,8 +21,13 @@
 
     <title>Mzda a daně – kalkulačky pro mzdu a daně v ČR</title>
     <style>
-      #root { visibility: hidden; }
-      #root.hydrated { visibility: visible; }
+      #root {
+        opacity: 0;
+      }
+      #root.hydrated {
+        opacity: 1;
+        transition: opacity 0.15s ease-in;
+      }
     </style>
   </head>
   <body>
