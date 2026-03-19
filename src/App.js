@@ -258,9 +258,13 @@ function AppRoutes() {
 }
 
 export default function App() {
-    useEffect(() => {
-    document.getElementById('root').classList.add('hydrated');
-  }, []);
+useEffect(() => {
+  // Krátká prodleva aby MUI stihl aplikovat styly
+  const timer = setTimeout(() => {
+    document.body.classList.add('app-ready');
+  }, 50);
+  return () => clearTimeout(timer);
+}, []);;
 
   return (
     <BrowserRouter>

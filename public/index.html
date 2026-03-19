@@ -20,17 +20,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9033242502600387" crossorigin="anonymous"></script>
 
     <title>Mzda a daně – kalkulačky pro mzdu a daně v ČR</title>
-    <style>
-      #root {
-        opacity: 0;
-      }
-      #root.hydrated {
-        opacity: 1;
-        transition: opacity 0.15s ease-in;
-      }
-    </style>
   </head>
   <body>
+  <script>document.documentElement.style.setProperty('--app-ready','0');</script>
+  <style>
+    body { opacity: 0; }
+    body.app-ready { opacity: 1; transition: opacity 0.15s ease-in; }
+  </style>
+  <div id="root"></div>
     <noscript>
       Kalkulačky pro mzdu a daně v České republice. Pro použití kalkulaček je nutné povolit JavaScript.
     </noscript>

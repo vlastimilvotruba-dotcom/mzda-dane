@@ -28,12 +28,21 @@ for (const route of routes) {
   });
   const html = await page.content();
 
-  const dir = path.join(buildDir, route === '/' ? '' : route);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  if (route === '/') {
+    fs.writeFileSync(path.join(buildDir, 'index.html'), html);
+  } else {
+    // Generuj SOUBOR např. cista-mzda.html místo složky cista-mzda/index.html
+    fs.writeFileSync(path.join(buildDir, `${route.slice(1)}.html`), html);
+    // Zachovej i složku pro trailing slash variantu
+    const dir = path.join(buildDir, route.slice(1));
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), html);
+  }
+
   console.log(`✅ Prerendered: ${route}`);
   await page.close();
 }
+
 
 await browser.close();
 server.kill();
