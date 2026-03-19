@@ -15,12 +15,8 @@ const server = spawn('npx', ['serve', '-s', 'build', '-l', String(port)], {
 
 await new Promise(r => setTimeout(r, 3000));
 
-// Netlify má Chromium na jiné cestě než lokální Windows
-const isCI = process.env.CI === 'true';
-
 const browser = await puppeteer.launch({
   headless: 'new',
-  executablePath: isCI ? '/usr/bin/chromium-browser' : undefined,
   args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
 });
 
