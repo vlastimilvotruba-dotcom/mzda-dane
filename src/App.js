@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Box, Container, Typography, Button } from '@mui/material';
@@ -258,6 +258,10 @@ function AppRoutes() {
 }
 
 export default function App() {
+    useEffect(() => {
+    document.getElementById('root').classList.add('hydrated');
+  }, []);
+
   return (
     <BrowserRouter>
       <AppRoutes />
