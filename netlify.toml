@@ -1,26 +1,9 @@
 [build]
-  command = "npx puppeteer browsers install chrome && npm run build"
-  publish = "build"
+  command = "npm run build"
+  publish = "out"
 
-[[redirects]]
-  from = "/cista-mzda"
-  to = "/cista-mzda/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/pujcka"
-  to = "/pujcka/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/rocni-dane"
-  to = "/rocni-dane/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
