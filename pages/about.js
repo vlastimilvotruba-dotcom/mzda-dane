@@ -10,8 +10,10 @@ export default function AboutPageRoute() {
   return (
     <>
       <Head>
-        <title>O aplikaci – Mzda a daně</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>O webu – Mzda a daně</title>
+        <meta name="description" content="Informace o webu mzda-dane.cz – jednoduché a přehledné kalkulačky pro mzdu a daně v České republice." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://mzda-dane.cz/about" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header showBack />

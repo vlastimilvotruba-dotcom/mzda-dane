@@ -1,5 +1,9 @@
-import React from 'react';
-import { Box, Typography, Divider, Paper } from '@mui/material';
+import React, { useState } from 'react';
+import {
+  Box, Typography, Divider, Paper, Chip,
+  Accordion, AccordionSummary, AccordionDetails,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const PRIMARY = '#e65100';
 
@@ -16,15 +20,29 @@ function Section({ title, children }) {
 }
 
 function FaqItem({ question, answer }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <Box mb={3}>
-      <Typography variant="subtitle1" fontWeight={700} gutterBottom>
-        {question}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {answer}
-      </Typography>
-    </Box>
+    <Accordion
+      expanded={expanded}
+      onChange={(_, isOpen) => setExpanded(isOpen)}
+      elevation={0}
+      sx={{
+        border: '1px solid #e0e0e0',
+        mb: 1,
+        borderRadius: '8px !important',
+        '&:before': { display: 'none' },
+      }}
+    >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography variant="body2" fontWeight={600}>{question}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.7 }}>
+          {answer}
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
   );
 }
 
@@ -87,6 +105,26 @@ export default function AnnualTaxContent() {
         </Paper>
       </Section>
 
+      <Section title="Co se změnilo v roce 2026">
+        <Typography variant="body1" paragraph>
+          Pro roční zúčtování za zdaňovací období roku 2026 platí tyto klíčové hodnoty. Přehled uplatnitelných odpočtů a limitů:
+        </Typography>
+        <Box display="flex" flexWrap="wrap" gap={1} mb={3}>
+          <Chip label="23% daň: nad 1 582 812 Kč/rok" variant="outlined" size="small" sx={{ borderColor: PRIMARY, color: PRIMARY }} />
+          <Chip label="Sleva na poplatníka: 30 840 Kč/rok" variant="outlined" size="small" sx={{ borderColor: PRIMARY, color: PRIMARY }} />
+          <Chip label="Min. příjem pro daňový bonus: 124 800 Kč" variant="outlined" size="small" sx={{ borderColor: PRIMARY, color: PRIMARY }} />
+          <Chip label="Penz. spoření: max. odpočet 48 000 Kč" variant="outlined" size="small" />
+          <Chip label="Hypotéka: max. odpočet 150 000 Kč" variant="outlined" size="small" />
+          <Chip label="Živ. pojištění: max. odpočet 24 000 Kč" variant="outlined" size="small" />
+        </Box>
+        <Typography variant="body2" color="text.secondary" paragraph>
+          <strong>Hranice pro 23% daňovou sazbu</strong> je pro rok 2026 stanovena na 1 582 812 Kč ročně (36násobek průměrné mzdy 43 967 Kč). Tato hranice se každoročně přepočítává – příjmy nad ni podléhají vyšší sazbě, zbývající část základní sazbě 15 %.
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <strong>Nezdanitelné části základu daně</strong> se uplatňují vždy zpětně v ročním zúčtování nebo daňovém přiznání – nelze je promítnout do měsíčních srážek. Odpočet na penzijní spoření, hypotéku nebo dary proto přináší vrácení přeplatku při ročním vyúčtování.
+        </Typography>
+      </Section>
+
       <Section title="Často kladené dotazy">
         <FaqItem
           question="Do kdy musím podat žádost o roční zúčtování?"
@@ -103,6 +141,30 @@ export default function AnnualTaxContent() {
         <FaqItem
           question="Co je daňový bonus na děti a jak ho získám?"
           answer="Daňový bonus vzniká, pokud daňové zvýhodnění na děti přesáhne výslednou daňovou povinnost. Stát pak rozdíl vyplatí. Pro nárok na bonus musí příjmy zaměstnance dosáhnout alespoň 6násobku minimální mzdy za rok (v roce 2026 celkem 124 800 Kč). Bonus se uplatňuje v ročním zúčtování nebo daňovém přiznání."
+        />
+        <FaqItem
+          question="Jak vysoký odpočet si mohu odečíst za penzijní spoření?"
+          answer="Odpočet na penzijní připojištění nebo doplňkové penzijní spoření činí částku přesahující 24 000 Kč ročně (tj. příspěvky nad 2 000 Kč měsíčně). Maximální odpočet je 48 000 Kč ročně. Pokud tedy platíte 6 000 Kč měsíčně (72 000 Kč ročně), odečtete si ze základu daně 48 000 Kč – daňová úspora činí 7 200 Kč."
+        />
+        <FaqItem
+          question="Co se stane, pokud žádost o roční zúčtování zapomenu podat?"
+          answer="Pokud nepodáte žádost do 15. února, zaměstnavatel roční zúčtování neprovede. V tom případě můžete přijít o přeplatek na dani, který by vznikl uplatněním nezdanitelných částí nebo slev. Možností je podat daňové přiznání sami do 1. dubna, kde tyto odpočty uplatníte dodatečně."
+        />
+        <FaqItem
+          question="Mohu v ročním zúčtování uplatnit dary na charitu?"
+          answer="Ano. Dary na veřejně prospěšné účely (registrovaným neziskovým organizacím, církvím, obcím apod.) jsou odečitatelnou položkou od základu daně. Minimální dar musí činit 1 000 Kč nebo 2 % ročního základu daně. Celkový odpočet nesmí překročit 15 % základu daně. Pro uplatnění je potřeba potvrzení od příjemce daru."
+        />
+        <FaqItem
+          question="Co je to sleva na manžela/manželku a kdy na ni mám nárok?"
+          answer="Slevu na manžela nebo manželku ve výši 24 840 Kč ročně lze uplatnit, pokud váš partner žil ve společné domácnosti a jeho/její vlastní příjmy nepřesáhly 68 000 Kč za rok. Do tohoto limitu se nezapočítávají dávky státní sociální podpory (mateřská, rodičovský příspěvek, přídavky na děti). Sleva se uplatňuje pouze v ročním zúčtování nebo daňovém přiznání, nikoli měsíčně."
+        />
+        <FaqItem
+          question="Jak kalkulačka počítá zálohy na daň sražené zaměstnavatelem?"
+          answer="Kalkulačka vychází ze zadané měsíční hrubé mzdy a simuluje standardní výpočet zálohy: z hrubé mzdy odečte sociální (7,1 %) a zdravotní (4,5 %) pojištění, základ zaokrouhlí na stokoruny nahoru, vypočte 15% daň a odečte uplatňované měsíční slevy. Roční zálohy jsou 12× tato částka."
+        />
+        <FaqItem
+          question="Jaký je rozdíl mezi ročním zúčtováním a daňovým přiznáním?"
+          answer="Roční zúčtování provádí zaměstnavatel za zaměstnance – je jednodušší a bezplatné. Daňové přiznání podává poplatník sám na finanční úřad – je povinné při příjmech z více zdrojů, vedlejší činnosti nebo příjmech ze zahraničí. Obě cesty vedou ke stejnému výsledku (přeplatek nebo doplatek), liší se procesem a zodpovědností."
         />
       </Section>
 

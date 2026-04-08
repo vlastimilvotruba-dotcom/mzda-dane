@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Typography, LinearProgress } from '@mui/material';
 import AnnualTaxForm from './AnnualTaxForm';
 import AnnualTaxResult from './AnnualTaxResult';
@@ -24,6 +24,7 @@ export default function AnnualTaxWizard({ onBack }) {
   const [form, setForm]     = useState(INITIAL_FORM);
   const [result, setResult] = useState(null);
   const [step, setStep]     = useState(0);
+  const topRef = useRef(null);
 
   function handleChange(field, value) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -33,6 +34,9 @@ export default function AnnualTaxWizard({ onBack }) {
     const res = calculateAnnualTax2026(form);
     setResult(res);
     setStep(1);
+    setTimeout(() => {
+      topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   }
 
   // Vrátí uživatele zpět na formulář se zachovanými daty
@@ -48,7 +52,7 @@ export default function AnnualTaxWizard({ onBack }) {
   }
 
   return (
-    <Box>
+    <Box ref={topRef}>
 
       {/* ── Progress bar ── */}
       <Box mb={3}>

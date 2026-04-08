@@ -3,12 +3,16 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet'
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance'
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong'
 import BadgeIcon from '@mui/icons-material/Badge'
+import WbSunnyIcon from '@mui/icons-material/WbSunny'
+import ElectricCarIcon from '@mui/icons-material/ElectricCar'
 
 const TILE_ACCENT = {
   'salary2026': '#1565c0',
   'loan': '#2e7d32',
-  'annual-tax': '#e65100',
+  'annual-tax': '#c62828',
   'self-employed': '#6a1b9a',
+  'fve': '#f57f17',
+  'ev': '#00897b',
 }
 
 const TILE_ICON = {
@@ -16,6 +20,8 @@ const TILE_ICON = {
   'loan': AccountBalanceIcon,
   'annual-tax': ReceiptLongIcon,
   'self-employed': BadgeIcon,
+  'fve': WbSunnyIcon,
+  'ev': ElectricCarIcon,
 }
 
 export default function CalcTitle({ id, title }) {

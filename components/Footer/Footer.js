@@ -24,6 +24,15 @@ function Footer({ onNavigate }) {
               variant="body2"
               color="text.secondary"
               underline="hover"
+              onClick={() => onNavigate('kontakt')}
+            >
+              Kontakt
+            </Link>
+            <Link
+              component="button"
+              variant="body2"
+              color="text.secondary"
+              underline="hover"
               onClick={() => onNavigate('about')}
             >
               O webu

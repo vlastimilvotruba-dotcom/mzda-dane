@@ -1,7 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mzda a dan\u011b",
+  "name": "Mzda a dan\u011b \u2013 kalkulace mezd, dan\u00ed a odvod\u016f",
   "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
@@ -18,8 +23,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://mzda-dane.cz/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#1565c0",
   "background_color": "#ffffff"
 }

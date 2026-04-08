@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Divider } from '@mui/material';
+import Link from 'next/link';
 
 function HomeContent() {
   return (
@@ -30,28 +31,67 @@ function HomeContent() {
         Co na webu mzda-dane.cz najdete?
       </Typography>
       <Typography variant="body1" paragraph color="text.secondary">
-        Nabízíme jednoduché a přehledné kalkulačky pro výpočet mzdy a daní v České republice.
-        Vše je průběžně aktualizováno podle platné legislativy.
+        Nabízíme jednoduché a přehledné kalkulačky pro výpočet mzdy, daní, energetických investic i mobility v České republice.
+        Vše je průběžně aktualizováno podle platné legislativy a aktuálních sazeb.
       </Typography>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 2 }}>
         <Typography variant="body1" color="text.secondary">
-          <strong>Kalkulačka čisté mzdy 2026</strong>
-          {' – zadejte hrubou mzdu, slevy a počet dětí, kalkulačka spočítá odvody, daň a výslednou čistou mzdu.'}
+          <Link href="/cista-mzda" style={{ color: '#1565c0', fontWeight: 600 }}>Kalkulačka čisté mzdy 2026</Link>
+          {' – zadejte hrubou mzdu, slevy a počet dětí, kalkulačka spočítá odvody, daň a výslednou čistou mzdu pro HPP, DPP i DPČ.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          <strong>Kalkulačka půjčky</strong>
+          <Link href="/rocni-dane" style={{ color: '#c62828', fontWeight: 600 }}>Roční daně zaměstnance</Link>
+          {' – roční zúčtování daně z příjmu, uplatnění odpočtů za penzijní spoření, hypotéku nebo dary.'}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          <Link href="/osvc" style={{ color: '#6a1b9a', fontWeight: 600 }}>OSVČ – daň a odvody 2025</Link>
+          {' – výpočet daně z příjmů, sociálního a zdravotního pojištění pro OSVČ včetně srovnání s paušální daní.'}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          <Link href="/pujcka" style={{ color: '#2e7d32', fontWeight: 600 }}>Kalkulačka půjčky</Link>
           {' – výpočet měsíční splátky, celkových nákladů a úroků půjčky nebo hypotéky.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          <strong>Roční daně zaměstnance</strong>
-          {' – roční zúčtování daně z příjmu pro zaměstnance.'}
+          <Link href="/navratnost-fve" style={{ color: '#f57f17', fontWeight: 600 }}>Kalkulačka návratnosti FVE 2026</Link>
+          {' – spočítejte dobu návratnosti fotovoltaické elektrárny, roční úsporu na elektřině a výši podpory z Nové zelené úsporám.'}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          <strong>OSVČ / Paušální daň</strong>
-          {' – výpočet odvodů a daní pro osoby samostatně výdělečně činné (připravujeme).'}
+          <Link href="/ev-vs-spalovak" style={{ color: '#00897b', fontWeight: 600 }}>Kalkulačka EV vs. benzín/nafta</Link>
+          {' – porovnejte roční provozní náklady auta a zjistěte cenu za 1 km jízdy u elektroauta, benzínu i dieselu.'}
         </Typography>
       </Box>
+
+      <Divider sx={{ my: 4 }} />
+
+      <Typography variant="h5" gutterBottom fontWeight={600}>
+        Fotovoltaika 2026 – vyplatí se a jak ji financovat?
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        Zájem o fotovoltaické elektrárny v ČR stále roste. Průměrná instalace pro rodinný dům (6 kWp) vyjde
+        na 150 000–220 000 Kč a při vlastní spotřebě kolem 65 % se investice vrátí za 9–13 let.
+        Po uplynutí doby návratnosti generuje FVE čistý zisk po celou zbývající životnost systému (25+ let).
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        Přímé dotace NZÚ pro rodinné domy jsou v roce 2026 pozastaveny z důvodu vyčerpání alokace.
+        Vláda připravuje náhradní program bezúročných půjček – výhodou je, že měsíční splátka
+        bývá nižší nebo srovnatelná s průměrnou měsíční úsporou na elektřině.
+        Naše{' '}
+        <Link href="/navratnost-fve" style={{ color: '#f57f17', fontWeight: 600 }}>kalkulačka FVE</Link>
+        {' '}vám toto srovnání spočítá přímo.
+      </Typography>
+
+      <Divider sx={{ my: 4 }} />
+
+      <Typography variant="h5" gutterBottom fontWeight={600}>
+        Elektroauto vs. spalovací motor – co je levnější na provoz?
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        Provozní náklady elektroauta bývají při domácím nabíjení výrazně nižší než u benzínu nebo nafty.
+        Rozhodující je ale roční nájezd, reálná spotřeba a cena elektřiny. Proto jsme přidali i{' '}
+        <Link href="/ev-vs-spalovak" style={{ color: '#00897b', fontWeight: 600 }}>kalkulačku EV vs. spalovák</Link>,
+        která porovná náklad na 100 km, cenu za 1 km i celkové roční výdaje.
+      </Typography>
 
       <Divider sx={{ my: 4 }} />
 
@@ -70,8 +110,8 @@ function HomeContent() {
         Jsou výsledky přesné?
       </Typography>
       <Typography variant="body1" paragraph color="text.secondary">
-        Kalkulačka vychází z platné legislativy pro rok 2026. Výsledky mají informativní charakter –
-        pro závazné mzdové výpočty doporučujeme konzultaci s účetním nebo mzdovou účtárnou.
+        Kalkulačky vychází z platné legislativy pro rok 2026. Výsledky mají informativní charakter –
+        pro závazné mzdové nebo daňové výpočty doporučujeme konzultaci s účetním nebo daňovým poradcem.
       </Typography>
 
       <Typography variant="subtitle1" fontWeight={600}>
@@ -86,9 +126,9 @@ function HomeContent() {
         Jak se liší DPP od DPČ?
       </Typography>
       <Typography variant="body1" paragraph color="text.secondary">
-        Dohoda o provedení práce (DPP) je vhodná pro příležitostnou práci – do 10 000 Kč měsíčně
-        se neplatí sociální ani zdravotní pojištění. Dohoda o pracovní činnosti (DPČ) má jiné limity
-        a odvody jsou povinné od nižší částky.
+        Dohoda o provedení práce (DPP) je vhodná pro příležitostnou práci – do 11 999 Kč měsíčně
+        se neplatí sociální ani zdravotní pojištění. Dohoda o pracovní činnosti (DPČ) má limit 4 499 Kč,
+        nad který jsou odvody povinné.
       </Typography>
     </Box>
   );

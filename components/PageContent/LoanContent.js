@@ -1,5 +1,9 @@
-import React from 'react';
-import { Box, Typography, Divider, Paper } from '@mui/material';
+import React, { useState } from 'react';
+import {
+  Box, Typography, Divider, Paper,
+  Accordion, AccordionSummary, AccordionDetails,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const PRIMARY = '#2e7d32';
 
@@ -16,15 +20,29 @@ function Section({ title, children }) {
 }
 
 function FaqItem({ question, answer }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <Box mb={3}>
-      <Typography variant="subtitle1" fontWeight={700} gutterBottom>
-        {question}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {answer}
-      </Typography>
-    </Box>
+    <Accordion
+      expanded={expanded}
+      onChange={(_, isOpen) => setExpanded(isOpen)}
+      elevation={0}
+      sx={{
+        border: '1px solid #e0e0e0',
+        mb: 1,
+        borderRadius: '8px !important',
+        '&:before': { display: 'none' },
+      }}
+    >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography variant="body2" fontWeight={600}>{question}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.7 }}>
+          {answer}
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
   );
 }
 
@@ -102,6 +120,22 @@ export default function LoanContent() {
         <FaqItem
           question="Jaká je maximální výše hypotéky?"
           answer="Česká národní banka stanovuje limity: LTV maximálně 80 % hodnoty nemovitosti, DTI nesmí překročit 8,5násobek ročního příjmu a DSTI nesmí přesáhnout 45 % čistého měsíčního příjmu."
+        />
+        <FaqItem
+          question="Co je LTV, DTI a DSTI?"
+          answer="LTV (Loan to Value) je poměr výše hypotéky k hodnotě nemovitosti – ČNB limit je 80 %, u žadatelů do 36 let 90 %. DTI (Debt to Income) je poměr celkového dluhu k ročnímu příjmu – limit je 8,5násobek. DSTI (Debt Service to Income) je poměr měsíčních splátek všech úvěrů k čistému měsíčnímu příjmu – limit je 45 %."
+        />
+        <FaqItem
+          question="Co je refinancování hypotéky a kdy se vyplatí?"
+          answer="Refinancování znamená převedení hypotéky k jiné bance za výhodnějších podmínek. Nejlépe se provádí při skončení fixačního období, kdy lze odejít bez sankce. Vyplatí se, pokud nová sazba je o alespoň 0,3–0,5 procentního bodu nižší a zbývá dostatečná doba splácení. Kalkulačka pomůže srovnat celkové náklady před a po refinancování."
+        />
+        <FaqItem
+          question="Jak funguje mimořádná splátka hypotéky?"
+          answer="Mimořádná splátka jistiny snižuje zbývající dluh, a tím i budoucí úroky. Ze zákona (zákon č. 257/2016 Sb.) má každý dlužník právo splatit až 25 % jistiny jednou ročně v měsíci výročí uzavření smlouvy bezplatně. Mimo toto okno může banka účtovat poplatek."
+        />
+        <FaqItem
+          question="Jaký je rozdíl mezi anuitním a degresivním splácením?"
+          answer="Anuitní splácení (nejběžnější) znamená stejnou výši splátky po celou dobu – na začátku tvoří větší část splátky úrok, postupně roste podíl jistiny. Degresivní splácení má na začátku vyšší splátky, které se postupně snižují – celkové úroky jsou nižší, ale v prvních letech je splátka výrazně vyšší."
         />
       </Section>
 

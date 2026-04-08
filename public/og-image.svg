@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#283593;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5c6bc0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7986cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5c6bc0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Top accent bar -->
+  <rect width="1200" height="6" y="0" fill="url(#accent)" />
+
+  <!-- Bottom accent bar -->
+  <rect width="1200" height="6" y="624" fill="url(#accent)" />
+
+  <!-- Left vertical accent -->
+  <rect width="6" height="630" x="0" fill="url(#accent)" />
+
+  <!-- Card background -->
+  <rect x="80" y="100" width="1040" height="430" rx="20" ry="20" fill="#283593" opacity="0.6" />
+
+  <!-- Calculator icon area -->
+  <rect x="120" y="140" width="100" height="100" rx="12" fill="#5c6bc0" opacity="0.8" />
+  <text x="170" y="210" font-family="Arial, sans-serif" font-size="52" fill="white" text-anchor="middle">&#x1F4CA;</text>
+
+  <!-- Main title -->
+  <text x="600" y="240" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">Mzda a dan&#283;</text>
+
+  <!-- Domain -->
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="34" fill="#9fa8da" text-anchor="middle">mzda-dane.cz</text>
+
+  <!-- Divider line -->
+  <rect x="200" y="340" width="800" height="2" fill="#5c6bc0" opacity="0.6" />
+
+  <!-- Subtitle -->
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="32" fill="#e8eaf6" text-anchor="middle">Kalkulace mezd, dan&#237; a odvod&#367; pro rok 2026</text>
+
+  <!-- Feature chips -->
+  <rect x="155" y="440" width="210" height="50" rx="25" fill="#5c6bc0" opacity="0.7" />
+  <text x="260" y="472" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">&#268;ist&#225; mzda</text>
+
+  <rect x="385" y="440" width="230" height="50" rx="25" fill="#5c6bc0" opacity="0.7" />
+  <text x="500" y="472" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">Ro&#269;n&#237; zda&#328;&#283;n&#237;</text>
+
+  <rect x="635" y="440" width="150" height="50" rx="25" fill="#5c6bc0" opacity="0.7" />
+  <text x="710" y="472" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">OSV&#268;</text>
+
+  <rect x="805" y="440" width="240" height="50" rx="25" fill="#5c6bc0" opacity="0.7" />
+  <text x="925" y="472" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">Kalkulace p&#367;j&#269;ky</text>
+
+  <!-- Bottom label -->
+  <text x="600" y="555" font-family="Arial, sans-serif" font-size="24" fill="#7986cb" text-anchor="middle">Zdarma &#183; Bez registrace &#183; Aktu&#225;ln&#237; sazby</text>
+</svg>

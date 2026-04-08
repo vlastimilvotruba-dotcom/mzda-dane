@@ -5,12 +5,16 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import BadgeIcon from '@mui/icons-material/Badge';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 
 const TILE_ACCENT = {
   'salary2026': '#1565c0',
   'loan': '#2e7d32',
-  'annual-tax': '#e65100',
+  'annual-tax': '#c62828',
   'self-employed': '#6a1b9a',
+  'fve': '#f57f17',
+  'ev': '#00897b',
 };
 
 const TILE_ICON = {
@@ -18,6 +22,8 @@ const TILE_ICON = {
   'loan': AccountBalanceIcon,
   'annual-tax': ReceiptLongIcon,
   'self-employed': BadgeIcon,
+  'fve': WbSunnyIcon,
+  'ev': ElectricCarIcon,
 };
 
 const TILE_URL = {
@@ -25,6 +31,8 @@ const TILE_URL = {
   'loan': '/pujcka',
   'annual-tax': '/rocni-dane',
   'self-employed': '/osvc',
+  'fve': '/navratnost-fve',
+  'ev': '/ev-vs-spalovak',
 };
 
 function CalculatorTile({ id, title, description, color }) {
@@ -87,13 +95,25 @@ export default function CalculatorTiles() {
       id: 'annual-tax',
       title: 'Roční daně zaměstnance',
       description: 'Roční zúčtování daně z příjmu pro zaměstnance.',
-      color: '#fff3e0',
+      color: '#ffebee',
     },
     {
       id: 'self-employed',
-      title: 'OSVČ – Paušální daň',
-      description: 'Výpočet odvodů a daní pro osoby samostatně výdělečně činné.',
+      title: 'OSVČ – daň a odvody 2025',
+      description: 'Výpočet daně z příjmů, sociálního a zdravotního pojištění i srovnání s paušální daní.',
       color: '#f3e5f5',
+    },
+    {
+      id: 'fve',
+      title: 'Návratnost FVE 2026',
+      description: 'Spočítejte dobu návratnosti fotovoltaiky, roční úsporu a výši dotace z Nové zelené úsporám.',
+      color: '#fff8e1',
+    },
+    {
+      id: 'ev',
+      title: 'EV vs. benzín/nafta',
+      description: 'Porovnejte roční provozní náklady a cenu za 1 km u elektroauta, benzínu a dieselu.',
+      color: '#e0f2f1',
     },
   ];
 
