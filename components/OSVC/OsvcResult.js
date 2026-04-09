@@ -215,7 +215,12 @@ export default function OsvcResult({ result, onBack, onReset }) {
           />
           <Row
             label="Orientační nová měsíční záloha na zdravotní"
-            value={fmt(result.health.nextAdvanceMonthly)}
+            value={result.health.nextAdvanceMonthly > 0 ? fmt(result.health.nextAdvanceMonthly) : '0 Kč'}
+            tooltip={
+              result.activityType === 'secondary'
+                ? 'Vedlejší OSVČ zálohy na ZP neplatí — pojistné uhradí až po podání přehledu o příjmech.'
+                : 'Po podání přehledu bude nová záloha odvozena od ročního výsledku, minimlně však 3 306 Kč/měsíč (minimální záloha VZP pro rok 2026).'
+            }
           />
         </AccordionDetails>
       </Accordion>

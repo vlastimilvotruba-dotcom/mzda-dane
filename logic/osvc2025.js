@@ -26,7 +26,8 @@ export const SOCIAL_MAX_BASE = 48 * AVERAGE_WAGE_2025; // 2 234 736 Kč
 
 export const MIN_SOCIAL_MAIN_MONTHLY = 4759;
 export const MIN_SOCIAL_MAIN_STARTUP_MONTHLY = 3399;
-export const MIN_HEALTH_MAIN_MONTHLY = 3143;
+export const MIN_HEALTH_MAIN_MONTHLY = 3143;       // minimální záloha ZP pro rok 2025
+export const MIN_HEALTH_MAIN_ADVANCE_2026 = 3306;  // minimální záloha ZP pro rok 2026 (dle VZP)
 export const MIN_SOCIAL_SECONDARY_ADVANCE = 1496;
 
 export const SECONDARY_DECISIVE_AMOUNT_FULL = 111736;
@@ -271,10 +272,14 @@ export function calculateOsvc2025(form) {
       )
     : 0;
 
-  const nextHealthAdvanceMonthly = Math.max(
-    Math.ceil(healthInsurance / monthsActive),
-    activityType === 'main' ? MIN_HEALTH_MAIN_MONTHLY : 0
-  );
+  // Vedlejší OSVČ zálohy na ZP neplatí – pojistné uhradí po podání přehledu (dle VZP).
+  // Hlavní OSVČ: záloha nesmí být nižší než zákonné minimum pro rok 2026.
+  const nextHealthAdvanceMonthly = activityType === 'main'
+    ? Math.max(
+        Math.ceil(healthInsurance / monthsActive),
+        MIN_HEALTH_MAIN_ADVANCE_2026
+      )
+    : 0;
 
   const flatTax = getFlatTaxAssessment(annualIncome, expenseResult.dominantRate);
   const flatTaxDifference = flatTax.yearlyAmount != null

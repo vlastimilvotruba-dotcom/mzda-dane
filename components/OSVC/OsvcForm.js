@@ -271,7 +271,7 @@ export default function OsvcForm({ form, onChange, onCalculate }) {
       ) : (
         <Alert severity="info" variant="outlined" sx={{ mb: 2 }}>
           U vedlejší činnosti se sociální pojištění v roce 2025 platí až při zisku od orientační rozhodné částky{' '}
-          <strong>{secondaryThreshold.toLocaleString('cs-CZ')} Kč</strong> za zadaný počet měsíců. Zdravotní pojištění zde nemá zákonné minimum.
+          <strong>{secondaryThreshold.toLocaleString('cs-CZ')} Kč</strong> za zadaný počet měsíců. Zdravotní pojištění nemá zákonné minimum a zálohy se neplatí — pojistné se uhradí po podání přehledu.
         </Alert>
       )}
 
