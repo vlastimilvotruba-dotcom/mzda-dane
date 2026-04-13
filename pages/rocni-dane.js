@@ -16,7 +16,7 @@ export default function AnnualTaxPage() {
         <title>Roční zúčtování daně 2026 – Mzda a daně</title>
         <meta name="description" content="Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance. Roční zúčtování daně 2026 zdarma." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/rocni-dane" />
+        <link rel="canonical" href="https://mzda-dane.cz/rocni-dane/" />
         <meta property="og:title" content="Roční zúčtování daně 2026" />
         <meta property="og:description" content="Zjistěte, zda vám finanční úřad vrátí přeplatek nebo budete doplácet. Roční zúčtování daně zaměstnance za rok 2025 – zdarma." />
         <meta property="og:url" content="https://mzda-dane.cz/rocni-dane" />

@@ -16,7 +16,7 @@ export default function SalaryPage() {
         <title>Kalkulačka čisté mzdy 2026 – Mzda a daně</title>
         <meta name="description" content="Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev. Kalkulačka mzdy 2026 zdarma." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/cista-mzda" />
+        <link rel="canonical" href="https://mzda-dane.cz/cista-mzda/" />
         <meta property="og:title" content="Kalkulačka čisté mzdy 2026" />
         <meta property="og:description" content="Výpočet čisté mzdy zaměstnance včetně sociálního, zdravotního pojištění a daně z příjmů. Zohledňuje slevy na děti, invaliditu i DPP/DPČ." />
         <meta property="og:url" content="https://mzda-dane.cz/cista-mzda" />

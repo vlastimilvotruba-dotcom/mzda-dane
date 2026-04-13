@@ -16,7 +16,7 @@ export default function LoanPage() {
         <title>Kalkulačka půjčky a hypotéky 2026 – Mzda a daně</title>
         <meta name="description" content="Výpočet měsíční splátky, celkových nákladů a doby splácení půjčky nebo hypotéky. Kalkulačka půjčky 2026 zdarma." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/pujcka" />
+        <link rel="canonical" href="https://mzda-dane.cz/pujcka/" />
         <meta property="og:title" content="Kalkulačka půjčky a hypotéky 2026" />
         <meta property="og:description" content="Spočítejte měsíční splátku, celkové přeplacení a RPSN. Kalkulačka hypotéky a spotřebitelských úvěrů 2026 – zdarma." />
         <meta property="og:url" content="https://mzda-dane.cz/pujcka" />

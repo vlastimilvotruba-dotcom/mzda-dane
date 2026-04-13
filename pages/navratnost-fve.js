@@ -63,7 +63,7 @@ export default function FVEPage() {
         <title>Kalkulačka návratnosti FVE 2026 – fotovoltaika zdarma | Mzda a daně</title>
         <meta name="description" content="Spočítejte dobu návratnosti fotovoltaické elektrárny. Zadejte výkon, cenu instalace a dotaci NZÚ – výsledek okamžitě. Kalkulačka FVE 2026 zdarma." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/navratnost-fve" />
+        <link rel="canonical" href="https://mzda-dane.cz/navratnost-fve/" />
         <meta property="og:title" content="Kalkulačka návratnosti FVE 2026 – fotovoltaika" />
         <meta property="og:description" content="Spočítejte návratnost fotovoltaiky, výši dotace NZÚ a roční úsporu. Nezávislá kalkulačka FVE 2026 zdarma." />
         <meta property="og:url" content="https://mzda-dane.cz/navratnost-fve" />

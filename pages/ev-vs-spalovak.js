@@ -72,7 +72,7 @@ export default function EVPage() {
         <title>Kalkulačka EV vs. benzín/nafta 2026 – náklady na 1 km | Mzda a daně</title>
         <meta name="description" content="Porovnejte provozní náklady elektroauta, benzínu a dieselu. Kalkulačka spočítá roční náklady i cenu za 1 km podle spotřeby a cen energií v ČR." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/ev-vs-spalovak" />
+        <link rel="canonical" href="https://mzda-dane.cz/ev-vs-spalovak/" />
         <meta property="og:title" content="Kalkulačka EV vs. benzín/nafta 2026" />
         <meta property="og:description" content="Spočítejte si cenu za 1 km a roční náklady elektroauta, benzínu a dieselu. Přehledné srovnání zdarma." />
         <meta property="og:url" content="https://mzda-dane.cz/ev-vs-spalovak" />

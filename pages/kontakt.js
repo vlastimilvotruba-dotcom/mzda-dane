@@ -13,7 +13,7 @@ export default function KontaktPage() {
         <title>Kontakt – Mzda a daně</title>
         <meta name="description" content="Kontaktujte nás na vov.software@gmail.com. Dotazy k výpočtům, hlášení chyb nebo návrhy na nové funkce kalkulaček mzda-dane.cz." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/kontakt" />
+        <link rel="canonical" href="https://mzda-dane.cz/kontakt/" />
         <meta property="og:title" content="Kontakt – Mzda a daně" />
         <meta property="og:description" content="Kontaktujte nás e-mailem. Dotazy k výpočtům mezd a daní, hlášení chyb nebo návrhy na nové funkce." />
         <meta property="og:url" content="https://mzda-dane.cz/kontakt" />

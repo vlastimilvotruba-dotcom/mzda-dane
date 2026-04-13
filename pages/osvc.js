@@ -20,7 +20,7 @@ export default function OsvcPage() {
           content="Výpočet daně z příjmů, sociálního a zdravotního pojištění pro OSVČ za rok 2025 včetně orientačního srovnání s paušální daní."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mzda-dane.cz/osvc" />
+        <link rel="canonical" href="https://mzda-dane.cz/osvc/" />
         <meta property="og:title" content="OSVČ kalkulačka 2025" />
         <meta property="og:description" content="Spočítejte daň z příjmů, sociální a zdravotní pojištění pro OSVČ za rok 2025. Porovnání s paušální daní – zdarma." />
         <meta property="og:url" content="https://mzda-dane.cz/osvc" />
