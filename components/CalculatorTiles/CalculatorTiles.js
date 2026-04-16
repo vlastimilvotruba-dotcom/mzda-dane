@@ -118,7 +118,7 @@ export default function CalculatorTiles() {
   ];
 
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+    <Box id="kalkulacky" sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, scrollMarginTop: '20px' }}>
       {tiles.map((tile) => (
         <Box
           key={tile.id}

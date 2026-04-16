@@ -84,7 +84,7 @@ export default function EVPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Porovnání provozních nákladů elektroauta, benzínu a nafty podle ročního nájezdu." />
+        <Header subtitle="Porovnání provozních nákladů elektroauta, benzínu a nafty podle ročního nájezdu." />
         <Box mt={4}>
           <Box mb={2}><AdSlot id="ev-top" position="top" /></Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">

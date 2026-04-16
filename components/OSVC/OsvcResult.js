@@ -116,6 +116,35 @@ export default function OsvcResult({ result, onBack, onReset }) {
       </Paper>
 
       <Paper elevation={2} sx={{ borderRadius: 3, p: 2.5 }}>
+        <Box display="flex" alignItems="center" gap={1} mb={1}>
+          <PaidIcon sx={{ color: PRIMARY }} />
+          <Typography variant="subtitle2" fontWeight={700} sx={{ color: PRIMARY }}>
+            Srovnání s paušální daní 2025
+          </Typography>
+        </Box>
+
+        {flatTaxKnown ? (
+          <>
+            <Row label={`Paušální režim – ${result.flatTax.band}. pásmo`} value={`${fmt(result.flatTax.monthlyAmount)} / měsíc`} bold />
+            <Row label="Ročně v paušálním režimu" value={fmt(result.flatTax.yearlyAmount)} />
+            <Row
+              label={result.flatTax.isFlatTaxCheaper ? 'Paušální daň by byla levnější o' : 'Paušální daň by byla dražší o'}
+              value={fmt(result.flatTax.cheaperBy)}
+              bold
+              color={flatTaxColor}
+            />
+            <Typography variant="body2" color="text.secondary" mt={1}>
+              {result.flatTax.note}
+            </Typography>
+          </>
+        ) : (
+          <Alert severity="info" variant="outlined">
+            {result.flatTax.note}
+          </Alert>
+        )}
+      </Paper>
+
+      <Paper elevation={2} sx={{ borderRadius: 3, p: 2.5 }}>
         <Typography variant="subtitle2" fontWeight={700} sx={{ color: PRIMARY }} mb={1}>
           Přehled výpočtu
         </Typography>

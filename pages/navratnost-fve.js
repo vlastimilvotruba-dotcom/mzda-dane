@@ -88,7 +88,7 @@ export default function FVEPage() {
         />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Výpočet doby návratnosti, roční úspory a dotací pro fotovoltaickou elektrárnu." />
+        <Header subtitle="Výpočet doby návratnosti, roční úspory a dotací pro fotovoltaickou elektrárnu." />
         <Box mt={4}>
           <Box mb={2}><AdSlot id="fve-top" position="top" /></Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">

@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack />
+        <Header />
         <Box mt={4} display="flex" justifyContent="center">
           <Box sx={{ width: '100%', maxWidth: 800 }}>
             <PrivacyPolicy />

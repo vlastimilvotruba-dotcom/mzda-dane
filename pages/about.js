@@ -16,7 +16,7 @@ export default function AboutPageRoute() {
         <link rel="canonical" href="https://mzda-dane.cz/about/" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack />
+        <Header />
         <Box mt={4} display="flex" justifyContent="center">
           <Box sx={{ width: '100%', maxWidth: 800 }}>
             <AboutPage />

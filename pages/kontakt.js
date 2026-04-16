@@ -20,7 +20,7 @@ export default function KontaktPage() {
         <meta property="og:locale" content="cs_CZ" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack />
+        <Header />
         <Box mt={4} display="flex" justifyContent="center">
           <Box sx={{ width: '100%', maxWidth: 800 }}>
             <ContactPage />

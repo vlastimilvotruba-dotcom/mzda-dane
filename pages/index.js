@@ -55,7 +55,7 @@ export default function HomePage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sitelinksSchema) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack={false} />
+        <Header description="Kalkulačky mezd, daní a odvodů pro rok 2026 · Zdarma" />
         <CalculatorTiles />
         <Box mt={2}>
           <AdSlot id="home-bottom" position="bottom" />

@@ -62,7 +62,7 @@ export default function OsvcPage() {
       </Head>
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Výpočet daně, sociálního a zdravotního pojištění OSVČ podle pravidel pro rok 2025." />
+        <Header subtitle="Výpočet daně, sociálního a zdravotního pojištění OSVČ podle pravidel pro rok 2025." />
 
         <Box mt={4}>
           <Box mb={2}><AdSlot id="osvc-top" position="top" /></Box>

@@ -57,7 +57,7 @@ export default function AnnualTaxPage() {
         }) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance." />
+        <Header subtitle="Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance." />
         <Box mt={4}>
           <Box mb={2}><AdSlot id="annual-top" position="top" /></Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">

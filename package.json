@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "update-aktuality": "node scripts/update-aktuality.js",
     "lint": "eslint"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "eslint": "^9",
-    "eslint-config-next": "16.2.0"
+    "eslint-config-next": "16.2.0",
+    "fast-xml-parser": "^4.5.6"
   }
 }

@@ -57,7 +57,7 @@ export default function SalaryPage() {
         }) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev." />
+        <Header subtitle="Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev." />
         <Box mt={4}>
           <Box mb={2}><AdSlot id="salary-top" position="top" /></Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">

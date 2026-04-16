@@ -26,7 +26,7 @@ export default function LoanPage() {
         <meta property="og:image:height" content="630" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header showBack subtitle="Výpočet měsíční splátky, celkových nákladů a doby půjčky nebo hypotéky." />
+        <Header subtitle="Výpočet měsíční splátky, celkových nákladů a doby půjčky nebo hypotéky." />
         <Box mt={4}>
           <Box mb={2}><AdSlot id="loan-top" position="top" /></Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2} justifyContent="center">
