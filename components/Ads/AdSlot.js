@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 
 const AD_SLOTS = {
-  /* až budou schválené reklamy odkomentovvat
   'home-bottom':    '9213580658',
   'salary-top':     '9613181694',
   'salary-side':    '1263413800',
   'salary-bottom':  '2245827569',
+  /* až budou schválené reklamy odkomentovvat
   'loan-top':       '9613181694',
   'loan-side':      '1263413800',
   'loan-bottom':    '2245827569',
@@ -23,6 +23,7 @@ function AdSlot({ id, position }) {
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
   const adRef = useRef(null);
   const initialized = useRef(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     if (initialized.current) return;
@@ -36,6 +37,39 @@ function AdSlot({ id, position }) {
     }
   }, []);
 
+  // Sleduj data-ad-status atribut který AdSense nastavuje: "filled" nebo "unfilled"
+  useEffect(() => {
+    const ins = adRef.current;
+    if (!ins) return;
+
+    let timeoutId;
+    let observer;
+
+    const evaluate = () => {
+      const status = ins.getAttribute('data-ad-status');
+      if (status === 'filled') {
+        setIsVisible(true);
+      } else if (status === 'unfilled') {
+        setIsVisible(false);
+      }
+    };
+
+    // Sleduj změny atributů na <ins> elementu
+    observer = new MutationObserver(evaluate);
+    observer.observe(ins, { attributes: true, attributeFilter: ['data-ad-status'] });
+
+    // Fallback: po 5 sekundách pokud není data-ad-status nastaven, skryj
+    timeoutId = setTimeout(() => {
+      const status = ins.getAttribute('data-ad-status');
+      if (!status) setIsVisible(false);
+    }, 5000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   // Skryj side slot na malých šířkách
   if (position === 'side' && isSmall) {
     return null;
@@ -45,6 +79,9 @@ function AdSlot({ id, position }) {
 
   // Pokud slot ID neexistuje, nic nezobrazuj
   if (!slotId) return null;
+
+  // Pokud se reklama nezobrazila, vrať null (nic)
+  if (!isVisible) return null;
 
   return (
     <Box

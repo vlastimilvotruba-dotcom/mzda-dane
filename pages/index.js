@@ -57,7 +57,7 @@ export default function HomePage() {
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header description="Kalkulačky mezd, daní a odvodů pro rok 2026 · Zdarma" />
         <CalculatorTiles />
-        <Box mt={2}>
+        <Box mt={3} mb={3}>
           <AdSlot id="home-bottom" position="bottom" />
         </Box>
         <HomeContent />
