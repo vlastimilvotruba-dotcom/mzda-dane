@@ -18,6 +18,7 @@ const MENU_LINKS = [
   { label: 'Domů', href: '/' },
   { label: 'Kalkulačky', href: '/#kalkulacky' },
   { label: 'Aktuality', href: '/aktuality' },
+  { label: 'Energetika', href: '/energetika' },
   { label: 'O webu', href: '/about' },
   { label: 'Kontakt', href: '/kontakt' },
 ]

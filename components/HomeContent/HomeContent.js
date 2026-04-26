@@ -60,6 +60,14 @@ function HomeContent() {
           <Link href="/ev-vs-spalovak" style={{ color: '#00897b', fontWeight: 600 }}>Kalkulačka EV vs. benzín/nafta</Link>
           {' – porovnejte roční provozní náklady auta a zjistěte cenu za 1 km jízdy u elektroauta, benzínu i dieselu.'}
         </Typography>
+        <Typography variant="body1" color="text.secondary">
+          <Link href="/aktuality" style={{ color: '#e65100', fontWeight: 600 }}>Aktuality – daně a mzdy 2026</Link>
+          {' – přehled aktuálních změn v daních, mzdách a odvodech v ČR s komentářem k dopadu na zaměstnance a OSVČ.'}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          <Link href="/energetika" style={{ color: '#2e7d32', fontWeight: 600 }}>Energetika – elektromobilita a FVE</Link>
+          {' – výběr důležitých zpráv o elektromobilech, fotovoltaice a cenách energií v ČR i EU s editorským komentářem.'}
+        </Typography>
       </Box>
 
       <Divider sx={{ my: 4 }} />
@@ -91,6 +99,21 @@ function HomeContent() {
         Rozhodující je ale roční nájezd, reálná spotřeba a cena elektřiny. Proto jsme přidali i{' '}
         <Link href="/ev-vs-spalovak" style={{ color: '#00897b', fontWeight: 600 }}>kalkulačku EV vs. spalovák</Link>,
         která porovná náklad na 100 km, cenu za 1 km i celkové roční výdaje.
+      </Typography>
+
+      <Divider sx={{ my: 4 }} />
+
+      <Typography variant="h5" gutterBottom fontWeight={600}>
+        Aktuality a komentáře
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        Na webu průběžně sledujeme změny v legislativě i dění v oblasti energetiky a mobility.
+        V sekci{' '}
+        <Link href="/aktuality" style={{ color: '#e65100', fontWeight: 600 }}>Aktuality</Link>
+        {' '}komentujeme novinky v daňových sazbách, změny v odvodech a jejich konkrétní dopad na výplatu.
+        Sekce{' '}
+        <Link href="/energetika" style={{ color: '#2e7d32', fontWeight: 600 }}>Energetika</Link>
+        {' '}přináší výběr zpráv o elektromobilech, fotovoltaice a cenách elektřiny – vždy s vazbou na české podmínky a naše kalkulačky.
       </Typography>
 
       <Divider sx={{ my: 4 }} />
@@ -129,6 +152,26 @@ function HomeContent() {
         Dohoda o provedení práce (DPP) je vhodná pro příležitostnou práci – do 11 999 Kč měsíčně
         se neplatí sociální ani zdravotní pojištění. Dohoda o pracovní činnosti (DPČ) má limit 4 499 Kč,
         nad který jsou odvody povinné.
+      </Typography>
+
+      <Typography variant="subtitle1" fontWeight={600}>
+        Kde sledovat změny v daních a mzdách?
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        V sekci{' '}
+        <Link href="/aktuality" style={{ color: '#e65100', fontWeight: 600 }}>Aktuality</Link>
+        {' '}průběžně komentujeme legislativní novinky – změny sazeb, slev na dani i odvodů. Každá zpráva obsahuje
+        konkrétní dopad na zaměstnance nebo OSVČ, ne jen přepis tiskové zprávy.
+      </Typography>
+
+      <Typography variant="subtitle1" fontWeight={600}>
+        Kde najdu zprávy o elektroautech a fotovoltaice?
+      </Typography>
+      <Typography variant="body1" paragraph color="text.secondary">
+        Sekce{' '}
+        <Link href="/energetika" style={{ color: '#2e7d32', fontWeight: 600 }}>Energetika</Link>
+        {' '}agreguje výběr zpráv z českých i zahraničních zdrojů (Hybrid.cz, Electrek) přeložených do češtiny.
+        Ke každému článku přidáváme komentář s vazbou na český trh a odkaz na příslušnou kalkulačku.
       </Typography>
     </Box>
   );

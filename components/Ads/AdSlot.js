@@ -1,21 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 
+// Přepínač reklam – nastavte na true po schválení AdSense účtu
+const ADS_ENABLED = false;
+
 const AD_SLOTS = {
   'home-bottom':    '9213580658',
   'salary-top':     '9613181694',
   'salary-side':    '1263413800',
   'salary-bottom':  '2245827569',
-  /* až budou schválené reklamy odkomentovvat
   'loan-top':       '9613181694',
   'loan-side':      '1263413800',
   'loan-bottom':    '2245827569',
   'annual-top':     '9613181694',
   'annual-side':    '1263413800',
   'annual-bottom':  '2245827569',
-  'other-top':      '9613181694',
-  'other-bottom':   '2245827569',
-  */
+  'osvc-top':       '9613181694',
+  'osvc-side':      '1263413800',
+  'osvc-bottom':    '2245827569',
+  'fve-top':        '9613181694',
+  'fve-side':       '1263413800',
+  'fve-bottom':     '2245827569',
+  'ev-top':         '9613181694',
+  'ev-side':        '1263413800',
+  'ev-bottom':      '2245827569',
 };
 
 function AdSlot({ id, position }) {
@@ -74,6 +82,9 @@ function AdSlot({ id, position }) {
   if (position === 'side' && isSmall) {
     return null;
   }
+
+  // Reklamy jsou dočasně vypnuty – čekáme na schválení AdSense
+  if (!ADS_ENABLED) return null;
 
   const slotId = AD_SLOTS[id];
 

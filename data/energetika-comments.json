@@ -1,0 +1,87 @@
+[
+  {
+    "link": "https://www.hybrid.cz/pre-dal-posiluje-svou-sit-nabijecich-stanic/",
+    "tags": ["Nabíjení"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Srovnání dvou čísel v daném článku je překvapující: spotřeba elektrické energie v síti PRE vzrostla o 41 %, ale počet zákazníků o 81 %. To znamená, že průměrný uživatel nabící na veřejné síti méně než dřív – nejspíš proto, že většina nabíjí doma a veřejnou infrastrukturu využívá jen na delší trasy. Praktický dopad: veřejné nabíjení tvoří u běžného řidiče menšinu nákladů – průměrný měsíční výdaj za nabíjení v ČR se pohybuje do 1 200 Kč."
+  },
+  {
+    "link": "https://www.hybrid.cz/petina-novych-aut-v-eu-jsou-elektromobily/",
+    "tags": ["Elektromobily", "EU trh"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Registrace elektromobilů v EU rostou o 32,5 % – za tím číslem je však důležitý detail: růst táhnou především firemní vozové parky, kde je přechod na BEV ekonomicky jednoznačný. Česká čísla za Q1 2026 (CDV) jsou výrazně nižší než průměr EU – stále jsme pod 5 % podílem. Hlavní brzda pro soukromé kupující zůstává cena pořízení. Dobrá zpráva: tlak čínských výrobců bude tlačit ceny dolů rychleji, než se čekalo."
+  },
+  {
+    "link": "https://electrek.co/2026/04/26/beijing-auto-show-2026-insane-glimpse-future-auto-industry/",
+    "tags": ["Elektromobily", "EU trh"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Zpráva z pekingského autosalonu 2026 je svým způsobem varováním pro evropské výrobce včetně Škody. Čínské značky jako BYD, NIO a ZEEKR představily modely s výbavou a cenou, které evropská konkurence prostě nedává dohromady. Pro kupce je to ale dobrá zpráva – ceny elektromobilů na evropském trhu budou pod tímto tlakem klesat rychleji, než většina analýz předpovídá. Sledujeme."
+  },
+  {
+    "link": "https://www.hybrid.cz/zajem-o-ojete-elektromobily-a-hybridy-sili/",
+    "tags": ["Elektromobily", "Hybridy"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Data z TipCars jsou prakticky zajímavá: ojetý elektromobil nebo hybrid je dnes dostupný v segmentu, kde dřív nebyla žádná elektro-volba. Konkrétně: ojetá Hyundai Ioniq 6 nebo VW ID.3 se na TipCars pohybují od 450 000 Kč, ojetý Toyota C-HR hybrid od 350 000 Kč. Úspora na provozu oprotí srovnatelnému spalovacímu autu je reálná i u ojety – náš kalkulátor to přepočtá v konkrétních Kč."
+  },
+  {
+    "link": "https://www.hybrid.cz/novy-elektromobil-volkswagen-id-3-neo-konecne-reaguje-na-pripominky-zakazniku/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "ID.3 byl od začátku kontroverzální: skvělý pohon, ale software a interiér plný kompromisů. ID.3 Neo tohle výrazně napravuje – fyzické ovladače klimatizace jsou zpět, obrazovka se zvětšila a zákaznícká zpětná vazba se projevila i na ergonomii. Volkswagen si nemŏže dovolit další generaci s podobnými výhrami, protože tlak od čínských výrobců je příliš silný. Pro kupce v ČR: ID.3 Neo bude jedním z nejdostupnějších nových elektromobilů s rozvinutou servisní sítí."
+  },
+  {
+    "link": "https://www.hybrid.cz/orlen-v-cesku-rozsiruje-sit-ultrarychleho-dobijeni/",
+    "tags": ["Nabíjení"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "ORLEN buduje ultrarychlé dobíjení především na svých čerpacích stanicích, takže majítel elektroauta má k dispozici i zázení čerpaky. Na vybraných trasách (D1, D5) už dnes výkon dosahuuje 300 kW – to znamená zastavávku 15–20 minut místo původních 40+. Cena se na ORLEN stanicích pohybuje okolo 12–14 Kč/kWh při platbě kartou, což je pro rychlonabíjení na dálnici konkurenceschopné číslo."
+  },
+  {
+    "link": "https://www.hybrid.cz/volvo-predstavuje-elektricke-nakladaky-s-dojezdem-az-700-km/",
+    "tags": ["Elektromobily", "Nabíjení"],
+    "comment": "700 km dojezd u elektrického nákladáku je přelomové číslo – překonává většinu mezinárodních tras v rámci ČR a sousedních zemí. Příprava na megawattové dobíjení (standard MCS) naznačuje, kde bude infrastruktura za 3–5 let: zastavávka nákladáku u rychlé MCS nabíečky by měla trvat 30–45 minut. Pro dopravce v ČR je to zatím informace do budoucna, ale investice do vozového parku se rozhodují dnes."
+  },
+  {
+    "link": "https://electrek.co/2026/04/26/electric-haul-trucks-could-save-fortescue-over-400-million-in-fuel-per-year/",
+    "tags": ["Elektromobily"],
+    "comment": "Číslo 400 milionů dolarů ročně zní astronomicky, ale je to prostá matematika: Fortescue provozuje stovky obřích těžebních náklaďáků s motory spalujícími naftu za miliony litrů ročně. Přechod na elektrický pohon u takového provozu nemá s ekologií primárně co dělat – je to čistě ekonomické rozhodnutí. Zajímavé je, že stejná logika platí v menším měřítku i pro české firmy s vozovými parky: nafta zdražila, elektřina na firemní tarif je stále levná alternativa."
+  },
+  {
+    "link": "https://electrek.co/2026/04/26/liebherr-delivers-330-ton-electric-excavator-to-bulgarian-copper-mine/",
+    "tags": ["Elektromobily"],
+    "comment": "Liebherr R 9350 E váží 300 tun a funguje v bulharském dolu Assarel – to není prototyp do výstavy, to je provozní stroj v aktivní těžbě mědi. Liebherr je přitom značka dobře etablovaná i v Česku (stavební technika, jeřáby), takže tento krok signalizuje, že elektrifikace těžké techniky přestává být záležitostí vzdálené budoucnosti. Pro průmyslové podniky, které zvažují elektrifikaci těžkého vybavení, je bulharský provoz první srovnatelnou referenční instalací v EU."
+  },
+  {
+    "link": "https://electrek.co/2026/04/25/this-fleet-is-going-electric-and-sharing-their-real-world-results-and-savings-online/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Článek upozorňuje na něco neobvyklého: malý komerční dopravce zveřejnil na Redditu skutečná data z přechodu na elektro – spotřebu, náklady na nabíjení, dobu prostojů. Taková transparentnost je vzácná, protože většina studií pochází od výrobců nebo leasingových firem s přímým zájmem. Pro české malé firmy uvažující o elektrické dodávce nebo servisním voze jsou reálná data od přímého provozovatele cennější než jakýkoliv marketingový materiál."
+  },
+  {
+    "link": "https://www.hybrid.cz/kia-rozsiruje-modelovou-radu-uzitkovych-elektromobilu-pv5/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Kia PV5 v nových variantách L2H2 (vysoká střecha) a L1H1 cílí přesně na segment, kde elektromobily zatím výrazně chybí: elektrikáři, instalatéři, kurýrní firmy. Dosavadní nabídka elektrických dodávek byla omezená a drahá – Kia vstupuje do prostoru, kde konkuruje především Volkswagen eCrafter a Stellantis Citroën ë-Dispatch. Pro OSVČ nebo malé firmy s pravidelnými trasami ve městě může PV5 ekonomicky dávat smysl i bez dotací."
+  },
+  {
+    "link": "https://www.hybrid.cz/hyundai-ioniq-3-elektromobil-usity-na-miru-evrope/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Ioniq 3 se zařazuje pod Ioniq 5 a 6 jako dostupnější vstupní model – Hyundai tím zaplňuje segment, kde dosud chyběla přesvědčivá evropská alternativa k čínským modelům okolo 30–35 tisíc eur. Slogan o autu šitém na míru Evropě není jen marketing: tepelné čerpadlo ve standardu, větší baterie než u asijských protějšků a servisní síť po celé ČR jsou pro české kupující konkrétní argumenty."
+  },
+  {
+    "link": "https://electrek.co/2026/04/25/new-bill-in-california-senate-could-turn-your-home-battery-into-a-moneymaker/",
+    "tags": ["Ceny energií", "FVE & Solár"],
+    "calcLink": "/navratnost-fve",
+    "calcLabel": "Kalkulačka návratnosti FVE",
+    "comment": "Kalifornský zákon je zajímavý především jako signál, ne jako přímá relevance pro ČR. Myšlenka se však přenáší: česká ERU a ČEZ momentálně testují podobné schéma agregace domácích baterek do virtuální elektrárny (Virtual Power Plant). Pokud model prokáže fungující ekonomiku v USA, je jen otázkou času, kdy se v podobné formě dostane do ČR. Pro majíitele FVE s baterikovým úloištěm by to mohla být další složka návratnosti investice."
+  }
+]

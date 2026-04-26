@@ -1,0 +1,69 @@
+[
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/novinky/novinky-2026/k-vysi-dane-z-nemovitych-veci-v-Ricanech",
+    "tags": ["Nemovitosti"],
+    "comment": "Případ z Říčan je praktickým připomenutím toho, jak funguje daň z nemovitých věcí: výši daně neurčuje Finanční správa, ale zastupitelstvo obce prostřednictvím obecně závazné vyhlášky. Finanční správa je povinna se vyhláškou řídit bez ohledu na to, zda ji obec považuje za chybnou. Pokud vám tedy přijde vyšší daň z nemovitostí, příčinou může být rozhodnutí vašeho zastupitelstva – a správné místo pro stížnost je radnice, nikoliv finanční úřad."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/financni-sprava-zacala-rozesilat-informace-k-platbe-dnv",
+    "tags": ["Nemovitosti"],
+    "comment": "Daň z nemovitých věcí je splatná do 31. května 2026 (nebo ve dvou splátkách do 31. května a 30. listopadu, pokud přesahuje 5 000 Kč). Platební údaje dostanete elektronicky – do datové schránky nebo e-mailem. Pokud nemáte ani jedno, přijde složenka poštou do 25. května. Pozor: letos se výše daně u mnoha nemovitostí zvýšila kvůli celostátní valorizaci – překvapení z vyšší částky tedy není výjimkou."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/mezinarodni-kontrolni-akce-damocles",
+    "tags": ["Kontroly"],
+    "comment": "Akce DAMOCLES probíhala na letišti Václava Havla a cílila na pašování narkotik a organizovaný zločin v rámci koordinace 14 zemí EU. Pro běžné cestující a podnikatele nemá přímý dopad – jde o součást dlouhodobé spolupráce celních správ v EU v boji proti závažné trestné činnosti."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/dane/dane/dan-z-pridane-hodnoty/informace-stanoviska-a-sdeleni/narok-na-odpocet-dph/sdeleni-fscr-k-okamziku-uplat-narok-odp-dane",
+    "tags": ["DPH"],
+    "comment": "Praktický dopad pro plátce DPH: pokud vám dorazí daňový doklad až v následujícím měsíci po uskutečnění plnění, odpočet DPH si uplatníte až za ten následující měsíc – ne zpětně. Toto upřesnění vychází z rozsudku Soudního dvora EU a mění dosavadní praxi některých plátců."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/lidem-s-danemi-nove-pomuze-i-umela-inteligence",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Finanční správa spustila beta verzi AI asistenta pro vyplnění daňového přiznání. Pro zaměstnance s jednoduchými příjmy to může výrazně usnadnit celý proces – zvláště pokud přiznání podáváte poprvé. Beta verze je zatím k dispozici přes portál Moje daně."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/financni-sprava-v-zakladni-lhute-obdrzela-pres-1-6-mil",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Od 2. dubna 2026 lze daňové přiznání podat již jen elektronicky. Papírová forma je uzavřena. Pokud jste nestihli základní lhůtu, máte čas do 4. května 2026 elektronicky – nebo do 1. července 2026, pokud vám přiznání zpracovává daňový poradce."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/novinky/novinky-2026/zmeny-v-registraci-platcu-dane-ze-zavisle-cinnosti-2026",
+    "tags": ["Zaměstnanci"],
+    "calcLink": "/cista-mzda",
+    "calcLabel": "Spočítejte čistou mzdu",
+    "comment": "Od dubna 2026 se mění způsob registrace zaměstnavatelů – nově probíhá přihlášením do evidence JMHZ (jednotné měsíční hlášení zaměstnavatele). Zaměstnavatelé by měli zkontrolovat, zda mají vyplněnou daňovou rezidenci všech zaměstnanců, jinak hrozí komplikace při zpracování mezd."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/danove-priznani-za-rok-2025-pripominame",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Připomínáme: oproti roku 2024 nedošlo v daních z příjmů fyzických osob za rok 2025 k žádným zásadním změnám sazeb ani slev. Pokud jste uplatňovali stejné odpočty jako loni (hypotéka, penzijní spoření, dary), postup je identický. Pozor na limit pro odpočet úroků z hypotéky – zůstává na 150 000 Kč ročně."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/dan-z-prijmu-za-rok-2025-tyden-do-konce-lhuty",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Pokud jste nestihli podat daňové přiznání do 1. dubna 2026, elektronická cesta je stále otevřená do 4. května 2026. Elektronické podání je navíc bezplatné přes portál Moje daně nebo datovou schránku."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/vice-nez-2-000-zarizeni-apple-v-drazbe",
+    "tags": ["Kontroly"],
+    "comment": "Informace pro zájemce o zákonné dražby: Finanční úřad pro Prahu nabídne přes 2 000 kusů elektroniky Apple zabavené při daňových kontrolách. Dražby probíhají online v systému APED – pro fyzické osoby bez omezení."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/kontrolne-exekucni-akce-olda",
+    "tags": ["Kontroly", "OSVČ"],
+    "calcLink": "/osvc",
+    "calcLabel": "Kalkulačka OSVČ odvodů",
+    "comment": "Upomínáme: kombinované akce Finanční správy a Celní správy se zaměřují zejména na neevidované tržby a nezdaněné zboží. Pro živnostníky a OSVČ je klíčové mít v pořádku evidenci tržeb a správně vedené účetnictví nebo daňovou evidenci."
+  }
+]

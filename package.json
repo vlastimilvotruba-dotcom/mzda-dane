@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "update-aktuality": "node scripts/update-aktuality.js",
+    "update-energetika": "node scripts/update-energetika.js",
     "lint": "eslint"
   },
   "dependencies": {
