@@ -38,11 +38,10 @@ function Footer({ onNavigate }) {
               O webu
             </Link>
             <Link
-              component="button"
+              href="/privacy"
               variant="body2"
               color="text.secondary"
               underline="hover"
-              onClick={() => onNavigate('privacy')}
             >
               Zásady ochrany osobních údajů
             </Link>

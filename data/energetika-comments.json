@@ -1,5 +1,88 @@
 [
   {
+    "link": "https://electrek.co/2026/05/12/lectric-memorial-day-e-bikes-mammotion-luba-3-awd-robot-mowers-more/",
+    "tags": ["Elektromobily"],
+    "comment": "Článek pokrývá amerský Memorial Day výprodej elektrokol Lectric – v ČR samotná sleva neplatí, ale situace v USA dobře ilustruje, kde se trh s elektrokoly nachází: balíčky zahrnují příslušenství v hodnotě stovek dolarů, protože výrobci bojují o zákazníky cenou i výbavou. V Česku se podobně dostupná elektrokola (složitelné modely 250W, pedálová asistence) pohybují od 15 000 Kč a trh roste meziročně o desítky procent. Elektrokolo je přitom nejrychleji se vracející elektrická investice – průměrný uživatel amortizuje kolo za 1–2 roky na uspořených nákladech za MHD nebo parkování."
+  },
+  {
+    "link": "https://electrek.co/2026/05/12/chic-beach-car-ev-concept-pickup-bed-images/",
+    "tags": ["Elektromobily"],
+    "comment": "Renault 4 JP4x4 je koncept – přestože se plátěná střecha a ložná plocha pickupu do sériové výroby nejspíš nedostanou, koncepty Renaultu mají historii, kdy se výrazné rysy přenáší do produkčních modelů. Sériový Renault 4 E-Tech Electric je reálně dostupný v ČR a česky jej pokrývá Hybrid.cz. Renault vsadil na open-top design, aby připomněl ikonický 4L Plein Air ze 60. let – nostalgický marketing funguje zvlášť u modelů, které mají emotivní historii. Koncept ukazuje, že elektromobilita nemusí nutně znamenat boxy a jednolitou karoserii – výrobci experimentují s formami, které spalovací motory neumožňovaly."
+  },
+  {
+    "link": "https://electrek.co/2026/05/12/rivian-hey-rivian-ai-assistant-vehicle-control/",
+    "tags": ["Elektromobily"],
+    "comment": "Rivian 'Hey Rivian' je první masově nasazený hlasový AI asistent ve vozidle s plnou kontrolou nad autem – klimatizace, navigace, jízdní režimy, vše hlasem nebo přes OTA aktualizaci bez návštěvy servisu. V Česku Rivian zatím není v prodeji, ale tento krok naznačuje směr, kterým se vydávají všichni výrobci: software a over-the-air aktualizace se stávají stejně podstatnou složkou hodnoty vozu jako hardware. Kupující elektromobilu dnes kupuje platformu, která se rozvíjí i po nákupu."
+  },
+  {
+    "link": "https://electrek.co/2026/05/12/corrupt-dot-head-takes-oil-money-to-film-reality-tv-show-during-oil-price-spike/",
+    "tags": ["Ceny energií"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Electrek komentuje propojení americké dopravní politiky s ropným průmyslem v kontextu cenového výkyvu ropy v roce 2026. Pro české domácnosti je prakticky zajímavá jiná rovina: ceny ropy výrazně ovlivňují ceny pohonných hmot v ČR. Při výkyvech nad 100 $/barel provozní výhoda elektromobilů oproti spalovacím autům v Kč/km výrazně roste – a právě to je jeden z klíčových parametrů v naší kalkulačce EV vs. spalovák."
+  },
+  {
+    "link": "https://electrek.co/2026/05/12/tesla-removes-basic-autopilot-netherlands-fsd-only/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Tesla tiše odebrala bezplatný Basic Autopilot v Nizozemsku – první evropský trh, kde zůstalo jen placené FSD. Krok může signalizovat globální posun Tesly k platebnímu modelu za asistenční funkce. Pro potenciální kupce v ČR to znamená reálnou položku navíc v kalkulaci: FSD stojí v EU cca 5 000 € jednorázově nebo ~300 €/měsíc v předplatném. Pokud Tesla odebere Basic Autopilot plošně i v ČR, je třeba tuto částku zahrnout do celkového srovnání nákladů."
+  },
+  {
+    "link": "https://www.hybrid.cz/levny-elektromobil-mg4-ev-urban-prijizdi-na-cesky-trh/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "MG4 EV Urban startuje na 599 990 Kč – jedno z nejlevnějších nových elektromobilů dostupných přímo v ČR s českou zárukou. Čínský původ a nižší cena jsou pro část kupujících výhoda, pro jiné otázník kolem servisního zázemí – MG v ČR spolupracuje s autorizovanými partnery ve většině krajských měst. Pokud váháte, jestli pořizovací cena a nižší provozní náklady dají ekonomiku do plusu vůči srovnatelnému spalováku, přesné číslo vám spočítá naše kalkulačka."
+  },
+  {
+    "link": "https://www.hybrid.cz/elektromobil-kia-ev2-s-dojezdem-az-453-km/",
+    "tags": ["Elektromobily", "Nabíjení"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Kia EV2 s 22kW palubní nabíječkou (AC) a dojezdem 453 km z 61kWh baterie míří na segment, kde elektromobily dosud výrazně chyběly pod hranicí 35 tisíc eur. 22kW AC nabíjení prakticky znamená, že přes noc na pomalejším domácím nebo pracovním stojanku nabijete plný akumulátor – žádná ranní starost o rychlonabíječ. EV2 se zařazuje pod EV3 a mohlo by se stát jedním z klíčových modelů pro hromadné přijetí elektromobilů v ČR."
+  },
+  {
+    "link": "https://www.hybrid.cz/zajem-o-elektromobily-v-cesku-dal-roste-duben-opet-rekordni/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Duben 2026 jako historicky nejúspěšnější měsíc prodeje elektromobilů v ČR potvrzuje, že přechod přestává být záležitostí early adopterů. Data CDV dlouhodobě ukazují, že motorem růstu jsou firemní flotily – tvoří přes 60 % nových registrací elektromobilů v ČR. Soukromý zákazník přibývá pomaleji, ale trend je jasný. Klíčová otázka: kdy se elektromobil ekonomicky vyplatí právě vám? To závisí na ročním nájezdu a tarifu elektřiny – kalkulačka odpoví za minutu."
+  },
+  {
+    "link": "https://www.hybrid.cz/lexus-odhalil-novy-sestimystny-elektromobil-lexus-tz/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Lexus TZ jako šestimístné elektrické SUV cílí na prémiový segment, kde konkuruje Tesle Model X nebo BMW iX – s důrazem na japonskou servisní kulturu a spolehlivost, která je pro část kupujících klíčovým argumentem. V ČR Lexus rozšiřuje servisní síť a plánuje nabíjecí infrastrukturu u dealerů. Cenové pásmo TZ ho řadí mezi aspirační vozy, ale ekonomika provozu je stejná jako u každého jiného elektromobilu – palivo v zásuvce místo na pumpě."
+  },
+  {
+    "link": "https://www.hybrid.cz/pozvanka-techday-fekt-2026-v-brne/",
+    "tags": ["Elektromobily"],
+    "comment": "TechDay FEKT 2026 na VUT v Brně propojuje akademické prostředí s praxí v oblasti elektrotechniky, energetiky a elektromobility. Akce tohoto druhu jsou důležitým signálem: česká technická výuka aktivně reaguje na potřeby odvětví, které v ČR teprve nabírá na intenzitě. Pro studenty elektrotechniky je to přímý kontakt s trhem práce – pro průmysl zdroj budoucích odborníků na elektrické pohony, bateriové systémy a nabíjecí infrastrukturu."
+  },
+  {
+    "link": "https://www.hybrid.cz/skoda-auto-druha-nejprodavanejsi-znacka-v-evrope/",
+    "tags": ["Elektromobily", "EU trh"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Škoda jako druhá nejprodávanější značka v Evropě s meziročním nárůstem 14 % je výsledkem silné nabídky spalovacích aut i rostoucí řady elektromobilů Enyaq a připravovaného Elroq. Zajímavý je kontext: Volkswagen Group tlačí na rychlejší elektrifikaci Škody – přitom právě tato značka může být pro české kupce nejpřirozenější cestou k prvnímu elektromobilu. Servisní síť pokrývá prakticky celé ČR a povědomí o značce je mimořádně silné."
+  },
+  {
+    "link": "https://www.hybrid.cz/veolia-meni-energetiku-svych-provozu-diky-fotovoltaice/",
+    "tags": ["FVE & Solár"],
+    "calcLink": "/navratnost-fve",
+    "calcLabel": "Kalkulačka návratnosti FVE",
+    "comment": "Veolia instalovala FVE v areálech v Ostravě, Brně a Olomouci a pokrývá desítky procent vlastní spotřeby z vlastní výroby. Příklad průmyslového provozu funguje jako argumentační zrcadlo i pro domácnosti: čím vyšší vlastní spotřeba a čím více energie spotřebujete přes den, tím kratší návratnost FVE. U tuzemských domácností se dnes pohybuje typicky mezi 6–10 lety v závislosti na velikosti střechy, expozici a tarifu elektřiny. Konkrétní číslo pro vaši situaci spočítejte v naší kalkulačce."
+  },
+  {
+    "link": "https://www.hybrid.cz/elektromobil-volkswagen-id-polo-slavi-svetovou-premieru/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "VW ID. Polo cílí na segment, kde Volkswagen prodává desetitisíce aut ročně – a kde elektromobilita v ČR dosud výrazně chyběla. Polo přichází jako cenově dostupnější volba pod ID.3 a bude vyráběno ve španělské Pamploně vedle spalovacích Seat Arona a Ibiza. Pro zákazníky v ČR jsou klíčové dva parametry: předpokládaná cena pod 30 tisíci eur a hustá servisní síť VW – obojí historicky silné stránky značky u nás."
+  },
+  {
     "link": "https://www.hybrid.cz/pre-dal-posiluje-svou-sit-nabijecich-stanic/",
     "tags": ["Nabíjení"],
     "calcLink": "/ev-vs-spalovak",

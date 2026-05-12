@@ -82,14 +82,14 @@ export default function AktualityPage({ aktuality }) {
               }}
             >
               <Typography variant="subtitle1" fontWeight={700} gutterBottom>
-                Komentář redakce – duben/květen 2026
+                Komentář redakce – květen 2026
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                Daňová sezóna 2026 vrcholí – základní lhůta pro podání přiznání v listinné podobě uplynula
-                1. dubna, elektronicky je možné podat ještě do 4. května 2026. Nové pro letošní rok:
-                Finanční správa spustila beta verzi AI asistenta pro vyplnění přiznání. Zároveň probíhá
-                rozesílání platebních informací k dani z nemovitých věcí (splatnost 31. května) – letos
-                s výraznějším nárůstem u řady nemovitostí kvůli celostátní valorizaci. Ke každé novince
+                Daňová sezóna 2026 je za námi – obě lhůty pro podání přiznání (papír 1. dubna, elektronicky
+                4. května) uplynuly. Celkem Finanční správa přijala přes 2,47 milionu přiznání, z toho více
+                než 90 % elektronicky. Nyní přichází na řadu daň z nemovitých věcí: splatnost je
+                31. května 2026 (nebo ve dvou splátkách do 31. května a 30. listopadu). Vláda zároveň
+                schválila EET 2.0 – cloudové nástupnictví původní evidence tržeb. Ke každé novince
                 přidáváme praktický komentář s dopadem pro zaměstnance, OSVČ i majitele nemovitostí.
               </Typography>
             </Paper>

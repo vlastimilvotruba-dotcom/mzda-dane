@@ -1,5 +1,26 @@
 [
   {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/financni-sprava-eviduje-zajem-o-podani-priz-v-el-podobe",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Data za rok 2025 jsou rekordní: z 2,474 milionu podaných přiznání jich přes 90 % přišlo elektronicky a fyzické osoby poprvé překročily 2 miliony podání. Trendem je ale i výrazná závěrečná špička – přes 91 tisíc přiznání bylo podáno 4. května, v poslední povolený den. Pro příště: dřívější podání nejen snižuje stres, ale také urychluje vrácení přeplatku – Finanční správa standardně vrací přeplatky do 30 dnů od podání."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/vlada-schvalila-eet-2-0",
+    "tags": ["OSVČ"],
+    "calcLink": "/osvc",
+    "calcLabel": "Kalkulačka odvodů OSVČ",
+    "comment": "EET 2.0 schválila vláda, zákon ještě čeká na projednání v parlamentu. Oproti původní EET z roku 2016 přináší zásadní změnu: cloudové řešení místo datové věty a speciálního hardware, jednodušší registraci a nižší technické nároky. Pro OSVČ a živnostníky to může znamenat výrazně levnější splnění evidenční povinnosti. Účinnost se předpokládá nejdříve od roku 2027 – sledujte průběh schvalování."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/krati-se-cas-na-podani-danoveho-priznani",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Lhůta 4. května 2026 pro elektronické podání daňového přiznání je pro většinu poplatníků poslední šancí bez daňového poradce. Pokud ani tuto lhůtu nestíháte, zbývají dvě legální cesty: podání přes daňového poradce s plnou mocí do 1. července 2026, nebo žádost o individuální prodloužení lhůty ze závažných důvodů. Penále za opožděné podání začíná na 0,05 % stanovené daně za každý den prodlení po uplynutí zákonné lhůty."
+  },
+  {
     "link": "https://financnisprava.gov.cz/cs/financni-sprava/novinky/novinky-2026/k-vysi-dane-z-nemovitych-veci-v-Ricanech",
     "tags": ["Nemovitosti"],
     "comment": "Případ z Říčan je praktickým připomenutím toho, jak funguje daň z nemovitých věcí: výši daně neurčuje Finanční správa, ale zastupitelstvo obce prostřednictvím obecně závazné vyhlášky. Finanční správa je povinna se vyhláškou řídit bez ohledu na to, zda ji obec považuje za chybnou. Pokud vám tedy přijde vyšší daň z nemovitostí, příčinou může být rozhodnutí vašeho zastupitelstva – a správné místo pro stížnost je radnice, nikoliv finanční úřad."

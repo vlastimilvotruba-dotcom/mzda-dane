@@ -82,15 +82,15 @@ export default function EnergetikaPage({ items }) {
               }}
             >
               <Typography variant="subtitle1" fontWeight={700} gutterBottom>
-                Komentář redakce – duben/květen 2026
+                Komentář redakce – květen 2026
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                Registrace nových elektromobilů v ČR v 1. čtvrtletí 2026 meziročně rostou – dle dat CDV
-                tvoří BEV přibližně 4 % z nových osobních aut. Ceny elektřiny po zimní stabilizaci mírně
-                klesají, což zlepšuje návratnost FVE i nákladový profil nabíjení doma. Nová evropská
-                nařízení (AFIR) zavazují čerpací stanice na dálnicích k rychlonabíječům od 2026 – sledujeme
-                rozjezd sítě v ČR. Novinky přinášíme česky: ze zdroje Hybrid.cz i z mezinárodního Electrek
-                (přeloženo automaticky, originál k dispozici v odkazu).
+                Duben 2026 se stal historicky nejúspěšnějším měsícem prodeje elektromobilů v ČR – nové i
+                dovezené vozy dosáhly rekordních hodnot. Na trh míří cenově dostupné modely (MG4 EV Urban
+                od 599 990 Kč, Kia EV2 s 453 km dojezdem) a Škoda se s meziročním nárůstem 14 % stala
+                druhou nejprodávanější značkou v Evropě. Veolia spouští FVE v Ostravě, Brně a Olomouci –
+                průmyslová fotovoltaika potvrzuje ekonomiku, která platí i pro domácnosti. Novinky
+                přinášíme česky: ze zdroje Hybrid.cz i z mezinárodního Electrek (originál vždy v odkazu).
               </Typography>
             </Paper>
 

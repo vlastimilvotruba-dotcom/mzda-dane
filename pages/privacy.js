@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     <>
       <Head>
         <title>Ochrana soukromí – Mzda a daně</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header />
