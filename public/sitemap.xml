@@ -78,4 +78,25 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://mzda-dane.cz/blog/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mzda-dane.cz/blog/benzin-nafta-vs-ev-2026/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mzda-dane.cz/blog/euro-v-cr-klady-zapory-2026/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
