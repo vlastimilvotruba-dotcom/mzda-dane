@@ -4,8 +4,12 @@ import { Container, Box } from '@mui/material'
 import Header from '../components/Header'
 import CalculatorTiles from '../components/CalculatorTiles/CalculatorTiles'
 import HomeContent from '../components/HomeContent/HomeContent'
+import HomePromo from '../components/HomePromo/HomePromo'
+import SalaryWidget from '../components/SalaryWidget/SalaryWidget'
 import AdSlot from '../components/Ads/AdSlot'
 import Footer from '../components/Footer/Footer'
+import fs from 'fs'
+import path from 'path'
 
 const siteSchema = {
   '@context': 'https://schema.org',
@@ -34,7 +38,7 @@ const sitelinksSchema = {
   ],
 }
 
-export default function HomePage() {
+export default function HomePage({ latestAktualityTitle, latestEnergetikaTitle, aktualityCount, energetikaCount, lastUpdated }) {
   const router = useRouter()
   return (
     <>
@@ -57,16 +61,39 @@ export default function HomePage() {
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header description="Kalkulačky mezd, daní a odvodů pro rok 2026 · Zdarma" />
         <CalculatorTiles />
+        <SalaryWidget />
+        <HomePromo
+          latestAktualityTitle={latestAktualityTitle}
+          latestEnergetikaTitle={latestEnergetikaTitle}
+          aktualityCount={aktualityCount}
+          energetikaCount={energetikaCount}
+        />
         <Box mt={3} mb={3}>
           <AdSlot id="home-bottom" position="bottom" />
         </Box>
         <HomeContent />
-        <Footer onNavigate={(page) => router.push(page)} />
+        <Footer onNavigate={(page) => router.push(page)} lastUpdated={lastUpdated} />
       </Container>
     </>
   )
 }
 
 export async function getStaticProps() {
-  return { props: {} }
+  try {
+    const aktuality = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/aktuality.json'), 'utf8'))
+    const energetika = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data/energetika.json'), 'utf8'))
+    return {
+      props: {
+        latestAktualityTitle: aktuality[0]?.title ?? null,
+        latestEnergetikaTitle: energetika[0]?.title ?? null,
+        aktualityCount: aktuality.length,
+        energetikaCount: energetika.length,
+        lastUpdated: aktuality[0]?.date
+          ? new Date(aktuality[0].date).toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' })
+          : null,
+      },
+    }
+  } catch {
+    return { props: { latestAktualityTitle: null, latestEnergetikaTitle: null, aktualityCount: 12, energetikaCount: 15, lastUpdated: null } }
+  }
 }

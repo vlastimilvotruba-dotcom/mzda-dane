@@ -55,6 +55,7 @@ export default function AnnualTaxPage() {
             }
           ]
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'Roční daně zaměstnance', item: 'https://mzda-dane.cz/rocni-dane' }] }) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header subtitle="Výpočet přeplatku nebo nedoplatku daně z příjmu zaměstnance." />

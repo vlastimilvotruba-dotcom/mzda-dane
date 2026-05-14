@@ -7,6 +7,7 @@ import { Container, Box, Typography, Paper, Chip, Divider, Stack, Button } from 
 import NextLink from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
+import ShareButtons from '../components/ShareButtons/ShareButtons'
 
 const PRIMARY = '#2e7d32'
 
@@ -48,6 +49,7 @@ export default function EnergetikaPage({ items }) {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mzda-dane.cz/energetika/" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'Energetika', item: 'https://mzda-dane.cz/energetika' }] }) }} />
       </Head>
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -55,20 +57,22 @@ export default function EnergetikaPage({ items }) {
 
         <Box mt={4} display="flex" justifyContent="center">
           <Box sx={{ width: '100%', maxWidth: 900 }}>
-            <Typography
-              variant="h4"
-              component="h1"
-              gutterBottom
-              sx={{
-                fontWeight: 700,
-                background: 'linear-gradient(90deg, #2e7d32 0%, #0277bd 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              Energetika
-            </Typography>
+            <Box display="flex" alignItems="flex-start" justifyContent="space-between" flexWrap="wrap" gap={1} mb={1}>
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{
+                  fontWeight: 700,
+                  background: 'linear-gradient(90deg, #2e7d32 0%, #0277bd 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Energetika
+              </Typography>
+              <ShareButtons title="Energetika – Mzda a daně" url="https://mzda-dane.cz/energetika" />
+            </Box>
 
             {/* Redakční komentář měsíce */}
             <Paper

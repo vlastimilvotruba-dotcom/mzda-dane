@@ -55,6 +55,7 @@ export default function SalaryPage() {
             }
           ]
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'Čistá mzda 2026', item: 'https://mzda-dane.cz/cista-mzda' }] }) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header subtitle="Výpočet čisté mzdy zaměstnance včetně odvodů a daňových slev." />

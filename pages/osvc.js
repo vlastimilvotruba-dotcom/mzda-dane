@@ -59,6 +59,7 @@ export default function OsvcPage() {
             }
           ]
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'OSVČ – daň a odvody', item: 'https://mzda-dane.cz/osvc' }] }) }} />
       </Head>
 
       <Container maxWidth="lg" sx={{ py: 4 }}>

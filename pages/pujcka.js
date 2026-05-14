@@ -24,6 +24,7 @@ export default function LoanPage() {
         <meta property="og:image" content="https://mzda-dane.cz/og-image.svg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'Kalkulačka půjčky', item: 'https://mzda-dane.cz/pujcka' }] }) }} />
       </Head>
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Header subtitle="Výpočet měsíční splátky, celkových nákladů a doby půjčky nebo hypotéky." />

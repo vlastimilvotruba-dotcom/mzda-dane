@@ -7,6 +7,7 @@ import { Container, Box, Typography, Paper, Chip, Divider, Stack, Button } from 
 import NextLink from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer/Footer'
+import ShareButtons from '../components/ShareButtons/ShareButtons'
 
 const PRIMARY = '#1565c0'
 
@@ -48,6 +49,7 @@ export default function AktualityPage({ aktuality }) {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mzda-dane.cz/aktuality/" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Domů', item: 'https://mzda-dane.cz' }, { '@type': 'ListItem', position: 2, name: 'Aktuality', item: 'https://mzda-dane.cz/aktuality' }] }) }} />
       </Head>
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -55,20 +57,22 @@ export default function AktualityPage({ aktuality }) {
 
         <Box mt={4} display="flex" justifyContent="center">
           <Box sx={{ width: '100%', maxWidth: 900 }}>
-            <Typography
-              variant="h4"
-              component="h1"
-              gutterBottom
-              sx={{
-                fontWeight: 700,
-                background: 'linear-gradient(90deg, #1565c0 0%, #6a1b9a 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              Aktuality
-            </Typography>
+            <Box display="flex" alignItems="flex-start" justifyContent="space-between" flexWrap="wrap" gap={1} mb={1}>
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{
+                  fontWeight: 700,
+                  background: 'linear-gradient(90deg, #1565c0 0%, #6a1b9a 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Aktuality
+              </Typography>
+              <ShareButtons title="Aktuality – Mzda a daně" url="https://mzda-dane.cz/aktuality" />
+            </Box>
 
             {/* Redakční komentář měsíce */}
             <Paper

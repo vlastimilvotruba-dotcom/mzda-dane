@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Link, Divider } from '@mui/material';
 
-function Footer({ onNavigate }) {
+function Footer({ onNavigate, lastUpdated }) {
   return (
     <Box component="footer" mt={8}>
       <Divider />
@@ -24,7 +24,7 @@ function Footer({ onNavigate }) {
               variant="body2"
               color="text.secondary"
               underline="hover"
-              onClick={() => onNavigate('kontakt')}
+              onClick={() => onNavigate('/kontakt')}
             >
               Kontakt
             </Link>
@@ -33,7 +33,7 @@ function Footer({ onNavigate }) {
               variant="body2"
               color="text.secondary"
               underline="hover"
-              onClick={() => onNavigate('about')}
+              onClick={() => onNavigate('/about')}
             >
               O webu
             </Link>
@@ -55,6 +55,11 @@ function Footer({ onNavigate }) {
             </Link>
           </Box>
         </Box>
+        {lastUpdated && (
+          <Typography variant="caption" color="text.disabled" display="block" pb={2}>
+            Data aktualizována: {lastUpdated} · Kalkulačky platné pro rok 2026
+          </Typography>
+        )}
       </Container>
     </Box>
   );

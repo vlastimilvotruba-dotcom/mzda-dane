@@ -16,9 +16,9 @@ import CalculateIcon from '@mui/icons-material/Calculate'
 
 const MENU_LINKS = [
   { label: 'Domů', href: '/' },
-  { label: 'Kalkulačky', href: '/#kalkulacky' },
   { label: 'Aktuality', href: '/aktuality' },
   { label: 'Energetika', href: '/energetika' },
+  { label: 'Blog', href: '/blog' },
   { label: 'O webu', href: '/about' },
   { label: 'Kontakt', href: '/kontakt' },
 ]
@@ -27,6 +27,12 @@ export default function Header({ subtitle, description }) {
   const router = useRouter()
   const [drawerOpen, setDrawerOpen] = useState(false)
   const textLine = description ?? subtitle
+  const pathname = router.pathname
+
+  const isActive = (href) => {
+    const base = href.split('#')[0] || '/'
+    return pathname === base
+  }
 
   const handleNavigate = (href) => {
     setDrawerOpen(false)
@@ -91,12 +97,14 @@ export default function Header({ subtitle, description }) {
                 key={item.href}
                 onClick={() => handleNavigate(item.href)}
                 sx={{
-                  color: '#1565c0',
+                  color: isActive(item.href) ? '#6a1b9a' : '#1565c0',
                   textTransform: 'none',
                   fontWeight: 700,
                   borderRadius: 2,
                   px: 1.5,
                   py: 0.5,
+                  borderBottom: isActive(item.href) ? '2px solid #6a1b9a' : '2px solid transparent',
+                  borderRadius: '4px 4px 0 0',
                   '&:hover': {
                     color: '#6a1b9a',
                     backgroundColor: 'rgba(21,101,192,0.08)',
@@ -132,6 +140,7 @@ export default function Header({ subtitle, description }) {
                 sx={{
                   borderRadius: 2,
                   mb: 0.5,
+                  bgcolor: isActive(item.href) ? 'rgba(106,27,154,0.08)' : 'transparent',
                   '&:hover': {
                     bgcolor: 'rgba(21,101,192,0.1)',
                   },
@@ -141,7 +150,7 @@ export default function Header({ subtitle, description }) {
                   primary={item.label}
                   primaryTypographyProps={{
                     fontWeight: 700,
-                    color: '#1565c0',
+                    color: isActive(item.href) ? '#6a1b9a' : '#1565c0',
                   }}
                 />
               </ListItemButton>
