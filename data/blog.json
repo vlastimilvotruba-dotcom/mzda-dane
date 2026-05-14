@@ -20,5 +20,27 @@
     "tags": ["Elektromobily", "Ceny paliv", "Osobní finance"],
     "readMinutes": 8,
     "image": null
+  },
+  {
+    "slug": "danove-priznani-vs-zuctovani-2026",
+    "title": "Daňové přiznání nebo roční zúčtování? Jak nepřijít o vrácení daně",
+    "perex": "Zaměstnanec nemusí vždy podávat daňové přiznání sám. Kdy stačí požádat zaměstnavatele o roční zúčtování a kdy je přiznání povinné – přehled pravidel, termínů a kdy se přiznání vyplatí i dobrovolně.",
+    "date": "2026-04-10",
+    "author": "Vlastimil Votruba",
+    "authorNote": "Autor a zakladatel mzda-dane.cz",
+    "tags": ["Daně", "Zaměstnanci", "Osobní finance"],
+    "readMinutes": 7,
+    "image": null
+  },
+  {
+    "slug": "osvc-kdy-se-vyplati-2026",
+    "title": "OSVČ v roce 2026: kdy se vyplatí a kdy je lepší zůstat zaměstnancem?",
+    "perex": "Přejít na faktury nebo zůstat zaměstnancem? Konkrétní čísla pro rok 2026 – odvody, paušální daň, break-even a rizika, která se v reklamách neříkají.",
+    "date": "2026-03-20",
+    "author": "Vlastimil Votruba",
+    "authorNote": "Autor a zakladatel mzda-dane.cz",
+    "tags": ["OSVČ", "Podnikání", "Osobní finance"],
+    "readMinutes": 8,
+    "image": null
   }
 ]

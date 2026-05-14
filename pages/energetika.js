@@ -301,7 +301,7 @@ export async function getStaticProps() {
   let comments = []
 
   try {
-    const raw = fs.readFileSync(filePath, 'utf8')
+    const raw = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '')
     items = JSON.parse(raw)
   } catch (error) {
     console.error('Nepodařilo se načíst energetika.json:', error)
@@ -343,7 +343,7 @@ export async function getStaticProps() {
       : autoCalcLink(tags)
     return {
       ...item,
-      comment: manual.comment || item.autoComment || null,
+      comment: manual.comment || null,
       tags,
       calcLink,
       calcLabel,
