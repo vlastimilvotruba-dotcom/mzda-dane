@@ -1,5 +1,17 @@
 [
   {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/danove-echo-v-opet-upozorni-na-nespravne-uplatneni-dan-slevy-na-manzela",
+    "tags": ["Daňové přiznání"],
+    "calcLink": "/rocni-dane",
+    "calcLabel": "Vyzkoušejte kalkulačku ročního zúčtování",
+    "comment": "Daňové echo V se zaměřuje na slevu na manžela/manželku (24 840 Kč ročně) – jednu z nejčastěji nesprávně uplatňovaných slev. Klíčová podmínka: manžel či manželka musí mít vlastní příjmy do 68 000 Kč za celý rok. Do tohoto limitu se počítají i příjmy ze zaměstnání, nemocenská, mateřská i rodičovský příspěvek. Naopak se nezapočítává dávka pěstouna ani příspěvek na péči. Pokud vám přijde dopis z Daňového echa, neznamená to automaticky sankci – jde o neformální upozornění, abyste mohli chybu opravit dobrovolně a bez postihu."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/novinky/novinky-2026/varovani-pred-podvodnymi-praktikami",
+    "tags": ["Daňové přiznání"],
+    "comment": "Podvodníci zneužívají jméno Finanční správy k propagaci placených služeb nebo k vylákání přihlašovacích údajů. Pravidlo číslo jedna: Finanční správa nikdy nevyžaduje platby přes třetí strany, neposílá SMS s žádostí o zadání PIN a necontaktuje poplatníky přes WhatsApp nebo sociální sítě. Pokud obdržíte e-mail nebo SMS, která se tváří jako zpráva od Finanční správy a žádá akci nebo platbu, ověřte přes oficiální web financnisprava.gov.cz nebo volejte bezplatnou linku 225 092 392."
+  },
+  {
     "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/financni-sprava-eviduje-zajem-o-podani-priz-v-el-podobe",
     "tags": ["Daňové přiznání"],
     "calcLink": "/rocni-dane",

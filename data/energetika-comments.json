@@ -166,5 +166,68 @@
     "calcLink": "/navratnost-fve",
     "calcLabel": "Kalkulačka návratnosti FVE",
     "comment": "Kalifornský zákon je zajímavý především jako signál, ne jako přímá relevance pro ČR. Myšlenka se však přenáší: česká ERU a ČEZ momentálně testují podobné schéma agregace domácích baterek do virtuální elektrárny (Virtual Power Plant). Pokud model prokáže fungující ekonomiku v USA, je jen otázkou času, kdy se v podobné formě dostane do ČR. Pro majíitele FVE s baterikovým úloištěm by to mohla být další složka návratnosti investice."
+  },
+  {
+    "link": "https://electrek.co/2026/05/19/chargepoint-is-bringing-2500-ev-charging-ports-to-apartments/",
+    "tags": ["Elektromobily", "Nabíjení"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "ChargePoint řeší přesně ten problém, který brání přechodu na elektromobil pro velkou část Čechů: odhadem 60 % domácností bydlí v bytových domech, kde chybí individuální nabíjecí zásuvka. Česká legislativa sice od roku 2022 umožňuje instalaci wallboxu v SVJ bez nutnosti souhlasu všech vlastníků, ale praxe je složitější – sdílená elektroinstalace, rozúčtování, technické limity přípojky. Model, kde operátor instalaci celkově spravuje a fakturuje nabíjení centrálně, je přesně to, co česká SVJ potřebují. Obdobné projekty testuje i PRE v Praze."
+  },
+  {
+    "link": "https://electrek.co/2026/05/19/tesla-cybertruck-owner-believed-elon-musk-lake-jail/",
+    "tags": ["Elektromobily"],
+    "comment": "Wade Mode Cybertrucku byl prezentován jako schopnost přebrodit 914 mm vody za jízdy, ne jako funkce pro přeplavání jezera. Případ nicméně otevírá praktickou otázku: co elektromobil skutečně zvládne? Baterie jsou zapouzdřeny a odolají déšti, hluboké kaluži i povodni na hodinu. Dlouhodobé ponoření nebo pohyb pod hladinou ale žádný sériový elektromobil navržen snést není. Pro české majitele: rozlití vody při mytí nebo průjezd zaplavenou vozovkou váš elektromobil neohrozí, jízda přímo do přehrady ano."
+  },
+  {
+    "link": "https://electrek.co/2026/05/19/electric-flying-car-jumps-over-tesla-cybertrucks-coming-soon/",
+    "tags": ["Elektromobily"],
+    "comment": "Alef Model A má skutečnou FAA certifikaci pro přepravu osob a dokončil přes 1 000 testovacích letů. Nejde o render ze studia, ale o funkční prototyp. Pro ČR je to zatím kuriozita – domácí legislativa ani česká CAA nic podobného nezná. Přesto článek ilustruje, kam elektrický pohon míří mimo tradiční automotive segmenty: tichý, okamžitý výkon elektromotoru je výhodou stejně na silnici jako ve vzduchu. Cena odhadovaná na 300 tisíc USD ho prozatím řadí jinam než rodinný sedan."
+  },
+  {
+    "link": "https://electrek.co/2026/05/19/ecoflow-delta-pro-ultra-x-power-station-smart-home-panel-3-bundle-jackery-memorial-day-sale-more/",
+    "tags": ["Ceny energií", "FVE & Solár"],
+    "calcLink": "/navratnost-fve",
+    "calcLabel": "Kalkulačka návratnosti FVE",
+    "comment": "Americké Memorial Day slevy se ČR netýkají, ale přenosné elektrárny jako EcoFlow DELTA Pro Ultra X jsou zajímavé i pro české domácnosti – zejména jako záložní zdroj při výpadku sítě nebo jako doplněk FVE systému na přečkání noci bez sítě. V ČR jsou srovnatelné modely s kapacitou přes 10 kWh dostupné v přepočtu od cca 80 tisíc Kč. Pro domácnosti s FVE je mobilní baterie spíše luxusní nadstavba – pevně instalovaný zásobník energie má výrazně lepší poměr ceny a kapacity."
+  },
+  {
+    "link": "https://electrek.co/2026/05/19/harley-davidsons-electric-motorcycle-spinoff-livewire-just-entered-the-dirt-bike-market/",
+    "tags": ["Elektromobily"],
+    "comment": "Elektrická terénní kola jsou v ČR perspektivní segment – enduro a motokrosové tratě jsou typicky daleko od obytných zón, kde by hluk nevadil, ale problém s povolením provozu a rušením klidu v přírodě přesto narůstá. Elektrická verze je tiché, točivý moment okamžitě k dispozici a žádná nutnost benzínové kanystry v lese. LiveWire přebírá aktiva americké elektrické terénní značky a kombinuje ji s kapitálovou silou Harley-Davidson – to je jiná startovní pozice než u malých startupů. V ČR prozatím v prodeji není, ale segment sledujeme."
+  },
+  {
+    "link": "https://www.hybrid.cz/moderni-doprava-stoji-na-datech/",
+    "tags": ["EU trh"],
+    "comment": "ITS European Congress 2026 v Budapešti ukázal, kde se pohybuje špička v inteligentních dopravních systémech. Pro elektromobilisty je tento vývoj přímo relevantní: ITS platformy budou v příštích letech zahrnovat lokalizaci nabíjecích stanic v reálném čase, predikci obsazenosti a integraci s navigací. ČR je v tomto ohledu aktivní – systém elektronického mýta disponuje rozsáhlou datovou vrstvou a ŘSD nasazuje sensoriku na klíčových dálničních úsecích. Konektivita mezi elektromobilem a infrastrukturou (OCPP 2.0.1, OSCP) se stane standardem do konce dekády."
+  },
+  {
+    "link": "https://www.hybrid.cz/ze-svedska-se-dovazi-hlavne-elektromobily-a-hybridy/",
+    "tags": ["Elektromobily", "Hybridy"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Data TipCars mají logiku: Švédsko patří k zemím s nejvyšším podílem elektromobilů a hybridů v Evropě, proto z tam přirozeně exportují právě tyto typy. Pro české kupce ojetin je to dobré znamení – nabídka dovezených elektromobilů ze Skandinávie bude v příštích letech narůstat. Švédské ojetiny mívají prokazatelnou servisní historii a relativně nízký roční nájezd. Ojetý Volvo XC40 Recharge nebo Polestar 2 ze Švédska je dnes běžná položka na tuzemském trhu – a pro první elektromobil to může být výrazně dostupnější vstup než nové auto."
+  },
+  {
+    "link": "https://www.hybrid.cz/jak-volkswagen-vyrabi-baterie-ve-spanelsku/",
+    "tags": ["Elektromobily"],
+    "comment": "VW Group postavil závodní linku na montáž baterií přímo pro modely SEAT a CUPRA v Martorell u Barcelony. Klíčový detail pro českou scénu: bateriová platforma MEB je sdílená napříč celou skupinou – Škoda Enyaq, VW ID.3/4, Audi Q4 e-tron i CUPRA Born vychází ze stejného základu. Kvalita a životnost akumulátorů jsou proto konzistentní. Data z reálného provozu ukazují, že MEB baterie degradují průměrně o 2–3 % kapacity ročně – po 10 letech by měl vůz stále přes 70 % původního dojezdu."
+  },
+  {
+    "link": "https://www.hybrid.cz/volkswagen-inovuje-dalsi-modely-rodiny-id-a-zavadi-nove-ceny/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Po ID.3 Neo (od 749 000 Kč) přichází modernizace ID.4 a ID.7 – hlavní změny zahrnují fyzická tlačítka klimatizace (zákazníci si je hlasitě vyžadovali) a nový infotainment s ChatGPT integrací. Pro zákazníky, kteří s nákupem váhali: příchod refresh verzí obvykle znamená výrazné slevy na stávající skladové zásoby u dealerů. Aktuálně jsou ID.4 a ID.7 první generace dostupné v ČR s slevami 50–100 tisíc Kč oproti ceníku – klasická situace na přelomu modelových let."
+  },
+  {
+    "link": "https://www.hybrid.cz/tym-z-prahy-2-ovladl-finale-jarni-robosouteze-na-maker-faire-prague/",
+    "tags": ["EU trh"],
+    "comment": "Robosoutěž FEL ČVUT pro základní školy formuje generaci, která bude navrhovat nabíjecí infrastrukturu, bateriové systémy a autonomní vozidla příštích dekád. Maker Faire Prague každoročně ukazuje, že zájem o techniku a robotiku u české mládeže je silný. Tým Team STV z DDM Stanice techniků z Prahy 2 zvítězil v celostátním finále – gratulujeme."
+  },
+  {
+    "link": "https://www.hybrid.cz/renault-podporuje-fanouskovsky-lego-model-renault-5-turbo-3e/",
+    "tags": ["Elektromobily"],
+    "comment": "Renault 5 Turbo 3E je elektrická reinterpretace legendárního rally auta 80. let a kampaň u LEGO Ideas testuje zájem fanoušků – pokud model překročí 10 000 hlasů, LEGO ho zváží jako oficiální produkt. Nostalgie funguje: Renault 5 E-Tech Electric je mezitím v prodeji v ČR a ve Francii si drží pozici nejprodávanějšího elektromobilu v segmentu B. I takové kroky pomáhají značce budovat emoční vazbu k elektromobilitě – věc, kterou například Volkswagen s ID rodinou nezvládl."
   }
 ]
