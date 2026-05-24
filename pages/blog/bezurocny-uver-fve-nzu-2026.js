@@ -216,7 +216,7 @@ export default function ArticleBezurocnyUverFVE() {
 
             {/* Perex */}
             <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.85, color: '#444', fontStyle: 'italic', mb: 4 }}>
-              Stát zaplatí za vás úroky z půjčky na fotovoltaiku. Přesně to přináší nová etapa programu
+              Stát za vás zaplatí úroky z půjčky na fotovoltaiku. Přesně to přináší nová etapa programu
               Nová zelená úsporám, která se od září 2026 otevírá majitelům rodinných domů i SVJ.
               Kdo může žádat, co je to renovační pas a co musíte udělat ještě před podáním žádosti u banky?
             </Typography>
