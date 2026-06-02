@@ -1,5 +1,83 @@
 [
   {
+    "link": "https://electrek.co/2026/06/01/volvo-ce-hitachi-energy-set-to-partner-on-zero-emission-job-sites/",
+    "tags": ["FVE & Solár", "Nabíjení"],
+    "comment": "Volvo CE a Hitachi Energy oznámily partnerství pro elektrická staveniště – jde o dodávku nabíjecí infrastruktury pro elektrické stavební stroje přímo na místě stavby. V ČR je stavební sektor jedním z největších emitentů CO₂ mimo silniční dopravu. Elektrická stavební technika Volvo (rypadla EC18 Electric, nakladače L25 Electric) je dostupná i u českých dealerů – pořizovací cena je vyšší, ale TCO se při vysokém vytížení strojů může vyrovnat spalovacím variantám do 4–5 let. Partnerství ukazuje, že elektromobilita pronikla i do oblastí, které se dosud považovaly za doménu spalovacích motorů."
+  },
+  {
+    "link": "https://electrek.co/2026/06/01/texas-adds-another-huge-solar-farm-ercot-grid-demand-soars/",
+    "tags": ["FVE & Solár"],
+    "calcLink": "/navratnost-fve",
+    "calcLabel": "Kalkulačka návratnosti FVE",
+    "comment": "Texas přidává solarní kapacitu rekordním tempem – síť ERCOT instaluje přes 20 GW ročně, protože poptávka po elektřině (datová centra, AI infrastruktura, elektromobilita) roste rychleji než cokoliv jiného. Zajímavá paralela pro ČR: i česká přenosová soustava čeká na zrychlení připojování obnovitelných zdrojů. Zákon o urychlení výstavby OZE sice platí od roku 2023, ale administrativní lhůty pro připojování FVE k síti jsou stále jednou z hlavních brzd energetické transformace. Domácí FVE se tohoto problému netýká – pro malé střešní systémy je připojení k distribuci standardní záležitost do 30 dnů."
+  },
+  {
+    "link": "https://electrek.co/2026/06/01/toyota-pulls-plug-most-important-evs/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Toyota škrtá výrobu bZ4X v USA a výrazně snižuje EV produkci – místo toho sází na hybridy (HEV, PHEV) a vývoj vodíkových článků. Pro kupce v ČR to má praktický dopad: Toyotova elektrická nabídka se v příštích dvou letech příliš nerozšíří. Na druhou stranu jsou Toyotovy hybridy technicky vyspělé, spolehlivé a dostupné od cca 500 000 Kč. Pro řidiče, kteří nejsou připraveni na čistý elektromobil (chybí domácí nabíjení, krátká vzdálenost denního dojíždění, nejistota z dojezdu), je hybridní Toyota stále jednou z nejpragmatičtějších voleb na trhu."
+  },
+  {
+    "link": "https://electrek.co/2026/06/01/byd-all-solid-state-batteries-evs-by-2027/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "BYD plánuje sériovou výrobu elektromobilů s plně tuhými (solid-state) bateriemi v roce 2027 – o 2–3 roky dříve, než většina analytiků čekala od Toyoty nebo Samsungu. Solid-state baterie nabízí vyšší energetickou hustotu (~400 Wh/kg oproti dnešním ~250 Wh/kg), výrazně rychlejší nabíjení a vyšší bezpečnost. Pokud BYD skutečně splní harmonogram, mohlo by to znamenat elektromobily s dojezdem přes 800 km a dobíjením na 80 % za 10–15 minut. Pro kupce, kteří odkládají pořízení elektromobilu kvůli dojezdu, stojí za to sledovat vývoj – ceny u nás budou reagovat dříve, než si většina myslí."
+  },
+  {
+    "link": "https://electrek.co/2026/06/01/ecoflow-hurricane-prep-sale-2048wh-delta-2-max-power-station-ego-3200-psi-pressure-washer-more/",
+    "tags": ["FVE & Solár"],
+    "calcLink": "/navratnost-fve",
+    "calcLabel": "Kalkulačka návratnosti FVE",
+    "comment": "Článek pokrývá amerský sezónní výprodej přenosných baterií EcoFlow v rámci přípravy na sezónu hurikánů. V ČR sice hurikány nehrozí, ale zájem o přenosné solárně-bateriové systémy roste i u nás – zejména jako záloha při výpadcích sítě po bouřkách nebo extrémním počasí. Přenosné stanice EcoFlow DELTA a Jackery jsou v ČR dostupné od cca 15 000 Kč (500 Wh) a mohou zásobovat základní spotřebiče (lednice, světla, nabíjení) po dobu 8–24 hodin bez sítě. Kombinace s malým přenosným solárním panelem prodlouží autonomii prakticky neomezeně."
+  },
+  {
+    "link": "https://www.hybrid.cz/v-eu-uz-vedou-hybridy-elektromobily-treti/",
+    "tags": ["Elektromobily", "Hybridy", "EU trh"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Statistiky ACEA za Q1 2026 jsou jasné: v EU se prodalo více hybridů (HEV + PHEV) než dieselů i elektromobilů – hybridy poprvé tvoří přes 30 % všech nových registrací. Čistě elektrická auta jsou třetí s cca 18 % podílem v EU. ČR výrazně zaostává za průměrem – u nás jsou BEV stále pod 6 %. Hlavní příčiny jsou strukturální: nižší průměrná cena nového auta v ČR (kupujeme levněji), menší podíl firemních aut s daňovými výhodami pro EV a hustá síť čerpacích stanic. Trend je ale jasný – a kdo kupuje auto s výhledem na 8–10 let, měl by do kalkulace zahrnout i budoucí ceny paliv a poplatky za emise v centrech měst."
+  },
+  {
+    "link": "https://www.hybrid.cz/hybrid-a-univerzalni-obuti-dava-to-smysl/",
+    "tags": ["Hybridy", "Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Pneumatika pro hybrid nebo elektromobil – speciální vs. univerzální. Elektromobily a silné hybridy mají výrazně vyšší točivý moment přenášený na povrch hned od nuly, což vede k rychlejšímu opotřebení klasických pneumatik. Výrobci jako Michelin (e.Primacy), Continental (EcoContact 7) nebo Goodyear proto vyrábí pneumatiky speciálně pro EV: vyšší nosnostní index (elektroauto je těžší), optimalizovaný valivý odpor (přímý vliv na dojezd) a snížená hlučnost (bez hluku motoru jsou přední pneumatiky dominantním zdrojem zvuku). Rozdíl v dojezdu při nevhodné pneumatice může být 5–10 % – při ceně dobití to je citelná položka."
+  },
+  {
+    "link": "https://www.hybrid.cz/elektromobil-ferrari-luce-novinka-ktera-budi-emoce/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Ferrari Luce je první čistě elektrické Ferrari. Výkon přes 1 100 koní (systémový), 0–100 km/h pod 3 sekundy, cena kolem 5 milionů Kč. Klíčový symbolický moment: Ferrari bylo poslední velká sportovní značka, která veřejně odolávala elektromobilitě – s argumentem, že spalovací motor patří k DNA Ferrari. Luce na to odpovídá umělecky vytvořeným syntetickým zvukem navržené jako emocionální zážitek, ne technická simulace. Pokud závodní DNA lze zachovat i bez spalovacího motoru, ztrácí argument „elektromobil nemá duši” svůj poslední opěrný bod."
+  },
+  {
+    "link": "https://www.hybrid.cz/prazdroj-ma-roboticky-sklad-ke-kamionum-dojede-pivo-samo/",
+    "tags": ["Nabíjení"],
+    "comment": "Prazdroj nasadil autonomní vozíky AMR (Autonomous Mobile Robots) v pivovaru v Plzni – přesouvají palety s pivem od výroby ke kamionům bez lidské obsluhy, 24 hodin denně. Pro energetický kontext je zajímavá vedlejší linie: průmyslová automatizace zvyšuje spotřebu elektřiny v areálu, ale Prazdroj zároveň provozuje střešní fotovoltaiku a pokrývá část vlastní spotřeby z vlastní výroby. Příklad z průmyslu dobře ilustruje, proč jsou průmyslové FVE ekonomicky atraktivní: velký odběratel elektřiny přes den, stabilní provoz – ideální profil pro maximalizaci vlastní spotřeby ze solárů."
+  },
+  {
+    "link": "https://www.hybrid.cz/dkv-mobility-ma-dobijeci-kartu-pro-elektricka-nakladni-auta/",
+    "tags": ["Nabíjení", "Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "DKV Mobility rozšiřuje svou fleetovou nabíjecí kartu na elektrická nákladní vozidla – přístup na tisíce DC rychlonabíjecích stanic podél evropských dálnic pro elektrické kamiony a dodávky. V ČR to je prakticky relevantní pro dopravní a logistické firmy: elektrické kamiony Volvo FH Electric, DAF XB Electric nebo Mercedes eActros jsou reálně v provozu a hledají spolehlivou nabíjecí infrastrukturu pro mezinárodní trasy. Česká logistika se elektrifikuje pomaleji než osobní auta, ale tlak EU na snížení emisí z těžkých vozidel je legislativně zakotven – přechod je otázka kdy, ne jestli."
+  },
+  {
+    "link": "https://www.hybrid.cz/auta-si-zacnou-povidat-se-silnici-i-v-cesku/",
+    "tags": ["Elektromobily"],
+    "comment": "ŘSD ČR zahajuje pilotní projekt infrastruktury V2X (vehicle-to-everything) na části dálniční sítě – auta budou dostávat informace o hustotě provozu, nehodách nebo chodcích na přechodu přímo přes rádiový signál ITS-G5 (C-ITS). Pro elektromobily je V2X zvlášť zajímavé: inteligentní plánování trasy s ohledem na nabíjecí stanice a prediktivní rekuperace mohou výrazně prodloužit reálný dojezd. ČR se tím zapojuje do celoevropské iniciativy C-ITS, jejímž cílem je do roku 2030 pokrýt většinu transevropské silniční sítě TEN-T standardní V2X komunikací."
+  },
+  {
+    "link": "https://www.hybrid.cz/skoda-epiq-cena-elektromobilu-zacne-na-619-000-kc/",
+    "tags": ["Elektromobily"],
+    "calcLink": "/ev-vs-spalovak",
+    "calcLabel": "Kalkulačka EV vs. spalovák",
+    "comment": "Škoda Epiq vstupuje na trh s cenou od 619 000 Kč – cílí na segment malých SUV, kde doteď elektromobily cenově nestačily. Baterie 55 kWh, dojezd přes 400 km (WLTP), výroba v Mladé Boleslavi. Pro srovnání: srovnatelný Škoda Karoq se spalovacím motorem startuje od cca 560 000 Kč – cenový rozdíl se smrskl na 60 000 Kč, tedy přibližně na roční úsporu na palivu při průměrném nájezdu 15 000 km a domácím nabíjení (cca 30–40 000 Kč ročně oproti benzínu). Epiq se tak může ekonomicky zaplatit dříve než srovnatelný spalovák – a to ještě bez zohlednění nižších nákladů na servis."
+  },
+  {
     "link": "https://electrek.co/2026/05/12/lectric-memorial-day-e-bikes-mammotion-luba-3-awd-robot-mowers-more/",
     "tags": ["Elektromobily"],
     "comment": "Článek pokrývá amerský Memorial Day výprodej elektrokol Lectric – v ČR samotná sleva neplatí, ale situace v USA dobře ilustruje, kde se trh s elektrokoly nachází: balíčky zahrnují příslušenství v hodnotě stovek dolarů, protože výrobci bojují o zákazníky cenou i výbavou. V Česku se podobně dostupná elektrokola (složitelné modely 250W, pedálová asistence) pohybují od 15 000 Kč a trh roste meziročně o desítky procent. Elektrokolo je přitom nejrychleji se vracející elektrická investice – průměrný uživatel amortizuje kolo za 1–2 roky na uspořených nákladech za MHD nebo parkování."

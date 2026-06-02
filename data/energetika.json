@@ -1,74 +1,160 @@
 [
   {
-    "title": "ChargePoint přináší do bytů 2 500 nabíjecích portů pro elektromobily",
-    "description": "Obyvatelé bytů a bytů jsou stále jedním z největších chybějících kousků ve výstavbě nabíjení elektromobilů v USA a ChargePoint říká, že bude spolupracovat s OBE Power, aby pomohl tuto mezeru uzavřít. více...",
-    "date": "2026-05-19T20:16:59.000Z",
-    "link": "https://electrek.co/2026/05/19/chargepoint-is-bringing-2500-ev-charging-ports-to-apartments/",
+    "title": "Společnost Volvo CE, Hitachi Energy se stala partnerem na staveništích s nulovými emisemi",
+    "description": "Společnosti Volvo CE a Hitachi Energy podepsaly memorandum o porozumění na podporu a urychlení zavádění bateriových elektrických stavebních zařízení poháněných čistým, obnovitelným zdrojem energie, který je podporován inteligentním ukládáním a řízením energie. více…",
+    "date": "2026-06-01T22:41:05.000Z",
+    "link": "https://electrek.co/2026/06/01/volvo-ce-hitachi-energy-set-to-partner-on-zero-emission-job-sites/",
     "source": "Electrek",
     "language": "en",
-    "originalTitle": "ChargePoint is bringing 2,500 EV charging ports to apartments",
-    "originalDescription": "Apartment and condo residents are still one of the biggest missing pieces in the US EV charging buildout, and ChargePoint says it will work with OBE Power to help close that gap. more…",
+    "originalTitle": "Volvo CE, Hitachi Energy set to partner on zero emission job sites",
+    "originalDescription": "Volvo CE and Hitachi Energy have signed an MOU to support and accelerate the deployment of battery electric construction equipment powered by a clean, renewable energy supply that’s backed by intelligent energy storage and management. more…",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "Texas přidává další obrovskou solární farmu, protože poptávka po síti ERCOT stoupá",
+    "description": "Texas pokračuje v hromadění solárních projektů, protože poptávka po elektřině roste v síti ERCOT – a nyní se pohybuje vpřed další masivní. více...",
+    "date": "2026-06-01T22:22:21.000Z",
+    "link": "https://electrek.co/2026/06/01/texas-adds-another-huge-solar-farm-ercot-grid-demand-soars/",
+    "source": "Electrek",
+    "language": "en",
+    "originalTitle": "Texas adds another huge solar farm as ERCOT grid demand soars",
+    "originalDescription": "Texas keeps piling on solar projects as electricity demand surges on the ERCOT grid – and now another massive one is moving ahead. more…",
+    "tags": [
+      "FVE & Solár"
+    ],
+    "autoComment": "Fotovoltaika je trend, který se brzy projeví i v ČR. Instalace FVE v ČR meziročně rostou a díky klesajícím cenám panelů se návratnost zkracuje. Konkrétní výpočet pro vaši střechu nabídne naše kalkulačka návratnosti FVE."
+  },
+  {
+    "title": "Toyota odpojuje jeden ze svých nejdůležitějších elektromobilů",
+    "description": "Elektrický sedan Lexus LF-ZC s nízkým sklonem je mrtvý. Toyota ruší plány na uvedení nové generace luxusního elektromobilu, který měl vstoupit do výroby koncem tohoto roku s pokročilými novými bateriemi a vyhrazenou platformou. více…",
+    "date": "2026-06-01T21:50:19.000Z",
+    "link": "https://electrek.co/2026/06/01/toyota-pulls-plug-most-important-evs/",
+    "source": "Electrek",
+    "language": "en",
+    "originalTitle": "Toyota pulls the plug on one of its most important EVs",
+    "originalDescription": "The low-slung Lexus LF-ZC electric sedan is dead. Toyota is scrapping plans to launch the next-gen luxury EV, which was expected to enter production later this year with advanced new batteries and a dedicated platform. more…",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "BYD plánuje do roku 2027 přivést do elektromobilů plně solidní baterie, ale není to samo",
+    "description": "Příští generace baterií EV může být blíže, než se očekávalo. BYD a několik dalších plánují začít nasazovat elektromobily s bateriemi typu all-solid-state během několika měsíců. více...",
+    "date": "2026-06-01T21:05:40.000Z",
+    "link": "https://electrek.co/2026/06/01/byd-all-solid-state-batteries-evs-by-2027/",
+    "source": "Electrek",
+    "language": "en",
+    "originalTitle": "BYD plans to bring all-solid-state batteries to EVs by 2027, but it's not alone",
+    "originalDescription": "The next generation of EV batteries may be closer than expected. BYD and several others plan to begin deploying EVs with all-solid-state batteries in just a few months. more…",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "EcoFlow Hurricane Prep Sale nabízí 2 048 Wh elektrárny DELTA 2 Max 899 $, tlaková myčka EGO 3 200 PSI 699 $ nízká, více",
+    "description": "Šťastný červen všem! Zahajujeme tento týden (a měsíc) Green Deal s vhodně spuštěným výprodejem EcoFlow Hurricane Season Prep, který nabízí až 61% slevy na elektrárny, jako je přenosná elektrárna DELTA 2 Max s výkonem 2 048 Wh na druhé nejnižší úrovni 899 $...",
+    "date": "2026-06-01T18:00:00.000Z",
+    "link": "https://electrek.co/2026/06/01/ecoflow-hurricane-prep-sale-2048wh-delta-2-max-power-station-ego-3200-psi-pressure-washer-more/",
+    "source": "Electrek",
+    "language": "en",
+    "originalTitle": "EcoFlow Hurricane Prep Sale offers 2,048Wh DELTA 2 Max power station $899, EGO 3,200 PSI pressure washer $699 low, more",
+    "originalDescription": "Happy June, everyone! We’re kicking off this week’s (and month’s) Green Deal coverage with the appropriately launched EcoFlow Hurricane Season Prep Sale that offers up to 61% power station discounts, like the 2,048Wh DELTA 2 Max Portable Power Station at its second-lowest $899…",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Hodnoty jako 61% naznačují dynamiku odvětví, které v ČR teprve nabírá tempo. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "V EU už vedou hybridy, elektromobily třetí",
+    "description": "Trh s novými osobními bateriovými elektromobily v Evropské unii od ledna do dubna roku 2026 rostl – jejich registrace se meziročně zvýšily o 33,8 % na 747 tisíc vozidel. The post V EU už vedou hybridy, elektromobily třetí first appeared on Hybrid.cz.",
+    "date": "2026-06-01T06:06:08.000Z",
+    "link": "https://www.hybrid.cz/v-eu-uz-vedou-hybridy-elektromobily-treti/",
+    "source": "Hybrid.cz",
+    "language": "cs",
+    "tags": [
+      "Elektromobily",
+      "Hybridy",
+      "EU trh"
+    ],
+    "autoComment": "Evropský trh je přímým měřítkem i pro ČR. Podíl 33, 8 % ukazuje tempo celé EU – ČR zatím mírně zaostává, ale mezera se rok od roku zmenšuje. Nová regulace AFIR od roku 2026 navíc garantuje rychlonabíječe na všech dálničních koridorech EU včetně ČR."
+  },
+  {
+    "title": "Hybrid a univerzální obutí: Dává to smysl?",
+    "description": "Hybridní vozy získávají příznivce pro svůj tichý chod, nižší spotřebu a lokální úsporu emisí. Jejich technická specifikace ale klade na podvozek úplně jiné nároky, než na které jste byli zvyklí u klasických lehkých spalováků. The post Hybrid a univerzální obutí: Dává to smysl?…",
+    "date": "2026-05-29T06:55:40.000Z",
+    "link": "https://www.hybrid.cz/hybrid-a-univerzalni-obuti-dava-to-smysl/",
+    "source": "Hybrid.cz",
+    "language": "cs",
+    "tags": [
+      "Hybridy"
+    ],
+    "autoComment": "Hybridní pohony jsou pro mnoho českých řidičů přirozeným krokem před přechodem na čistě elektrický provoz. V ČR tvoří PHEV a HEV stále větší podíl nových registrací – nabídka se každý rok rozšiřuje."
+  },
+  {
+    "title": "Elektromobil Ferrari Luce: novinka, která budí emoce",
+    "description": "Ferrariv Římě odhalilo svůj první elektromobil názvem Ferrari Luce. Má podle automobilky otevřít další kapitolu historie značky z Maranella. The post Elektromobil Ferrari Luce: novinka, která budí emoce first appeared on Hybrid.cz.",
+    "date": "2026-05-28T09:55:28.000Z",
+    "link": "https://www.hybrid.cz/elektromobil-ferrari-luce-novinka-ktera-budi-emoce/",
+    "source": "Hybrid.cz",
+    "language": "cs",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "Prazdroj má robotický sklad, ke kamionům dojede pivo samo",
+    "description": "Plzeňský Prazdroj dokončil jednu z největších investic ve své historii, kompletně zprovoznil plně automatický sklad v Plzni. The post Prazdroj má robotický sklad, ke kamionům dojede pivo samo first appeared on Hybrid.cz.",
+    "date": "2026-05-26T07:15:13.000Z",
+    "link": "https://www.hybrid.cz/prazdroj-ma-roboticky-sklad-ke-kamionum-dojede-pivo-samo/",
+    "source": "Hybrid.cz",
+    "language": "cs",
+    "tags": [
+      "Elektromobily"
+    ],
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+  },
+  {
+    "title": "DKV Mobility má dobíjecí kartu pro elektrická nákladní auta",
+    "description": "Přístup k více než 3000 dobíjecím bodům pro nákladní vozidla, které byly ověřeny společností DKV Mobility, ve více než 17 evropských zemích. The post DKV Mobility má dobíjecí kartu pro elektrická nákladní auta first appeared on Hybrid.cz.",
+    "date": "2026-05-22T09:39:26.000Z",
+    "link": "https://www.hybrid.cz/dkv-mobility-ma-dobijeci-kartu-pro-elektricka-nakladni-auta/",
+    "source": "Hybrid.cz",
+    "language": "cs",
     "tags": [
       "Elektromobily",
       "Nabíjení"
     ],
-    "autoComment": "Nabíjecí infrastruktura je trend, který se brzy projeví i v ČR. Sítě ORLEN, PRE a E.ON v ČR rychle rozrůstají – dostupnost rychlonabíječek na dálnicích se v roce 2026 výrazně zlepšila. Celkové náklady na elektromobil včetně nabíjení porovná naše kalkulačka EV vs. spalovák."
+    "autoComment": "Nabíjecí infrastruktura je přímo relevantní pro český trh. Sítě ORLEN, PRE a E.ON v ČR rychle rozrůstají – dostupnost rychlonabíječek na dálnicích se v roce 2026 výrazně zlepšila. Celkové náklady na elektromobil včetně nabíjení porovná naše kalkulačka EV vs. spalovák."
   },
   {
-    "title": "Majitel Tesly Cybertruck věřil Elonu Muskovi, když řekl, že by mohl překročit jezero — teď je ve vězení",
-    "description": "Majitel Tesly Cybertruck najel svým elektrickým pickupem do Grapevine Lake v Texasu, aby otestoval funkci „Wade Mode“ vozidla. Cybertruck se ve vodě stal invalidním a řidič byl zatčen. Incident je poslední v rostoucím seznamu majitelů Cybertruck, kteří berou Elona...",
-    "date": "2026-05-19T18:50:33.000Z",
-    "link": "https://electrek.co/2026/05/19/tesla-cybertruck-owner-believed-elon-musk-lake-jail/",
-    "source": "Electrek",
-    "language": "en",
-    "originalTitle": "Tesla Cybertruck owner believed Elon Musk when he said it could cross a lake — now he's in jail",
-    "originalDescription": "A Tesla Cybertruck owner drove his electric pickup truck into Grapevine Lake in Texas to test the vehicle’s “Wade Mode” feature. The Cybertruck became disabled in the water and the driver was arrested. The incident is the latest in a growing list of Cybertruck owners taking Elon…",
+    "title": "Auta si začnou „povídat“ se silnicí i v Česku",
+    "description": "Doprava v ČR vstupuje do další etapy digitalizace. Vláda schválila strategii rozvoje kooperativních inteligentních dopravních systémů. The post Auta si začnou „povídat“ se silnicí i v Česku first appeared on Hybrid.cz.",
+    "date": "2026-05-21T08:46:11.000Z",
+    "link": "https://www.hybrid.cz/auta-si-zacnou-povidat-se-silnici-i-v-cesku/",
+    "source": "Hybrid.cz",
+    "language": "cs",
     "tags": [
       "Elektromobily"
     ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
   },
   {
-    "title": "Toto 100% elektrické létající auto, které přeskočilo Tesla Cybertruck, přijde brzy",
-    "description": "Kalifornský startup Alef Aeronautics tvrdí, že je to první skutečně elektrické létající auto na světě. Po dokončení více než 1 000 letů, včetně přeskakování přes Tesla Cybertruck, se Alef připravuje na zahájení dodávek zákazníkům později v tomto roce. více…",
-    "date": "2026-05-19T18:08:26.000Z",
-    "link": "https://electrek.co/2026/05/19/electric-flying-car-jumps-over-tesla-cybertrucks-coming-soon/",
-    "source": "Electrek",
-    "language": "en",
-    "originalTitle": "This 100% electric flying car that jumped over a Tesla Cybertruck is coming soon",
-    "originalDescription": "California-based startup Alef Aeronautics claims it’s the world’s first real electric flying car. After completing over 1,000 flights, including hopping over a Tesla Cybertruck, Alef is preparing to begin customer deliveries later this year. more…",
+    "title": "Škoda Epiq: cena elektromobilu začne na 619 000 Kč",
+    "description": "Škoda Epiq je první elektromobil značky Škoda postaveným na nové elektrické platformě MEB+ s pohonem předních kol. Cena začne na 619 000 Kč. The post Škoda Epiq: cena elektromobilu začne na 619 000 Kč first appeared on Hybrid.cz.",
+    "date": "2026-05-20T08:39:33.000Z",
+    "link": "https://www.hybrid.cz/skoda-epiq-cena-elektromobilu-zacne-na-619-000-kc/",
+    "source": "Hybrid.cz",
+    "language": "cs",
     "tags": [
       "Elektromobily"
     ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Hodnoty jako 100% naznačují dynamiku odvětví, které v ČR teprve nabírá tempo. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Exkluzivní sleva 3 997 $ na elektrárnu EcoFlow DELTA Pro Ultra X + balíček Smart Home Panel 3, výprodej Jackery Memorial Day, více",
-    "description": "V čele našich úterních zelených nabídek je exkluzivní sleva 3 997 $ pro naše čtenáře na balíčku 12 288Wh přenosné elektrárny EcoFlow DELTA Pro Ultra X s inteligentním domácím panelem 3 za nové minimum 9 899 $. Hned za tím máme také Jackery's Memorial Day Sale s až 2 400 $...",
-    "date": "2026-05-19T18:00:00.000Z",
-    "link": "https://electrek.co/2026/05/19/ecoflow-delta-pro-ultra-x-power-station-smart-home-panel-3-bundle-jackery-memorial-day-sale-more/",
-    "source": "Electrek",
-    "language": "en",
-    "originalTitle": "Exclusive $3,997 savings on EcoFlow DELTA Pro Ultra X power station + Smart Home Panel 3 bundle, Jackery Memorial Day Sale, more",
-    "originalDescription": "Leading our Tuesday Green Deals is an exclusive $3,997 price cut for our readers on the bundled 12,288Wh EcoFlow DELTA Pro Ultra X Portable Power Station with a Smart Home Panel 3 at a new $9,899 low. Right behind that we also have Jackery’s Memorial Day Sale with up to $2,400…",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Spinoff Harley-Davidson na elektrické motocykly LiveWire právě vstoupil na trh s terénními koly",
-    "description": "Na trh s elektrickými terénními koly vstupuje nový hráč, i když jméno za ním už mnoho jezdců zná. LiveWire, značka elektrických motocyklů původně uvedená na trh společností Harley-Davidson, dnes oznámila, že získala aktiva elektrických terénních...",
-    "date": "2026-05-19T16:54:15.000Z",
-    "link": "https://electrek.co/2026/05/19/harley-davidsons-electric-motorcycle-spinoff-livewire-just-entered-the-dirt-bike-market/",
-    "source": "Electrek",
-    "language": "en",
-    "originalTitle": "Harley-Davidson’s electric motorcycle spinoff LiveWire just entered the dirt bike market",
-    "originalDescription": "There’s a new player entering the electric dirt bike market, though the name behind it will already be familiar to many riders. LiveWire, the electric motorcycle brand originally launched by Harley-Davidson, announced today that it has acquired the assets of electric off-road…",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o trend, který se brzy projeví i v ČR. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
+    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
   },
   {
     "title": "Moderní doprava stojí na datech",
@@ -100,92 +186,6 @@
     "description": "V závodě pro montáž akumulátorových baterií značek SEAT a CUPRA absolvuje každá sada akumulátorů cestu od montáže z jednotlivých komponentů až po The post Jak Volkswagen vyrábí baterie ve Španělsku first appeared on Hybrid.cz.",
     "date": "2026-05-15T07:13:07.000Z",
     "link": "https://www.hybrid.cz/jak-volkswagen-vyrabi-baterie-ve-spanelsku/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Volkswagen inovuje další elektromobily rodiny ID",
-    "description": "Po elektromobilu Volkswagen ID.3 Neo přichází na řadu modernizace modelů ID.4, ID.7 a ID.7 Tourer. ID.3 Neo lze pořídit od 749 000 Kč. The post Volkswagen inovuje další elektromobily rodiny ID first appeared on Hybrid.cz.",
-    "date": "2026-05-14T13:11:03.000Z",
-    "link": "https://www.hybrid.cz/volkswagen-inovuje-dalsi-modely-rodiny-id-a-zavadi-nove-ceny/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Tým z Prahy 2 ovládl finále jarní Robosoutěže na Maker Faire Prague",
-    "description": "Absolutním vítězem Robosoutěže FEL ČVUT pro týmy z 2. stupně základních škol se stal tým Team STV z DDM Stanice techniků. The post Tým z Prahy 2 ovládl finále jarní Robosoutěže na Maker Faire Prague first appeared on Hybrid.cz.",
-    "date": "2026-05-14T05:51:12.000Z",
-    "link": "https://www.hybrid.cz/tym-z-prahy-2-ovladl-finale-jarni-robosouteze-na-maker-faire-prague/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Levný elektromobil MG4 EV Urban přijíždí na český trh",
-    "description": "Čínská značka MG se na evropském trhu rychle uchytila. Aktuálně přidává nový kompaktní levný elektromobil MG4 EV Urban. Cena začíná na 599 990 Kč. The post Levný elektromobil MG4 EV Urban přijíždí na český trh first appeared on Hybrid.cz.",
-    "date": "2026-05-12T07:04:33.000Z",
-    "link": "https://www.hybrid.cz/levny-elektromobil-mg4-ev-urban-prijizdi-na-cesky-trh/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily",
-      "EU trh"
-    ],
-    "autoComment": "Evropský trh je přímým měřítkem i pro ČR. ČR postupně dohání průměr EU v podílu elektromobilů, data CDV za Q1 2026 to potvrzují. Nová regulace AFIR od roku 2026 navíc garantuje rychlonabíječe na všech dálničních koridorech EU včetně ČR."
-  },
-  {
-    "title": "Elektromobil Kia EV2 s dojezdem až 453 km",
-    "description": "Elektromobil Kia EV2 je dispozici s kapacitami 42,2 kWh a 61,0 kWh. Nabízejí dojezd až 312 km/453 km. Má 22kW palubní nabíječku. The post Elektromobil Kia EV2 s dojezdem až 453 km first appeared on Hybrid.cz.",
-    "date": "2026-05-11T06:57:59.000Z",
-    "link": "https://www.hybrid.cz/elektromobil-kia-ev2-s-dojezdem-az-453-km/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily",
-      "Nabíjení"
-    ],
-    "autoComment": "Nabíjecí infrastruktura je přímo relevantní pro český trh. Sítě ORLEN, PRE a E.ON v ČR rychle rozrůstají – dostupnost rychlonabíječek na dálnicích se v roce 2026 výrazně zlepšila. Celkové náklady na elektromobil včetně nabíjení porovná naše kalkulačka EV vs. spalovák."
-  },
-  {
-    "title": "Zájem o elektromobily v Česku dál roste, duben opět rekordní",
-    "description": "Duben 2026 se stal historicky nejúspěšnějším měsícem prodeje elektromobilů v ČR. Nové i dovezené elektromobily jsou na rekordních hodnotách. The post Zájem o elektromobily v Česku dál roste, duben opět rekordní first appeared on Hybrid.cz.",
-    "date": "2026-05-08T08:05:55.000Z",
-    "link": "https://www.hybrid.cz/zajem-o-elektromobily-v-cesku-dal-roste-duben-opet-rekordni/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Lexus odhalil nový šestimístný elektromobil Lexus TZ",
-    "description": "Lexus představil zcela nový Lexus TZ, šestimístný SUV elektromobil, který zkoumá nové obzory v oblasti cestovního pohodlí i potěšení z jízdy. The post Lexus odhalil nový šestimístný elektromobil Lexus TZ first appeared on Hybrid.cz.",
-    "date": "2026-05-07T08:50:07.000Z",
-    "link": "https://www.hybrid.cz/lexus-odhalil-novy-sestimystny-elektromobil-lexus-tz/",
-    "source": "Hybrid.cz",
-    "language": "cs",
-    "tags": [
-      "Elektromobily"
-    ],
-    "autoComment": "Elektromobilita se vyvíjí rychlým tempem – jde o přímo relevantní pro český trh. Výběr modelů dostupných v ČR každým rokem roste a pořizovací ceny postupně klesají. Naše kalkulačka EV vs. spalovák vám pomůže porovnat skutečné provozní náklady."
-  },
-  {
-    "title": "Renault podporuje fanouškovský LEGO model Renault 5 Turbo 3E",
-    "description": "Renault podporuje fanouškovský Lego model Renault 5 Turbo 3E a vyzývá veřejnost, aby kampaň podpořila, aby mohl být zvažován jako oficiální model Lego. The post Renault podporuje fanouškovský LEGO model Renault 5 Turbo 3E first appeared on Hybrid.cz.",
-    "date": "2026-05-06T06:28:58.000Z",
-    "link": "https://www.hybrid.cz/renault-podporuje-fanouskovsky-lego-model-renault-5-turbo-3e/",
     "source": "Hybrid.cz",
     "language": "cs",
     "tags": [

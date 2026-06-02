@@ -1,5 +1,20 @@
 [
   {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/oceneni-pro-nejvetsiho-platce-dpo",
+    "tags": ["Daňové přiznání"],
+    "comment": "Škoda Auto letos obdržela ocenění pro největšího plátce daně z příjmů právnických osob v ČR – tradičně jde o stovky milionů až miliardy korun. Pro kontext: výběr DPPO celkem za rok 2025 přesáhl 330 miliard Kč a tvoří třetí největší příjmový zdroj státního rozpočtu po DPH a dani z příjmů fyzických osob. Ocenění má symbolický charakter a Finanční správa jím zdůrazňuje, že férové odvody velkých korporací mají zásadní dopad na financování veřejných služeb."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/financni-sprava-pripomina-uhradu-dnv",
+    "tags": ["Nemovitosti"],
+    "comment": "Daň z nemovitých věcí je splatná do 31. května – kdo platbu nestihne, zaplatí úrok z prodlení od prvního dne zpoždění. Letos je u řady obcí daň vyšší než v minulých letech: zastupitelé měli od roku 2024 možnost zvýšit místní koeficient až na 5násobek zákonné sazby. Platit lze přes QR kód na složence, datovou schránkou nebo bankovním převodem na účet místně příslušného finančního úřadu. Výši vaší konkrétní daně najdete v dopisu, který Finanční správa rozesílá na jaře, nebo ve své datové schránce."
+  },
+  {
+    "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/akce-servac-odhalila-rozsahly-danovy-unik",
+    "tags": ["Kontroly", "DPH"],
+    "comment": "Akce Servác odhalila karuselový podvod při dovozu spotřební elektroniky – zboží procházelo přes řetězec fiktivních firem, aby bylo možné neoprávněně uplatnit odpočet DPH. Způsob podvodu je klasický: jedna firma v řetězci inkasuje DPH od odběratele, ale nikdy ho neodvede státu (takzvaný missing trader). Finanční správa koordinovala akci s celní správou a EUROPOL – výsledek ukazuje, že přeshraniční spolupráce v boji proti daňovým únikům v EU je čím dál účinnější. Pro OSVČ a firmy, které nakupují elektroniku od méně známých dodavatelů, platí: ověřujte spolehlivost obchodního partnera v registru DPH plátců."
+  },
+  {
     "link": "https://financnisprava.gov.cz/cs/financni-sprava/media-a-verejnost/tiskove-zpravy-gfr/tiskove-zpravy-2026/danove-echo-v-opet-upozorni-na-nespravne-uplatneni-dan-slevy-na-manzela",
     "tags": ["Daňové přiznání"],
     "calcLink": "/rocni-dane",
